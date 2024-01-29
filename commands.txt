@@ -1,0 +1,5 @@
+python3 benchmark_serving.py --backend vllm --tokenizer meta-llama/Llama-2-70b-hf --dataset ShareGPT_V3_unfiltered_cleaned_split.json --num-prompts 100
+
+python3 -m vllm.entrypoints.api_server         --model meta-llama/Llama-2-70b-hf --swap-space 16         --disable-log-requests --tensor_parallel_size=4
+
+nvidia-smi -lms 100 --query-gpu=index,timestamp,power.draw.instant,utilization.gpu,utilization.memory,memory.total,memory.used,memory.free  --format=csv,nounits -f ${directory}/nvidiasmi_monitor & monitorpid=$!
