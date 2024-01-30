@@ -256,7 +256,7 @@ def main(args: argparse.Namespace):
             print("Jovan --- Request rate = ", request_rate)
             print("Jovan --- P50 latency = ", np.percentile(latencies, 50))
             print("Jovan --- P99 latency = ", np.percentile(latencies, 99))
-    
+            time.sleep(30) 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
