@@ -231,7 +231,7 @@ class Scheduler:
                 num_batched_tokens = len(new_seq_lens) * max(new_seq_lens)
                 if (num_batched_tokens >
                         self.scheduler_config.max_num_batched_tokens):
-                    print("Jovan --- The total number of batched tokens exceeds the limit ", num_batched_tokens)
+                    # print("Jovan --- The total number of batched tokens exceeds the limit ", num_batched_tokens)
                     break
 
                 # The total number of sequences in the RUNNING state should not
@@ -239,7 +239,7 @@ class Scheduler:
                 num_new_seqs = seq_group.get_max_num_running_seqs()
                 if (num_curr_seqs + num_new_seqs >
                         self.scheduler_config.max_num_seqs):
-                    print("Jovan --- The total number of batched sequences exceeds the limit ", num_curr_seqs, " ", num_new_seqs)
+                    # print("Jovan --- The total number of batched sequences exceeds the limit ", num_curr_seqs, " ", num_new_seqs)
                     break
 
                 num_paddings = num_batched_tokens - sum(new_seq_lens)
