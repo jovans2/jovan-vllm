@@ -65,6 +65,8 @@ def sample_requests_full(
         #    continue
         #if output_len < 130 or output_len > 150:
         #    continue
+        if output_len > 150:
+            continue
         if prompt_len < 4 or output_len < 4:
             # Prune too short sequences.
             # This is because TGI causes errors when the input or output length
@@ -77,8 +79,8 @@ def sample_requests_full(
         # out_lens.append(output_len)
         filtered_dataset.append((prompt, prompt_len, output_len))
      
-    filtered_dataset = filtered_dataset[:101]
-    
+    filtered_dataset = filtered_dataset[:1000]
+    filtered_dataset = [filtered_dataset[0]] * 10000 
     for _, in_len, out_len in filtered_dataset:
         in_lens.append(in_len)
         out_lens.append(out_len)
@@ -202,13 +204,13 @@ def main(args: argparse.Namespace):
     beam_search_widths = [1, 2, 3, 4, 5, 6, 7, 8]
     
     beam_search_widths = [1]
-    request_rates = [20]
+    request_rates = [0.1, 0.5, 1, 2, 5, 10, 12, 15, 18, 20]
     tokenizer = get_tokenizer(args.tokenizer, trust_remote_code=args.trust_remote_code)
     full_ds = sample_requests_full(args.dataset, tokenizer)
     for request_rate in request_rates:
         # REQUEST_LATENCY = []
         for bsw in beam_search_widths:
-            # args.num_prompts = args.num_prompts * request_rate
+            args.num_prompts = int(60 * request_rate)
             args.request_rate = request_rate
             args.best_of = bsw
             if bsw > 1:
