@@ -75,11 +75,15 @@ def sample_requests_full(
         if prompt_len > 1024 or prompt_len + output_len > 2048:
             # Prune too long sequences.
             continue
+        if prompt_len < 1000:
+            continue
+        if output_len < 100 or output_len > 150:
+            continue
         # in_lens.append(prompt_len)
         # out_lens.append(output_len)
         filtered_dataset.append((prompt, prompt_len, output_len))
      
-    filtered_dataset = filtered_dataset[:1000]
+    # filtered_dataset = filtered_dataset[:1000]
     filtered_dataset = [filtered_dataset[0]] * 10000 
     for _, in_len, out_len in filtered_dataset:
         in_lens.append(in_len)
@@ -205,6 +209,7 @@ def main(args: argparse.Namespace):
     
     beam_search_widths = [1]
     request_rates = [0.1, 0.5, 1, 2, 5, 10, 12, 15, 18, 20]
+    request_rates = [0.1, 0.5, 1, 1.5, 2, 2.5, 3]
     tokenizer = get_tokenizer(args.tokenizer, trust_remote_code=args.trust_remote_code)
     full_ds = sample_requests_full(args.dataset, tokenizer)
     for request_rate in request_rates:
