@@ -107,6 +107,8 @@ class Scheduler:
         # Sequence groups in the SWAPPED state.
         self.swapped: Deque[SequenceGroup] = deque()
 
+        print("Jovan --- ", self.scheduler_config.max_num_batched_tokens)
+
     @property
     def lora_enabled(self) -> bool:
         return bool(self.lora_config)
