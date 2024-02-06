@@ -189,6 +189,10 @@ class _AsyncLLMEngine(LLMEngine):
 
         if not scheduler_outputs.is_empty():
             # Execute the model.
+            print("Metadata = ", seq_group_metadata_list)
+            print("Blocks to swap in = ", scheduler_outputs.blocks_to_swap_in)
+            print("Blocks to swap out = ", scheduler_outputs.blocks_to_swap_out)
+            print("Blocks to copy = ", scheduler_outputs.blocks_to_copy)
             all_outputs = await self._run_workers_async(
                 "execute_model",
                 driver_kwargs={
@@ -274,6 +278,7 @@ class _AsyncLLMEngine(LLMEngine):
 
         # Run the ray workers asynchronously.
         for worker in self.workers:
+            print("Run worker = ", worker)
             coros.append(worker.execute_method.remote(method, *args, **kwargs))
 
         all_outputs = await asyncio.gather(*coros)
