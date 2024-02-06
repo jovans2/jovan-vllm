@@ -29,7 +29,7 @@ if TYPE_CHECKING:
 
 logger = init_logger(__name__)
 _LOCAL_LOGGING_INTERVAL_SEC = 5
-
+ttft_file = open("ttft.txt", "a")
 
 class LLMEngine:
     """An LLM engine that receives requests and generates texts.
@@ -719,6 +719,11 @@ class LLMEngine:
         scheduled_seq_groups = scheduler_outputs.scheduled_seq_groups
         for seq_group, outputs in zip(scheduled_seq_groups, output):
             self._process_sequence_group_outputs(seq_group, outputs)
+
+        if scheduler_outputs.prompt_run:
+            currTime = time.time()
+            ttft = currTime - scheduler_outputs.start_time
+            print(f"Time to first token = {ttft}\n", file=ttft_file, flush=True)
 
         # Free the finished sequence groups.
         self.scheduler.free_finished_seq_groups()
