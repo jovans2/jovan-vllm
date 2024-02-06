@@ -30,6 +30,7 @@ if TYPE_CHECKING:
 logger = init_logger(__name__)
 _LOCAL_LOGGING_INTERVAL_SEC = 5
 ttft_file = open("ttft.txt", "a")
+print("Open ttft file")
 
 class LLMEngine:
     """An LLM engine that receives requests and generates texts.
