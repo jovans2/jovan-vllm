@@ -75,7 +75,7 @@ def sample_requests_full(
         if prompt_len > 1024 or prompt_len + output_len > 2048:
             # Prune too long sequences.
             continue
-        if prompt_len < 1000:
+        if prompt_len > 100:
             continue
         # if output_len < 100 or output_len > 150:
         #    continue
@@ -213,12 +213,14 @@ def main(args: argparse.Namespace):
     request_rates = [0.1, 0.5, 1, 2, 5, 10, 12, 15, 18, 20]
     request_rates = [0.1, 0.5, 1, 1.5, 2, 2.5, 3]
     request_rates = [0.5, 1, 2, 5, 8, 10, 12]
+    request_rates = [0.1]
     tokenizer = get_tokenizer(args.tokenizer, trust_remote_code=args.trust_remote_code)
     full_ds = sample_requests_full(args.dataset, tokenizer)
     for request_rate in request_rates:
         # REQUEST_LATENCY = []
         for bsw in beam_search_widths:
             args.num_prompts = int(60 * request_rate)
+            # args.num_prompts = int(request_rate)
             args.request_rate = request_rate
             args.best_of = bsw
             if bsw > 1:
