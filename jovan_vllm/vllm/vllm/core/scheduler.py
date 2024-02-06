@@ -272,7 +272,7 @@ class Scheduler:
                     blocks_to_swap_out=blocks_to_swap_out,
                     blocks_to_copy=blocks_to_copy,
                     ignored_seq_groups=ignored_seq_groups,
-                    start_time = time.time(),
+                    start_time=time.time(),
                 )
                 return scheduler_outputs
 
@@ -365,6 +365,7 @@ class Scheduler:
             blocks_to_swap_out=blocks_to_swap_out,
             blocks_to_copy=blocks_to_copy,
             ignored_seq_groups=[],
+            start_time=0,
         )
         return scheduler_outputs
 
