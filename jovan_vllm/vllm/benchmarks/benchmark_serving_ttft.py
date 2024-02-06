@@ -15,13 +15,11 @@ On the client side, run:
         --tokenizer <your_model> --dataset <target_dataset> \
         --request-rate <request_rate>
 """
-import asyncio
 import json
-import random
 import time
-from typing import AsyncGenerator, List, Tuple
+from typing import List, Tuple
 
-import aiohttp
+import requests
 import numpy as np
 from tqdm.asyncio import tqdm
 from transformers import PreTrainedTokenizerBase
@@ -115,22 +113,9 @@ async def send_request(backend: str, model: str, api_url: str, prompt: str,
     else:
         raise ValueError(f"Unknown backend: {backend}")
 
-    timeout = aiohttp.ClientTimeout(total=3 * 3600)
-    async with aiohttp.ClientSession(timeout=timeout) as session:
-        while True:
-            async with session.post(api_url, headers=headers,
-                                    json=pload) as response:
-                chunks = []
-                async for chunk, _ in response.content.iter_chunks():
-                    chunks.append(chunk)
-            output = b"".join(chunks).decode("utf-8")
-            try:
-                output = json.loads(output)
-            except:
-                print("ERROR = ", output)
-            # Re-send the request if it failed.
-            if "error" not in output:
-                break
+    response = requests.post(api_url, headers=headers, json=pload)
+    if response.status_code != 200:
+        print("ERROR = ", response.text)
 
     request_end_time = time.perf_counter()
     request_latency = request_end_time - request_start_time
