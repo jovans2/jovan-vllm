@@ -130,6 +130,8 @@ def main():
     api_url = f"http://localhost:8000/generate"
 
     for data in dataset:
+        print("Current input len = ", data[1])
+        print("Current output len = ", data[2])
         pbar = tqdm(total=1000)
         for _ in range(1000):
             send_request("vllm", None, api_url, data[0], data[1], data[2], 1, False, pbar)
