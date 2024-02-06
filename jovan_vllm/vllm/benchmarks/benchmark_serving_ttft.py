@@ -60,7 +60,7 @@ def sample_requests(
     len_1000 = "", 0, 0
     for prompt, prompt_token_ids, output_len in tokenized_dataset:
         prompt_len = len(prompt_token_ids)
-        if output_len > 20:
+        if output_len > 10:
             continue
         if 5 < prompt_len < 15 and len_10[0] == "":
             len_10 = prompt, prompt_len, output_len
