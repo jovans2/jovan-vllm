@@ -51,6 +51,8 @@ class SchedulerOutputs:
         assert not (blocks_to_swap_in and blocks_to_swap_out)
         self.ignored_seq_groups = ignored_seq_groups
 
+        self.start_time = start_time
+
         self.num_loras = len(self.lora_requests)
         if self.num_loras > 0:
             self._sort_by_lora_ids()
