@@ -1,0 +1,36 @@
+Time to first token = 0.05064797401428223
+
+Time to first token = 0.04798722267150879
+
+Time to first token = 0.04680299758911133
+
+Time to first token = 0.04708433151245117
+
+Time to first token = 0.046399593353271484
+
+Time to first token = 0.04617905616760254
+
+Time to first token = 0.04702568054199219
+
+Time to first token = 0.04571700096130371
+
+Time to first token = 0.04621767997741699
+
+Time to first token = 0.046163320541381836
+
+Time to first token = 0.045801401138305664
+
+Time to first token = 0.046349525451660156
+
+Time to first token = 0.04553937911987305
+
+Time to first token = 0.04627108573913574
+
+Time to first token = 0.04569435119628906
+
+Time to first token = 0.045563697814941406
+
+Time to first token = 0.04549717903137207
+
+Time to first token = 0.04684638977050781
+
