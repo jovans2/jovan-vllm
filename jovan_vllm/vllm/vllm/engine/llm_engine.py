@@ -91,13 +91,14 @@ class LLMEngine:
         self.cache_config = cache_config
         self.lora_config = lora_config
         self.parallel_config = parallel_config
-        print("Jovan --- Scheduler configs = ", scheduler_config)
         self.scheduler_config = scheduler_config
         self.log_stats = log_stats
         self._verify_args()
 
         self._init_tokenizer()
         self.seq_counter = Counter()
+
+        self.ttft_file = open("ttft.txt", "a")
 
         # Create the parallel GPU workers.
         if self.parallel_config.worker_use_ray:
@@ -709,7 +710,7 @@ class LLMEngine:
         if scheduler_outputs.prompt_run:
             currTime = time.time()
             ttft = currTime - scheduler_outputs.start_time
-            print("Time to first token = ", ttft)
+            print(f"Time to first token = {ttft}\n", file=self.ttft_file, flush=True)
         for seq_group, outputs in zip(scheduled_seq_groups, output):
             self._process_sequence_group_outputs(seq_group, outputs)
 
