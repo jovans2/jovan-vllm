@@ -147,7 +147,7 @@ def main():
         pbar.close()
         latencies = []
         for lat in REQUEST_LATENCY:
-            latencies.append(lat[0])
+            latencies.append(lat[2])
         print("Average latency = ", sum(latencies)/len(latencies))
         print("P50 latency = ", np.percentile(latencies, 50))
         print("P99 latency = ", np.percentile(latencies, 99))
