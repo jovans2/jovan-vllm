@@ -374,7 +374,6 @@ class Scheduler:
         # This function call changes the internal states of the scheduler
         # such as self.running, self.swapped, and self.waiting.
         scheduler_outputs = self._schedule()
-        print("Scheduled = ", len(scheduler_outputs.scheduled_seq_groups))
 
         # Create input data structures.
         seq_group_metadata_list: List[SequenceGroupMetadata] = []
