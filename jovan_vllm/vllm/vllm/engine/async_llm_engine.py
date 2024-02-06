@@ -189,7 +189,9 @@ class _AsyncLLMEngine(LLMEngine):
 
         if not scheduler_outputs.is_empty():
             # Execute the model.
-            print("Metadata = ", seq_group_metadata_list)
+            print("Metadata ReqID = ", seq_group_metadata_list.request_id)
+            print("Metadata IsPrompt = ", seq_group_metadata_list.is_prompt)
+            print("Metadata SeqData = ", seq_group_metadata_list.seq_data)
             print("Blocks to swap in = ", scheduler_outputs.blocks_to_swap_in)
             print("Blocks to swap out = ", scheduler_outputs.blocks_to_swap_out)
             print("Blocks to copy = ", scheduler_outputs.blocks_to_copy)
@@ -273,12 +275,11 @@ class _AsyncLLMEngine(LLMEngine):
 
         # Run the driver worker asynchronously.
         driver_executor = getattr(self.driver_worker, method)
-        coros.append(asyncio.get_event_loop().run_in_executor(
-            None, partial(driver_executor, *driver_args, **driver_kwargs)))
+        coros.append(asyncio.get_event_loop().run_in_executor(None, partial(driver_executor, *driver_args, **driver_kwargs)))
 
         # Run the ray workers asynchronously.
         for worker in self.workers:
-            print("Run worker = ", worker)
+            print("Run worker = ", worker, " for the method = ", method)
             coros.append(worker.execute_method.remote(method, *args, **kwargs))
 
         all_outputs = await asyncio.gather(*coros)
