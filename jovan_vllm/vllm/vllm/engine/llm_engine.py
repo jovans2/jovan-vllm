@@ -30,7 +30,7 @@ if TYPE_CHECKING:
 logger = init_logger(__name__)
 
 _LOGGING_INTERVAL_SEC = 5
-
+ttft_file = open("ttft.txt", "a")
 
 class LLMEngine:
     """An LLM engine that receives requests and generates texts.
@@ -97,8 +97,6 @@ class LLMEngine:
 
         self._init_tokenizer()
         self.seq_counter = Counter()
-
-        self.ttft_file = open("ttft.txt", "a")
 
         # Create the parallel GPU workers.
         if self.parallel_config.worker_use_ray:
@@ -710,7 +708,7 @@ class LLMEngine:
         if scheduler_outputs.prompt_run:
             currTime = time.time()
             ttft = currTime - scheduler_outputs.start_time
-            print(f"Time to first token = {ttft}\n", file=self.ttft_file, flush=True)
+            print(f"Time to first token = {ttft}\n", file=ttft_file, flush=True)
         for seq_group, outputs in zip(scheduled_seq_groups, output):
             self._process_sequence_group_outputs(seq_group, outputs)
 
