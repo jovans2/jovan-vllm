@@ -79,7 +79,7 @@ def sample_requests(
     return filtered_dataset
 
 
-async def send_request(backend: str, model: str, api_url: str, prompt: str,
+def send_request(backend: str, model: str, api_url: str, prompt: str,
                        prompt_len: int, output_len: int, best_of: int,
                        use_beam_search: bool, pbar: tqdm) -> None:
     request_start_time = time.perf_counter()
