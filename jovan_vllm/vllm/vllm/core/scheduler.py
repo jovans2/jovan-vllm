@@ -39,6 +39,7 @@ class SchedulerOutputs:
         blocks_to_swap_out: Dict[int, int],
         blocks_to_copy: Dict[int, List[int]],
         ignored_seq_groups: List[SequenceGroup],
+        start_time: float,
     ) -> None:
         self.scheduled_seq_groups = scheduled_seq_groups
         self.prompt_run = prompt_run
@@ -49,6 +50,8 @@ class SchedulerOutputs:
         # Swap in and swap out should never happen at the same time.
         assert not (blocks_to_swap_in and blocks_to_swap_out)
         self.ignored_seq_groups = ignored_seq_groups
+
+        self.start_time = start_time
 
         self.num_loras = len(self.lora_requests)
         if self.num_loras > 0:
@@ -269,6 +272,7 @@ class Scheduler:
                     blocks_to_swap_out=blocks_to_swap_out,
                     blocks_to_copy=blocks_to_copy,
                     ignored_seq_groups=ignored_seq_groups,
+                    start_time = time.time(),
                 )
                 return scheduler_outputs
 

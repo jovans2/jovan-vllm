@@ -706,6 +706,10 @@ class LLMEngine:
             scheduler_outputs: SchedulerOutputs) -> List[RequestOutput]:
         # Update the scheduled sequence groups with the model outputs.
         scheduled_seq_groups = scheduler_outputs.scheduled_seq_groups
+        if scheduler_outputs.prompt_run:
+            currTime = time.time()
+            ttft = currTime - scheduler_outputs.start_time
+            print("Time to first token = ", ttft)
         for seq_group, outputs in zip(scheduled_seq_groups, output):
             self._process_sequence_group_outputs(seq_group, outputs)
 
