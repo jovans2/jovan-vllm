@@ -57,7 +57,6 @@ def main(args: argparse.Namespace):
                          use_tqdm=False)
             end_time = time.perf_counter()
             latency = end_time - start_time
-            print(len(dummy_prompt_token_ids))
             return latency
 
     print("Warming up...")
@@ -77,7 +76,7 @@ def main(args: argparse.Namespace):
     input_lens = [10, 50, 100, 200, 500, 800, 1000]
     for in_len in input_lens:
         latencies = []
-        args.num_iters = 1000
+        args.num_iters = 100
         dummy_prompt_token_ids = [[0] * in_len] * 1
         for _ in tqdm(range(args.num_iters), desc="Profiling iterations"):
             latencies.append(run_to_completion(profile_dir=None))
