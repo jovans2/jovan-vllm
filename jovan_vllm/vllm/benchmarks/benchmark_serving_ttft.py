@@ -92,7 +92,7 @@ def sample_requests(
 
 def send_request(backend: str, model: str, api_url: str, prompt: str,
                        prompt_len: int, output_len: int, best_of: int,
-                       use_beam_search: bool, pbar: tqdm) -> None:
+                       use_beam_search: bool) -> None:
     request_start_time = time.perf_counter()
 
     headers = {"User-Agent": "Benchmark Client"}
@@ -131,7 +131,7 @@ def send_request(backend: str, model: str, api_url: str, prompt: str,
     request_end_time = time.perf_counter()
     request_latency = request_end_time - request_start_time
     REQUEST_LATENCY.append((prompt_len, output_len, request_latency))
-    pbar.update(1)
+    # pbar.update(1)
 
 def main():
     global REQUEST_LATENCY
@@ -141,17 +141,17 @@ def main():
     api_url = f"http://localhost:8000/generate"
 
     frequencies = [800, 1000, 1200, 1400, 1600, 1800, 1980]
-
+    num_iters = 200
     for freq in frequencies:
-        time.sleep(10)
+        time.sleep(30)
         os.system("sudo nvidia-smi -lgc " + str(freq))
         for data in dataset:
             print("Current input len = ", data[1])
             print("Current output len = ", data[2])
-            pbar = tqdm(total=100)
-            for _ in range(200):
-                send_request("vllm", None, api_url, data[0], data[1], data[2], 1, False, pbar)
-            pbar.close()
+            # pbar = tqdm(total=num_iters)
+            for _ in range(num_iters):
+                send_request("vllm", None, api_url, data[0], data[1], data[2], 1, False)
+            # pbar.close()
             latencies = []
             for lat in REQUEST_LATENCY:
                 latencies.append(lat[2])
@@ -159,6 +159,7 @@ def main():
             print("P50 latency = ", np.percentile(latencies, 50))
             print("P99 latency = ", np.percentile(latencies, 99))
             REQUEST_LATENCY = []
+            time.sleep(15)
 
 
 if __name__ == "__main__":
