@@ -19,6 +19,8 @@ import json
 import time
 from typing import List, Tuple
 
+import os
+
 import requests
 import numpy as np
 from tqdm.asyncio import tqdm
@@ -138,20 +140,25 @@ def main():
 
     api_url = f"http://localhost:8000/generate"
 
-    for data in dataset:
-        print("Current input len = ", data[1])
-        print("Current output len = ", data[2])
-        pbar = tqdm(total=100)
-        for _ in range(100):
-            send_request("vllm", None, api_url, data[0], data[1], data[2], 1, False, pbar)
-        pbar.close()
-        latencies = []
-        for lat in REQUEST_LATENCY:
-            latencies.append(lat[2])
-        print("Average latency = ", sum(latencies)/len(latencies))
-        print("P50 latency = ", np.percentile(latencies, 50))
-        print("P99 latency = ", np.percentile(latencies, 99))
-        REQUEST_LATENCY = []
+    frequencies = [800, 1000, 1200, 1400, 1600, 1800, 1980]
+
+    for freq in frequencies:
+        time.sleep(10)
+        os.system("sudo nvidia-smi -lgc " + str(freq))
+        for data in dataset:
+            print("Current input len = ", data[1])
+            print("Current output len = ", data[2])
+            pbar = tqdm(total=100)
+            for _ in range(200):
+                send_request("vllm", None, api_url, data[0], data[1], data[2], 1, False, pbar)
+            pbar.close()
+            latencies = []
+            for lat in REQUEST_LATENCY:
+                latencies.append(lat[2])
+            print("Average latency = ", sum(latencies)/len(latencies))
+            print("P50 latency = ", np.percentile(latencies, 50))
+            print("P99 latency = ", np.percentile(latencies, 99))
+            REQUEST_LATENCY = []
 
 
 if __name__ == "__main__":
