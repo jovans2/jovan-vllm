@@ -90,9 +90,7 @@ def sample_requests(
     return filtered_dataset
 
 
-def send_request(backend: str, model: str, api_url: str, prompt: str,
-                       prompt_len: int, output_len: int, best_of: int,
-                       use_beam_search: bool) -> None:
+def send_request(backend: str, model: str, api_url: str, prompt: str, prompt_len: int, output_len: int, best_of: int, use_beam_search: bool) -> None:
     request_start_time = time.perf_counter()
 
     headers = {"User-Agent": "Benchmark Client"}
@@ -150,7 +148,7 @@ def main():
             print("Current output len = ", data[2])
             # pbar = tqdm(total=num_iters)
             for _ in range(num_iters):
-                send_request("vllm", None, api_url, data[0], data[1], data[2], 1, False)
+                send_request("vllm", None, api_url, data[0], data[1], 1, 1, False)
             # pbar.close()
             latencies = []
             for lat in REQUEST_LATENCY:
