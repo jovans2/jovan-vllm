@@ -143,6 +143,8 @@ def main():
     for freq in frequencies:
         time.sleep(30)
         os.system("sudo nvidia-smi -lgc " + str(freq))
+        if freq == 1980:
+            os.system("sudo nvidia-smi -rgc")
         for data in dataset:
             print("Current input len = ", data[1])
             print("Current output len = ", data[2])
@@ -162,3 +164,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+# DCGM DMON 1397207
