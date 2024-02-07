@@ -60,33 +60,41 @@ def sample_requests(
     len_500 = "", 0, 0
     len_800 = "", 0, 0
     len_1000 = "", 0, 0
+    len_1500 = "", 0, 0
+    len_2000 = "", 0, 0
     for prompt, prompt_token_ids, output_len in tokenized_dataset:
         prompt_len = len(prompt_token_ids)
         if output_len > 10:
             continue
-        if 5 < prompt_len < 15 and len_10[0] == "":
+        if prompt_len == 10 and len_10[0] == "":
             len_10 = prompt, prompt_len, output_len
             print("Found 10")
-        if 40 < prompt_len < 60 and len_50[0] == "":
+        if prompt_len == 50 and len_50[0] == "":
             len_50 = prompt, prompt_len, output_len
             print("Found 50")
-        if 90 < prompt_len < 110 and len_100[0] == "":
+        if prompt_len == 100 and len_100[0] == "":
             len_100 = prompt, prompt_len, output_len
             print("Found 100")
-        if 190 < prompt_len < 210 and len_200[0] == "":
+        if prompt_len == 200 and len_200[0] == "":
             len_200 = prompt, prompt_len, output_len
             print("Found 200")
-        if 490 < prompt_len < 510 and len_500[0] == "":
+        if prompt_len == 500 and len_500[0] == "":
             len_500 = prompt, prompt_len, output_len
             print("Found 500")
-        if 790 < prompt_len < 810 and len_800[0] == "":
+        if prompt_len == 800 and len_800[0] == "":
             len_800 = prompt, prompt_len, output_len
             print("Found 800")
-        if 990 < prompt_len < 1010 and len_1000[0] == "":
+        if prompt_len == 1000 and len_1000[0] == "":
             len_1000 = prompt, prompt_len, output_len
             print("Found 1000")
+        if 1450 < prompt_len < 1550 and len_1500[0] == "":
+            len_1500 = prompt, prompt_len, output_len
+            print("Found 1500")
+        if 1950 < prompt_len < 2050 and len_2000[0] == "":
+            len_2000 = prompt, prompt_len, output_len
+            print("Found 1500")
 
-    filtered_dataset: List[Tuple[str, int, int]] = [len_10, len_50, len_100, len_200, len_500, len_800, len_1000]
+    filtered_dataset: List[Tuple[str, int, int]] = [len_10, len_50, len_100, len_200, len_500, len_800, len_1000, len_1500, len_2000]
     return filtered_dataset
 
 
