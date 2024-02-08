@@ -725,6 +725,10 @@ class LLMEngine:
             currTime = time.time()
             ttft = currTime - scheduler_outputs.start_time
             print(f"Time to first token = {ttft}\n", file=ttft_file, flush=True)
+        else:
+            currTime = time.time()
+            tbt = currTime - scheduler_outputs.start_time
+            print(f"Time between tokens = {tbt}\n", file=ttft_file, flush=True)
 
         # Free the finished sequence groups.
         self.scheduler.free_finished_seq_groups()
