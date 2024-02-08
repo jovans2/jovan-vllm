@@ -147,7 +147,7 @@ def main():
     api_url = f"http://localhost:8000/generate"
 
     frequencies = [800, 1000, 1200, 1400, 1600, 1800, 1980]
-    num_iters = 200
+    num_iters = 50
     for freq in frequencies:
         time.sleep(30)
         os.system("sudo nvidia-smi -lgc " + str(freq))
