@@ -92,7 +92,7 @@ def sample_requests(
             print("Found 1500")
         if 1950 < prompt_len < 2050 and len_2000[0] == "":
             len_2000 = prompt, prompt_len, output_len
-            print("Found 1500")
+            print("Found 2000")
 
     filtered_dataset: List[Tuple[str, int, int]] = [len_10, len_50, len_100, len_200, len_500, len_800, len_1000, len_1500, len_2000]
     return filtered_dataset
