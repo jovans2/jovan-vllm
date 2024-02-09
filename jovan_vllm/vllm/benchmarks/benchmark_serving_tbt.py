@@ -95,6 +95,7 @@ def sample_requests(
             print("Found 2000")
 
     filtered_dataset: List[Tuple[str, int, int]] = [len_10, len_50, len_100, len_200, len_500, len_800, len_1000, len_1500, len_2000]
+    filtered_dataset: List[Tuple[str, int, int]] = [len_10]
     return filtered_dataset
 
 
@@ -148,6 +149,10 @@ def main():
 
     frequencies = [800, 1000, 1200, 1400, 1600, 1800, 1980]
     num_iters = 50
+
+    frequencies = [1980]
+    num_iters = 1
+
     for freq in frequencies:
         time.sleep(30)
         os.system("sudo nvidia-smi -lgc " + str(freq))
