@@ -171,5 +171,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-# DCGM DMON 1397207

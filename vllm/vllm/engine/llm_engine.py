@@ -724,11 +724,17 @@ class LLMEngine:
         if scheduler_outputs.prompt_run:
             currTime = time.time()
             ttft = currTime - scheduler_outputs.start_time
-            print(f"Time to first token = {ttft}\n", file=ttft_file, flush=True)
+            print(f"Time to first token = {ttft}", file=ttft_file, flush=True)
         else:
             currTime = time.time()
             tbt = currTime - scheduler_outputs.start_time
-            print(f"Time between tokens = {tbt}\n", file=ttft_file, flush=True)
+            print(f"Time between tokens = {tbt}", file=ttft_file, flush=True)
+        lens = ""
+        for seq_group in scheduled_seq_groups:
+            for seqId in seq_group.seqs_dict:
+                seq = seq_group.seqs_dict[seqId]
+                lens += " " + str(len(seq.tokens))
+        print(f"Current batch = {lens}", file=ttft_file, flush=True)
 
         # Free the finished sequence groups.
         self.scheduler.free_finished_seq_groups()
