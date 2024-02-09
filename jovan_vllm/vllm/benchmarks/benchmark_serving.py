@@ -262,57 +262,58 @@ def main(args: argparse.Namespace):
     request_rates = [10]
     tokenizer = get_tokenizer(args.tokenizer, trust_remote_code=args.trust_remote_code)
     full_ds = sample_requests_full(args.dataset, tokenizer)
-    for request_rate in request_rates:
-        # REQUEST_LATENCY = []
-        for bsw in beam_search_widths:
-            args.num_prompts = int(60 * request_rate)
-            # args.num_prompts = int(request_rate)
-            args.request_rate = request_rate
-            args.best_of = bsw
-            if bsw > 1:
-                args.use_beam_search = True
-            print(args)
-            random.seed(args.seed)
-            np.random.seed(args.seed)
+    for rept in range(20):
+        for request_rate in request_rates:
+            # REQUEST_LATENCY = []
+            for bsw in beam_search_widths:
+                args.num_prompts = int(60 * request_rate)
+                # args.num_prompts = int(request_rate)
+                args.request_rate = request_rate
+                args.best_of = bsw
+                if bsw > 1:
+                    args.use_beam_search = True
+                print(args)
+                random.seed(args.seed)
+                np.random.seed(args.seed)
 
-            api_url = f"{args.protocol}://{args.host}:{args.port}{args.endpoint}"
-            # tokenizer = get_tokenizer(args.tokenizer,
-            #                        trust_remote_code=args.trust_remote_code)
-            input_requests = sample_requests(full_ds, args.num_prompts)
+                api_url = f"{args.protocol}://{args.host}:{args.port}{args.endpoint}"
+                # tokenizer = get_tokenizer(args.tokenizer,
+                #                        trust_remote_code=args.trust_remote_code)
+                input_requests = sample_requests(full_ds, args.num_prompts)
 
-            benchmark_start_time = time.perf_counter()
-            asyncio.run(
-                benchmark(args.backend, args.model, api_url, input_requests,
-                        args.best_of, args.use_beam_search, args.request_rate))
-            benchmark_end_time = time.perf_counter()
-            benchmark_time = benchmark_end_time - benchmark_start_time
-            print(f"Total time: {benchmark_time:.2f} s")
-            print(f"Throughput: {args.num_prompts / benchmark_time:.2f} requests/s")
+                benchmark_start_time = time.perf_counter()
+                asyncio.run(
+                    benchmark(args.backend, args.model, api_url, input_requests,
+                            args.best_of, args.use_beam_search, args.request_rate))
+                benchmark_end_time = time.perf_counter()
+                benchmark_time = benchmark_end_time - benchmark_start_time
+                print(f"Total time: {benchmark_time:.2f} s")
+                print(f"Throughput: {args.num_prompts / benchmark_time:.2f} requests/s")
 
-            # Compute the latency statistics.
-            avg_latency = np.mean([latency for _, _, latency in REQUEST_LATENCY])
-            print(f"Average latency: {avg_latency:.2f} s")
-            avg_per_token_latency = np.mean([
-                latency / (prompt_len + output_len)
-                for prompt_len, output_len, latency in REQUEST_LATENCY
-            ])
-            print(f"Average latency per token: {avg_per_token_latency:.2f} s")
-            avg_per_output_token_latency = np.mean(
-                [latency / output_len for _, output_len, latency in REQUEST_LATENCY])
-            print("Average latency per output token: "
-                f"{avg_per_output_token_latency:.2f} s")
-    
-            latencies = []
-            for _, _, latency in REQUEST_LATENCY:
-                latencies.append(latency)
-        
-            # (prompt len, output len, latency)
-            REQUEST_LATENCY = []
-        
-            print("Jovan --- Request rate = ", request_rate)
-            print("Jovan --- P50 latency = ", np.percentile(latencies, 50))
-            print("Jovan --- P99 latency = ", np.percentile(latencies, 99))
-            time.sleep(30) 
+                # Compute the latency statistics.
+                avg_latency = np.mean([latency for _, _, latency in REQUEST_LATENCY])
+                print(f"Average latency: {avg_latency:.2f} s")
+                avg_per_token_latency = np.mean([
+                    latency / (prompt_len + output_len)
+                    for prompt_len, output_len, latency in REQUEST_LATENCY
+                ])
+                print(f"Average latency per token: {avg_per_token_latency:.2f} s")
+                avg_per_output_token_latency = np.mean(
+                    [latency / output_len for _, output_len, latency in REQUEST_LATENCY])
+                print("Average latency per output token: "
+                    f"{avg_per_output_token_latency:.2f} s")
+
+                latencies = []
+                for _, _, latency in REQUEST_LATENCY:
+                    latencies.append(latency)
+
+                # (prompt len, output len, latency)
+                REQUEST_LATENCY = []
+
+                print("Jovan --- Request rate = ", request_rate)
+                print("Jovan --- P50 latency = ", np.percentile(latencies, 50))
+                print("Jovan --- P99 latency = ", np.percentile(latencies, 99))
+                time.sleep(30)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
