@@ -54,7 +54,8 @@ def sample_requests_full(
     for i in range(len(dataset)):
         output_len = len(completion_token_ids[i])
         tokenized_dataset.append((prompts[i], prompt_token_ids[i], output_len))
-    
+
+    '''
     in_lens = []
     out_lens = []
     # Filter out too long sequences.
@@ -94,6 +95,57 @@ def sample_requests_full(
     print("P50 input lens = ", np.percentile(in_lens, 50))
     print("P50 output lens = ", np.percentile(out_lens, 50))
     print(len(filtered_dataset))
+    return filtered_dataset
+    '''
+
+    len_10 = "", 0, 0
+    len_50 = "", 0, 0
+    len_100 = "", 0, 0
+    len_200 = "", 0, 0
+    len_500 = "", 0, 0
+    len_800 = "", 0, 0
+    len_1000 = "", 0, 0
+    len_1500 = "", 0, 0
+    len_2000 = "", 0, 0
+    for prompt, prompt_token_ids, output_len in tokenized_dataset:
+        prompt_len = len(prompt_token_ids)
+        if output_len > 10:
+            continue
+        if prompt_len == 10 and len_10[0] == "":
+            len_10 = prompt, prompt_len, output_len
+            print("Found 10")
+        if prompt_len == 50 and len_50[0] == "":
+            len_50 = prompt, prompt_len, output_len
+            print("Found 50")
+        if prompt_len == 100 and len_100[0] == "":
+            len_100 = prompt, prompt_len, output_len
+            print("Found 100")
+        if prompt_len == 200 and len_200[0] == "":
+            len_200 = prompt, prompt_len, output_len
+            print("Found 200")
+        if prompt_len == 500 and len_500[0] == "":
+            len_500 = prompt, prompt_len, output_len
+            print("Found 500")
+        if prompt_len == 800 and len_800[0] == "":
+            len_800 = prompt, prompt_len, output_len
+            print("Found 800")
+        if prompt_len == 1000 and len_1000[0] == "":
+            len_1000 = prompt, prompt_len, output_len
+            print("Found 1000")
+        if 1450 < prompt_len < 1550 and len_1500[0] == "":
+            len_1500 = prompt, prompt_len, output_len
+            print("Found 1500")
+        if 1950 < prompt_len < 2050 and len_2000[0] == "":
+            len_2000 = prompt, prompt_len, output_len
+            print("Found 2000")
+
+    filtered_dataset_curr: List[Tuple[str, int, int]] = [len_10, len_50, len_100, len_200, len_500, len_800, len_1000, len_1500, len_2000]
+
+    filtered_dataset: List[Tuple[str, int, int]] = []
+    for elem in filtered_dataset_curr:
+        for _ in range(100):
+            filtered_dataset.append(elem)
+
     return filtered_dataset
 
 def sample_requests(
@@ -205,15 +257,9 @@ async def benchmark(
 
 def main(args: argparse.Namespace):
     global REQUEST_LATENCY
-
-    request_rates = [1, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
-    beam_search_widths = [1, 2, 3, 4, 5, 6, 7, 8]
     
     beam_search_widths = [1]
-    request_rates = [0.1, 0.5, 1, 2, 5, 10, 12, 15, 18, 20]
-    request_rates = [0.1, 0.5, 1, 1.5, 2, 2.5, 3]
-    request_rates = [0.5, 1, 2, 5, 8, 10, 12]
-    request_rates = [0.1]
+    request_rates = [10]
     tokenizer = get_tokenizer(args.tokenizer, trust_remote_code=args.trust_remote_code)
     full_ds = sample_requests_full(args.dataset, tokenizer)
     for request_rate in request_rates:
