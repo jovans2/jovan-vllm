@@ -733,7 +733,7 @@ class LLMEngine:
         for seq_group in scheduled_seq_groups:
             for seqId in seq_group.seqs_dict:
                 seq = seq_group.seqs_dict[seqId]
-                lens += " " + str(len(seq.tokens))
+                lens += " " + str(len(seq.tokens)) + "(" + str(len(seq.prompt)) + ")"
         print(f"Current batch = {lens}", file=ttft_file, flush=True)
 
         # Free the finished sequence groups.
