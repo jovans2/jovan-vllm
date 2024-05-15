@@ -84,7 +84,7 @@ class RequestOutput:
         self.ttft = 0
 
     @classmethod
-    def from_seq_group(cls, seq_group: SequenceGroup, ttft_time: float) -> "RequestOutput":
+    def from_seq_group(cls, seq_group: SequenceGroup, ttft_time: float, tbt_time: float) -> "RequestOutput":
         # Get the top-n sequences.
         n = seq_group.sampling_params.n
         seqs = seq_group.get_seqs()
@@ -113,7 +113,7 @@ class RequestOutput:
             outputs.append(output)
 
         # Every sequence in the sequence group should have the same prompt.
-        prompt = seq_group.prompt + " MY TTFT = " + str(ttft_time) + " "
+        prompt = seq_group.prompt + " MY TTFT = " + str(ttft_time) + " MY TBT = " + str(tbt_time)
         
         prompt_token_ids = seq_group.prompt_token_ids
         prompt_logprobs = seq_group.prompt_logprobs

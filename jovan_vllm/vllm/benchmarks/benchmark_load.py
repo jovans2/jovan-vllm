@@ -1,5 +1,6 @@
 import json
 import ast
+import sys
 import time
 import re
 from typing import List, Tuple
@@ -43,6 +44,7 @@ def generate_poisson_distribution(rates, duration):
 # (prompt len, output len, latency)
 REQUEST_LATENCY = []
 ttfts = []
+tbts = []
 
 def sample_requests(
     dataset_path: str,
@@ -67,18 +69,39 @@ def sample_requests(
         output_len = len(completion_token_ids[i])
         tokenized_dataset.append((prompts[i], prompt_token_ids[i], output_len))
 
-    my_req = "", 0, 0
+    my_req_ss = "", 0, 0
+    my_req_sm = "", 0, 0
+    my_req_sl = "", 0, 0
+    my_req_ms = "", 0, 0
+    my_req_mm = "", 0, 0
+    my_req_ml = "", 0, 0
+    my_req_ls = "", 0, 0
+    my_req_lm = "", 0, 0
+    my_req_ll = "", 0, 0
     for prompt, prompt_token_ids, output_len in tokenized_dataset:
         prompt_len = len(prompt_token_ids)
+        if 400 < prompt_len < 500:
+            my_req_ss = prompt, prompt_len, 96
+            my_req_sm = prompt, prompt_len, 256
+            my_req_sl = prompt, prompt_len, 600
         if 1000 < prompt_len < 1100:
-            my_req = prompt, prompt_len, 128
+            my_req_ms = prompt, prompt_len, 96
+            my_req_mm = prompt, prompt_len, 256
+            my_req_ml = prompt, prompt_len, 600
+        if 4000 < prompt_len < 4100:
+            my_req_ls = prompt, prompt_len, 96
+            my_req_lm = prompt, prompt_len, 256
+            my_req_ll = prompt, prompt_len, 600
 
-    filtered_dataset: List[Tuple[str, int, int]] = [my_req]
+    filtered_dataset: List[Tuple[str, int, int]] = [my_req_ss, my_req_sm, my_req_sl, my_req_ms, my_req_mm, my_req_ml, my_req_ls, my_req_lm, my_req_ll]
+    for elem in filtered_dataset:
+        print(elem[2])
     return filtered_dataset
 
 
 def send_request(backend: str, model: str, api_url: str, prompt: str, prompt_len: int, output_len: int, best_of: int, use_beam_search: bool) -> None:
     global ttfts
+    global tbts
     request_start_time = time.perf_counter()
     
     headers = {"User-Agent": "Benchmark Client"}
@@ -120,7 +143,14 @@ def send_request(backend: str, model: str, api_url: str, prompt: str, prompt_len
 
     match = re.search(pattern, rsp)
     ttft_number = float(match.group(1))
+    
+    pattern = r"MY TBT = (\d+\.\d+)"
+
+    match = re.search(pattern, rsp)
+    tbt_number = float(match.group(1))
+
     ttfts.append(ttft_number)
+    tbts.append(tbt_number)
     request_end_time = time.perf_counter()
     request_latency = request_end_time - request_start_time
     REQUEST_LATENCY.append((prompt_len, output_len, request_latency))
@@ -130,9 +160,10 @@ def send_request(backend: str, model: str, api_url: str, prompt: str, prompt_len
 def main(load_reqs):
     global REQUEST_LATENCY
     global ttfts
+    global tbts
     tokenizer = get_tokenizer("meta-llama/Llama-2-70b-hf", trust_remote_code=False)
     dataset = sample_requests("../../../../ShareGPT_V3_unfiltered_cleaned_split.json", tokenizer)
-    data = dataset[0]
+    data = dataset[int(sys.argv[1])]
     print(data[1], "-", data[2])
     api_url = f"http://localhost:8000/generate"
 
@@ -162,7 +193,9 @@ def main(load_reqs):
     print("Average ttft = ", sum(ttfts)/len(ttfts))
     print("P50 ttft = ", np.percentile(ttfts, 50))
     print("P99 ttft = ", np.percentile(ttfts, 99))
-
+    print("Average tbt = ", sum(tbts)/len(tbts))
+    print("P50 tbt = ", np.percentile(tbts, 50))
+    print("P99 tbt = ", np.percentile(tbts, 99))
     REQUEST_LATENCY = []
     ttfts = []
 
@@ -170,7 +203,7 @@ def main(load_reqs):
 if __name__ == "__main__":
     loads = [0.5, 1.5, 3]
     freqs = [800, 1000, 1200, 1400, 1600, 1800, 1980]
-    loads = [3]
+    loads = [int(sys.argv[2])]
     freqs = [1980]
     for freq in freqs:
         os.system("sudo nvidia-smi -lgc " + str(freq))

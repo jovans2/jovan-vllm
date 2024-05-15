@@ -1,6 +1,7 @@
 import copy
 from collections import defaultdict
 import os
+import numpy as np
 import time
 from typing import (TYPE_CHECKING, Any, Dict, Iterable, List, Optional, Tuple,
                     Union)
@@ -457,7 +458,7 @@ class LLMEngine:
 
         # Create the sequence group.
         seq_group = SequenceGroup(request_id, [seq], sampling_params,
-                                  arrival_time, lora_request, prefix)
+                                  arrival_time, arrival_time, lora_request, prefix)
 
         # Add the sequence group to the scheduler.
         self.scheduler.add_seq_group(seq_group)
@@ -726,10 +727,14 @@ class LLMEngine:
                 #ttft = currTime - scheduler_outputs.start_time
                 ttft = currTime - seq_group.arrival_time
                 seq_group.ttft = ttft
+                seq_group.last_time = currTime
                 print(f"Time to first token = {ttft}", file=ttft_file, flush=True)
             else:
                 currTime = time.time()
-                tbt = currTime - scheduler_outputs.start_time
+                tbt = currTime - seq_group.last_time
+                seq_group.last_time = currTime
+                seq_group.tbts.append(tbt)
+                seq_group.tbt = np.percentile(seq_group.tbts, 90)
                 # print(f"Time between tokens = {tbt}", file=ttft_file, flush=True)
         lens = ""
         for seq_group in scheduled_seq_groups:
@@ -744,10 +749,10 @@ class LLMEngine:
         # Create the outputs.
         request_outputs: List[RequestOutput] = []
         for seq_group in scheduled_seq_groups:
-            request_output = RequestOutput.from_seq_group(seq_group, seq_group.ttft)
+            request_output = RequestOutput.from_seq_group(seq_group, seq_group.ttft, seq_group.tbt)
             request_outputs.append(request_output)
         for seq_group in scheduler_outputs.ignored_seq_groups:
-            request_output = RequestOutput.from_seq_group(seq_group, seq_group.ttft)
+            request_output = RequestOutput.from_seq_group(seq_group, seq_group.ttft, seq_group.tbt)
             request_outputs.append(request_output)
 
         # Update prefix state, now all the uncomputed prefixes are computed.
