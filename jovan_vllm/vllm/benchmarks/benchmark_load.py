@@ -50,6 +50,8 @@ def sample_requests(
     dataset_path: str,
     tokenizer: PreTrainedTokenizerBase,
 ) -> List[Tuple[str, int, int]]:
+    
+    '''
     # Load the dataset.
     with open(dataset_path) as f:
         dataset = json.load(f)
@@ -58,16 +60,29 @@ def sample_requests(
     # Only keep the first two turns of each conversation.
     dataset = [(data["conversations"][0]["value"],
                 data["conversations"][1]["value"]) for data in dataset]
+    '''
+    file_path = "prompts"  # Update with the path to your text file
 
+    # Read the contents of the file
+    with open(file_path, "r") as file:
+        text = file.read()
+
+    # Split the text based on the separator
+    texts = text.split("*" * 35)  # 35 asterisks for the separator
+
+    # Remove any leading/trailing whitespace from each text
+    prompts = [t.strip() for t in texts if t.strip()]
+    
     # Tokenize the prompts and completions.
-    prompts = [prompt for prompt, _ in dataset]
+    # prompts = [prompt for prompt, _ in dataset]
     prompt_token_ids = tokenizer(prompts).input_ids
-    completions = [completion for _, completion in dataset]
-    completion_token_ids = tokenizer(completions).input_ids
+    # completions = [completion for _, completion in dataset]
+    # completion_token_ids = tokenizer(completions).input_ids
     tokenized_dataset = []
-    for i in range(len(dataset)):
-        output_len = len(completion_token_ids[i])
+    for i in range(len(prompts)):
+        output_len = 100
         tokenized_dataset.append((prompts[i], prompt_token_ids[i], output_len))
+    
 
     my_req_ss = "", 0, 0
     my_req_sm = "", 0, 0
@@ -92,10 +107,19 @@ def sample_requests(
             my_req_ls = prompt, prompt_len, 96
             my_req_lm = prompt, prompt_len, 256
             my_req_ll = prompt, prompt_len, 600
-
+    
     filtered_dataset: List[Tuple[str, int, int]] = [my_req_ss, my_req_sm, my_req_sl, my_req_ms, my_req_mm, my_req_ml, my_req_ls, my_req_lm, my_req_ll]
+    
+    with open("prompts", "w") as text_file:
+        text_file.write(my_req_ss[0])
+        text_file.write("***********************************")
+        text_file.write(my_req_ms[0])
+        text_file.write("***********************************")
+        text_file.write(my_req_ls[0])
+    
     for elem in filtered_dataset:
         print(elem[2])
+    
     return filtered_dataset
 
 
@@ -157,13 +181,13 @@ def send_request(backend: str, model: str, api_url: str, prompt: str, prompt_len
     # pbar.update(1)
 
 
-def main(load_reqs):
+def main(load_reqs, reqt):
     global REQUEST_LATENCY
     global ttfts
     global tbts
     tokenizer = get_tokenizer("meta-llama/Llama-2-70b-hf", trust_remote_code=False)
     dataset = sample_requests("../../../../ShareGPT_V3_unfiltered_cleaned_split.json", tokenizer)
-    data = dataset[int(sys.argv[1])]
+    data = dataset[reqt]
     print(data[1], "-", data[2])
     api_url = f"http://localhost:8000/generate"
 
@@ -199,16 +223,17 @@ def main(load_reqs):
     REQUEST_LATENCY = []
     ttfts = []
 
+    return np.percentile(ttfts, 99)
+
 
 if __name__ == "__main__":
-    loads = [0.5, 1.5, 3]
-    freqs = [800, 1000, 1200, 1400, 1600, 1800, 1980]
-    loads = [int(sys.argv[2])]
-    freqs = [1980]
-    for freq in freqs:
-        os.system("sudo nvidia-smi -lgc " + str(freq))
-        if freq == 1980:
-            os.system("sudo nvidia-smi -rgc")
-        for load in loads:
-            main(load)
-
+    SLOs = [1.5, 1.5, 1.5, 2, 2, 2, 3, 3, 3]
+    for reqt in range(9):
+        load = 0
+        while True:
+            load += 0.2
+            ttft = main(load, reqt)
+            if ttft >= SLOs[reqt]:
+                print("Throughput = ", load - 0.2)
+                break
+            
