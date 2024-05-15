@@ -553,7 +553,7 @@ class AsyncLLMEngine:
         # Preprocess the request.
         # This should not be used for logging, as it is monotonic time.
         arrival_time = time.monotonic()
-
+        arrival_time = time.time()
         try:
             stream = await self.add_request(
                 request_id,

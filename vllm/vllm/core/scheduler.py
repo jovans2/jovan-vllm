@@ -1,6 +1,7 @@
 from collections import deque
 import enum
 import time
+import os
 from typing import Deque, Dict, Iterable, List, Optional, Tuple, Union, Set
 
 from vllm.config import CacheConfig, LoRAConfig, SchedulerConfig
@@ -161,6 +162,9 @@ class Scheduler:
         return len(self.waiting) + len(self.running) + len(self.swapped)
 
     def _schedule(self) -> SchedulerOutputs:
+        # freq = 1980
+        # os.system("sudo nvidia-smi -lgc " + str(freq) + " > /dev/null 2>&1")
+
         # Blocks that need to be swaped or copied before model execution.
         blocks_to_swap_in: Dict[int, int] = {}
         blocks_to_swap_out: Dict[int, int] = {}
@@ -258,7 +262,14 @@ class Scheduler:
 
             self.waiting.extendleft(leftover_waiting_sequences)
 
+            # freq = 1980
+            # os.system("sudo nvidia-smi -lgc " + str(freq) + " > /dev/null 2>&1")
+
             if scheduled or ignored_seq_groups:
+                
+                freq = 1980
+                os.system("sudo nvidia-smi -lgc " + str(freq) + " > /dev/null 2>&1")
+
                 scheduler_outputs = SchedulerOutputs(
                     scheduled_seq_groups=scheduled,
                     prompt_run=True,

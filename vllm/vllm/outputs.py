@@ -71,6 +71,7 @@ class RequestOutput:
         prompt_logprobs: Optional[PromptLogprobs],
         outputs: List[CompletionOutput],
         finished: bool,
+        ttft:float,
         lora_request: Optional[LoRARequest] = None,
     ) -> None:
         self.request_id = request_id
@@ -80,9 +81,10 @@ class RequestOutput:
         self.outputs = outputs
         self.finished = finished
         self.lora_request = lora_request
+        self.ttft = 0
 
     @classmethod
-    def from_seq_group(cls, seq_group: SequenceGroup) -> "RequestOutput":
+    def from_seq_group(cls, seq_group: SequenceGroup, ttft_time: float) -> "RequestOutput":
         # Get the top-n sequences.
         n = seq_group.sampling_params.n
         seqs = seq_group.get_seqs()
@@ -111,7 +113,8 @@ class RequestOutput:
             outputs.append(output)
 
         # Every sequence in the sequence group should have the same prompt.
-        prompt = seq_group.prompt
+        prompt = seq_group.prompt + " MY TTFT = " + str(ttft_time) + " "
+        
         prompt_token_ids = seq_group.prompt_token_ids
         prompt_logprobs = seq_group.prompt_logprobs
         finished = seq_group.is_finished()
@@ -121,6 +124,7 @@ class RequestOutput:
                    prompt_logprobs,
                    outputs,
                    finished,
+                   ttft=ttft_time,
                    lora_request=seq_group.lora_request)
 
     def __repr__(self) -> str:

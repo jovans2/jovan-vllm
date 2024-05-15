@@ -721,31 +721,33 @@ class LLMEngine:
         for seq_group, outputs in zip(scheduled_seq_groups, output):
             self._process_sequence_group_outputs(seq_group, outputs)
 
-        if scheduler_outputs.prompt_run:
-            currTime = time.time()
-            ttft = currTime - scheduler_outputs.start_time
-            print(f"Time to first token = {ttft}", file=ttft_file, flush=True)
-        else:
-            currTime = time.time()
-            tbt = currTime - scheduler_outputs.start_time
-            print(f"Time between tokens = {tbt}", file=ttft_file, flush=True)
+            if scheduler_outputs.prompt_run:
+                currTime = time.time()
+                #ttft = currTime - scheduler_outputs.start_time
+                ttft = currTime - seq_group.arrival_time
+                seq_group.ttft = ttft
+                print(f"Time to first token = {ttft}", file=ttft_file, flush=True)
+            else:
+                currTime = time.time()
+                tbt = currTime - scheduler_outputs.start_time
+                # print(f"Time between tokens = {tbt}", file=ttft_file, flush=True)
         lens = ""
         for seq_group in scheduled_seq_groups:
             for seqId in seq_group.seqs_dict:
                 seq = seq_group.seqs_dict[seqId]
                 lens += " " + str(len(seq.tokens)) + "(" + str(seq.get_prompt_len()) + ")"
-        print(f"Current batch = {lens}", file=ttft_file, flush=True)
+        # print(f"Current batch = {lens}", file=ttft_file, flush=True)
 
-        # Free the finished sequence groups.
+        # Free the finished sequence groups.`
         self.scheduler.free_finished_seq_groups()
 
         # Create the outputs.
         request_outputs: List[RequestOutput] = []
         for seq_group in scheduled_seq_groups:
-            request_output = RequestOutput.from_seq_group(seq_group)
+            request_output = RequestOutput.from_seq_group(seq_group, seq_group.ttft)
             request_outputs.append(request_output)
         for seq_group in scheduler_outputs.ignored_seq_groups:
-            request_output = RequestOutput.from_seq_group(seq_group)
+            request_output = RequestOutput.from_seq_group(seq_group, seq_group.ttft)
             request_outputs.append(request_output)
 
         # Update prefix state, now all the uncomputed prefixes are computed.

@@ -1,0 +1,263 @@
+GPU clocks set to "(gpuClkMin 800, gpuClkMax 800)" for GPU 00000001:00:00.0
+
+Warning: persistence mode is disabled on device 00000001:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 800, gpuClkMax 800)" for GPU 00000002:00:00.0
+
+Warning: persistence mode is disabled on device 00000002:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 800, gpuClkMax 800)" for GPU 00000003:00:00.0
+
+Warning: persistence mode is disabled on device 00000003:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 800, gpuClkMax 800)" for GPU 00000008:00:00.0
+
+Warning: persistence mode is disabled on device 00000008:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 800, gpuClkMax 800)" for GPU 00000009:00:00.0
+
+Warning: persistence mode is disabled on device 00000009:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 800, gpuClkMax 800)" for GPU 0000000A:00:00.0
+
+Warning: persistence mode is disabled on device 0000000A:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 800, gpuClkMax 800)" for GPU 0000000B:00:00.0
+
+Warning: persistence mode is disabled on device 0000000B:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 800, gpuClkMax 800)" for GPU 0000000C:00:00.0
+
+Warning: persistence mode is disabled on device 0000000C:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+All done.
+/home/azureuser/miniconda3/envs/jovan_vllm/lib/python3.10/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+GPU clocks set to "(gpuClkMin 1000, gpuClkMax 1000)" for GPU 00000001:00:00.0
+
+Warning: persistence mode is disabled on device 00000001:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1000, gpuClkMax 1000)" for GPU 00000002:00:00.0
+
+Warning: persistence mode is disabled on device 00000002:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1000, gpuClkMax 1000)" for GPU 00000003:00:00.0
+
+Warning: persistence mode is disabled on device 00000003:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1000, gpuClkMax 1000)" for GPU 00000008:00:00.0
+
+Warning: persistence mode is disabled on device 00000008:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1000, gpuClkMax 1000)" for GPU 00000009:00:00.0
+
+Warning: persistence mode is disabled on device 00000009:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1000, gpuClkMax 1000)" for GPU 0000000A:00:00.0
+
+Warning: persistence mode is disabled on device 0000000A:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1000, gpuClkMax 1000)" for GPU 0000000B:00:00.0
+
+Warning: persistence mode is disabled on device 0000000B:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1000, gpuClkMax 1000)" for GPU 0000000C:00:00.0
+
+Warning: persistence mode is disabled on device 0000000C:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+All done.
+GPU clocks set to "(gpuClkMin 1200, gpuClkMax 1200)" for GPU 00000001:00:00.0
+
+Warning: persistence mode is disabled on device 00000001:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1200, gpuClkMax 1200)" for GPU 00000002:00:00.0
+
+Warning: persistence mode is disabled on device 00000002:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1200, gpuClkMax 1200)" for GPU 00000003:00:00.0
+
+Warning: persistence mode is disabled on device 00000003:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1200, gpuClkMax 1200)" for GPU 00000008:00:00.0
+
+Warning: persistence mode is disabled on device 00000008:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1200, gpuClkMax 1200)" for GPU 00000009:00:00.0
+
+Warning: persistence mode is disabled on device 00000009:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1200, gpuClkMax 1200)" for GPU 0000000A:00:00.0
+
+Warning: persistence mode is disabled on device 0000000A:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1200, gpuClkMax 1200)" for GPU 0000000B:00:00.0
+
+Warning: persistence mode is disabled on device 0000000B:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1200, gpuClkMax 1200)" for GPU 0000000C:00:00.0
+
+Warning: persistence mode is disabled on device 0000000C:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+All done.
+GPU clocks set to "(gpuClkMin 1400, gpuClkMax 1400)" for GPU 00000001:00:00.0
+
+Warning: persistence mode is disabled on device 00000001:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1400, gpuClkMax 1400)" for GPU 00000002:00:00.0
+
+Warning: persistence mode is disabled on device 00000002:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1400, gpuClkMax 1400)" for GPU 00000003:00:00.0
+
+Warning: persistence mode is disabled on device 00000003:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1400, gpuClkMax 1400)" for GPU 00000008:00:00.0
+
+Warning: persistence mode is disabled on device 00000008:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1400, gpuClkMax 1400)" for GPU 00000009:00:00.0
+
+Warning: persistence mode is disabled on device 00000009:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1400, gpuClkMax 1400)" for GPU 0000000A:00:00.0
+
+Warning: persistence mode is disabled on device 0000000A:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1400, gpuClkMax 1400)" for GPU 0000000B:00:00.0
+
+Warning: persistence mode is disabled on device 0000000B:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1400, gpuClkMax 1400)" for GPU 0000000C:00:00.0
+
+Warning: persistence mode is disabled on device 0000000C:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+All done.
+GPU clocks set to "(gpuClkMin 1600, gpuClkMax 1600)" for GPU 00000001:00:00.0
+
+Warning: persistence mode is disabled on device 00000001:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1600, gpuClkMax 1600)" for GPU 00000002:00:00.0
+
+Warning: persistence mode is disabled on device 00000002:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1600, gpuClkMax 1600)" for GPU 00000003:00:00.0
+
+Warning: persistence mode is disabled on device 00000003:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1600, gpuClkMax 1600)" for GPU 00000008:00:00.0
+
+Warning: persistence mode is disabled on device 00000008:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1600, gpuClkMax 1600)" for GPU 00000009:00:00.0
+
+Warning: persistence mode is disabled on device 00000009:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1600, gpuClkMax 1600)" for GPU 0000000A:00:00.0
+
+Warning: persistence mode is disabled on device 0000000A:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1600, gpuClkMax 1600)" for GPU 0000000B:00:00.0
+
+Warning: persistence mode is disabled on device 0000000B:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1600, gpuClkMax 1600)" for GPU 0000000C:00:00.0
+
+Warning: persistence mode is disabled on device 0000000C:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+All done.
+GPU clocks set to "(gpuClkMin 1800, gpuClkMax 1800)" for GPU 00000001:00:00.0
+
+Warning: persistence mode is disabled on device 00000001:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1800, gpuClkMax 1800)" for GPU 00000002:00:00.0
+
+Warning: persistence mode is disabled on device 00000002:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1800, gpuClkMax 1800)" for GPU 00000003:00:00.0
+
+Warning: persistence mode is disabled on device 00000003:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1800, gpuClkMax 1800)" for GPU 00000008:00:00.0
+
+Warning: persistence mode is disabled on device 00000008:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1800, gpuClkMax 1800)" for GPU 00000009:00:00.0
+
+Warning: persistence mode is disabled on device 00000009:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1800, gpuClkMax 1800)" for GPU 0000000A:00:00.0
+
+Warning: persistence mode is disabled on device 0000000A:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1800, gpuClkMax 1800)" for GPU 0000000B:00:00.0
+
+Warning: persistence mode is disabled on device 0000000B:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1800, gpuClkMax 1800)" for GPU 0000000C:00:00.0
+
+Warning: persistence mode is disabled on device 0000000C:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+All done.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 00000001:00:00.0
+
+Warning: persistence mode is disabled on device 00000001:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 00000002:00:00.0
+
+Warning: persistence mode is disabled on device 00000002:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 00000003:00:00.0
+
+Warning: persistence mode is disabled on device 00000003:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 00000008:00:00.0
+
+Warning: persistence mode is disabled on device 00000008:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 00000009:00:00.0
+
+Warning: persistence mode is disabled on device 00000009:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 0000000A:00:00.0
+
+Warning: persistence mode is disabled on device 0000000A:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 0000000B:00:00.0
+
+Warning: persistence mode is disabled on device 0000000B:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 0000000C:00:00.0
+
+Warning: persistence mode is disabled on device 0000000C:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+All done.
+All done.
+Open ttft file
+1010 - 128
+Average latency =  3.7316351927504456
+P50 latency =  3.7857866545000434
+P99 latency =  4.563677256899609
+1010 - 128
+Average latency =  6.264282156837073
+P50 latency =  6.374521316000028
+P99 latency =  8.423932826960808
+1010 - 128
+Average latency =  16.532393780425565
+P50 latency =  18.020721736998894
+P99 latency =  25.302659836287493
+1010 - 128
+Average latency =  3.6970833350005705
+P50 latency =  3.699249264500395
+P99 latency =  4.583831818300678
+1010 - 128
+Average latency =  6.034108392714077
+P50 latency =  5.72863157899701
+P99 latency =  8.305993677999211
+1010 - 128
+Average latency =  15.525725603010637
+P50 latency =  16.12797126950136
+P99 latency =  23.083818152520035
+1010 - 128
+Average latency =  3.7013382824375185
+P50 latency =  3.7362857260013698
+P99 latency =  4.645699640251586
+1010 - 128
+Average latency =  6.280611468224156
+P50 latency =  5.8692976199999976
+P99 latency =  9.189962203199538
+1010 - 128
+Average latency =  15.554010868383093
+P50 latency =  17.48138005650071
+P99 latency =  21.91822217016117
+1010 - 128
+Average latency =  3.658433724375527
+P50 latency =  3.7002141780012607
+P99 latency =  4.571435135399042
+1010 - 128
+Average latency =  5.866012442040932
+P50 latency =  5.704996152999229
+P99 latency =  7.919009579841367
+1010 - 128
+Average latency =  16.152316812638055
+P50 latency =  17.79820123149875
+P99 latency =  23.576336228630204
+1010 - 128
+Average latency =  3.7488809796248006
+P50 latency =  3.784974542499185
+P99 latency =  4.729670779099979
+1010 - 128
+Average latency =  5.850125009469315
+P50 latency =  5.74676188200101
+P99 latency =  7.980942090479656
+1010 - 128
+Average latency =  14.778547180350792
+P50 latency =  16.14869221400113
+P99 latency =  20.580677315599495
+1010 - 128
+Average latency =  3.711705100562085
+P50 latency =  3.751173452999865
+P99 latency =  4.65337886114903
+1010 - 128
+Average latency =  5.936912384489581
+P50 latency =  5.831492827001057
+P99 latency =  8.08497884291748
+1010 - 128
+Average latency =  15.495108011053047
+P50 latency =  16.991229534998638
+P99 latency =  22.813737359822007
+1010 - 128
+Average latency =  3.703979063812085
+P50 latency =  3.7388066984985926
+P99 latency =  4.578628921897871
+1010 - 128
+Average latency =  6.0795402048974285
+P50 latency =  5.778505602997029
+P99 latency =  9.187983436081558
+1010 - 128
+Average latency =  16.020099992936128
+P50 latency =  17.078129816
+P99 latency =  23.088974902040025

@@ -246,9 +246,11 @@ class SequenceGroup:
         seqs: List[Sequence],
         sampling_params: SamplingParams,
         arrival_time: float,
+        ttft: float,
         lora_request: Optional[LoRARequest] = None,
         prefix: Optional[Prefix] = None,
     ) -> None:
+        self.ttft = 0
         self.request_id = request_id
         self.seqs_dict = {seq.seq_id: seq for seq in seqs}
         self.sampling_params = sampling_params

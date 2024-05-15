@@ -1,5 +1,7 @@
 import json
+import ast
 import time
+import re
 from typing import List, Tuple
 import os
 import threading
@@ -40,7 +42,7 @@ def generate_poisson_distribution(rates, duration):
 
 # (prompt len, output len, latency)
 REQUEST_LATENCY = []
-
+ttfts = []
 
 def sample_requests(
     dataset_path: str,
@@ -68,16 +70,17 @@ def sample_requests(
     my_req = "", 0, 0
     for prompt, prompt_token_ids, output_len in tokenized_dataset:
         prompt_len = len(prompt_token_ids)
-        if 750 < prompt_len < 850:
-            my_req = prompt, prompt_len, 100
+        if 1000 < prompt_len < 1100:
+            my_req = prompt, prompt_len, 128
 
     filtered_dataset: List[Tuple[str, int, int]] = [my_req]
     return filtered_dataset
 
 
 def send_request(backend: str, model: str, api_url: str, prompt: str, prompt_len: int, output_len: int, best_of: int, use_beam_search: bool) -> None:
+    global ttfts
     request_start_time = time.perf_counter()
-
+    
     headers = {"User-Agent": "Benchmark Client"}
     if backend == "vllm":
         pload = {
@@ -111,20 +114,29 @@ def send_request(backend: str, model: str, api_url: str, prompt: str, prompt_len
     if response.status_code != 200:
         print("ERROR = ", response.text)
 
+    rsp = ast.literal_eval(response.text)["text"]
+    rsp = rsp[0]
+    pattern = r"MY TTFT = (\d+\.\d+)"
+
+    match = re.search(pattern, rsp)
+    ttft_number = float(match.group(1))
+    ttfts.append(ttft_number)
     request_end_time = time.perf_counter()
     request_latency = request_end_time - request_start_time
     REQUEST_LATENCY.append((prompt_len, output_len, request_latency))
     # pbar.update(1)
 
 
-def main():
+def main(load_reqs):
     global REQUEST_LATENCY
+    global ttfts
     tokenizer = get_tokenizer("meta-llama/Llama-2-70b-hf", trust_remote_code=False)
     dataset = sample_requests("../../../../ShareGPT_V3_unfiltered_cleaned_split.json", tokenizer)
     data = dataset[0]
+    print(data[1], "-", data[2])
     api_url = f"http://localhost:8000/generate"
 
-    instance_events = generate_poisson_distribution([0.5], 30)[0]
+    instance_events = generate_poisson_distribution([load_reqs], 30)[0]
     after_time, before_time = 0, 0
     st = 0
     threads = []
@@ -147,8 +159,23 @@ def main():
     print("Average latency = ", sum(latencies) / len(latencies))
     print("P50 latency = ", np.percentile(latencies, 50))
     print("P99 latency = ", np.percentile(latencies, 99))
+    print("Average ttft = ", sum(ttfts)/len(ttfts))
+    print("P50 ttft = ", np.percentile(ttfts, 50))
+    print("P99 ttft = ", np.percentile(ttfts, 99))
+
     REQUEST_LATENCY = []
+    ttfts = []
 
 
 if __name__ == "__main__":
-    main()
+    loads = [0.5, 1.5, 3]
+    freqs = [800, 1000, 1200, 1400, 1600, 1800, 1980]
+    loads = [3]
+    freqs = [1980]
+    for freq in freqs:
+        os.system("sudo nvidia-smi -lgc " + str(freq))
+        if freq == 1980:
+            os.system("sudo nvidia-smi -rgc")
+        for load in loads:
+            main(load)
+
