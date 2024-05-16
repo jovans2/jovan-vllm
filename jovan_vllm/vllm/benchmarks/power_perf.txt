@@ -1,0 +1,1824 @@
+GPU clocks set to "(gpuClkMin 800, gpuClkMax 800)" for GPU 00000001:00:00.0
+
+Warning: persistence mode is disabled on device 00000001:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 800, gpuClkMax 800)" for GPU 00000002:00:00.0
+
+Warning: persistence mode is disabled on device 00000002:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 800, gpuClkMax 800)" for GPU 00000003:00:00.0
+
+Warning: persistence mode is disabled on device 00000003:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 800, gpuClkMax 800)" for GPU 00000008:00:00.0
+
+Warning: persistence mode is disabled on device 00000008:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 800, gpuClkMax 800)" for GPU 00000009:00:00.0
+
+Warning: persistence mode is disabled on device 00000009:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 800, gpuClkMax 800)" for GPU 0000000A:00:00.0
+
+Warning: persistence mode is disabled on device 0000000A:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 800, gpuClkMax 800)" for GPU 0000000B:00:00.0
+
+Warning: persistence mode is disabled on device 0000000B:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 800, gpuClkMax 800)" for GPU 0000000C:00:00.0
+
+Warning: persistence mode is disabled on device 0000000C:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+All done.
+/home/azureuser/miniconda3/envs/jovan_vllm/lib/python3.10/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+GPU clocks set to "(gpuClkMin 1000, gpuClkMax 1000)" for GPU 00000001:00:00.0
+
+Warning: persistence mode is disabled on device 00000001:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1000, gpuClkMax 1000)" for GPU 00000002:00:00.0
+
+Warning: persistence mode is disabled on device 00000002:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1000, gpuClkMax 1000)" for GPU 00000003:00:00.0
+
+Warning: persistence mode is disabled on device 00000003:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1000, gpuClkMax 1000)" for GPU 00000008:00:00.0
+
+Warning: persistence mode is disabled on device 00000008:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1000, gpuClkMax 1000)" for GPU 00000009:00:00.0
+
+Warning: persistence mode is disabled on device 00000009:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1000, gpuClkMax 1000)" for GPU 0000000A:00:00.0
+
+Warning: persistence mode is disabled on device 0000000A:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1000, gpuClkMax 1000)" for GPU 0000000B:00:00.0
+
+Warning: persistence mode is disabled on device 0000000B:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1000, gpuClkMax 1000)" for GPU 0000000C:00:00.0
+
+Warning: persistence mode is disabled on device 0000000C:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+All done.
+Open ttft file
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.08493161201477051
+P50 ttft =  0.08118069171905518
+P99 ttft =  0.12943549156188966
+Average tbt =  0.028347110748291018
+P50 tbt =  0.02834479808807373
+P99 tbt =  0.02846130084991455
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.08589698019481841
+P50 ttft =  0.08218741416931152
+P99 ttft =  0.13446764945983888
+Average tbt =  0.02906448500497
+P50 tbt =  0.028890514373779298
+P99 tbt =  0.029614353179931642
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.0952540397644043
+P50 ttft =  0.08377742767333984
+P99 ttft =  0.14883517265319823
+Average tbt =  0.03060897827148438
+P50 tbt =  0.030029487609863282
+P99 tbt =  0.0320914363861084
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.0933133858006175
+P50 ttft =  0.08768391609191895
+P99 ttft =  0.15124564170837404
+Average tbt =  0.031403240343419535
+P50 tbt =  0.03173837661743164
+P99 tbt =  0.03280364990234375
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.09861656665802002
+P50 ttft =  0.08904802799224854
+P99 ttft =  0.15864154338836667
+Average tbt =  0.032377882003784185
+P50 tbt =  0.032266783714294436
+P99 tbt =  0.0331022629737854
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.0989045724272728
+P50 ttft =  0.09043645858764648
+P99 ttft =  0.1662134003639221
+Average tbt =  0.037712085992097896
+P50 tbt =  0.03270113468170166
+P99 tbt =  0.08142767477035551
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.1002822020282484
+P50 ttft =  0.09332275390625
+P99 ttft =  0.15910418510437013
+Average tbt =  0.05765689693085143
+P50 tbt =  0.03546104431152344
+P99 tbt =  0.0996458683013916
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.10570855600288115
+P50 ttft =  0.09536957740783691
+P99 ttft =  0.1817529201507568
+Average tbt =  0.06917757183672439
+P50 tbt =  0.07453312873840387
+P99 tbt =  0.10223763561248779
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.10666120052337646
+P50 ttft =  0.09679293632507324
+P99 ttft =  0.17663049936294553
+Average tbt =  0.09164706291036406
+P50 tbt =  0.10204081535339356
+P99 tbt =  0.10356809616088868
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.10750117301940917
+P50 ttft =  0.09594249725341797
+P99 ttft =  0.18080835342407225
+Average tbt =  0.09103667758759998
+P50 tbt =  0.10302743911743165
+P99 tbt =  0.10464333343505859
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.11216376004395662
+P50 ttft =  0.09981179237365723
+P99 ttft =  0.2321370744705197
+Average tbt =  0.09586292990931762
+P50 tbt =  0.10393078327178956
+P99 tbt =  0.10452885007858276
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.11544957882215996
+P50 ttft =  0.09988951683044434
+P99 ttft =  0.22754939556121823
+Average tbt =  0.10113834813863296
+P50 tbt =  0.10494694709777833
+P99 tbt =  0.16853729248046884
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.12210459568921257
+P50 ttft =  0.10347020626068115
+P99 ttft =  0.2368896961212159
+Average tbt =  0.10016855527372936
+P50 tbt =  0.10622611045837402
+P99 tbt =  0.14777237653732356
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.13016303725864575
+P50 ttft =  0.11234486103057861
+P99 ttft =  0.26712599277496324
+Average tbt =  0.11682177246480753
+P50 tbt =  0.10961406230926514
+P99 tbt =  0.1755555114746094
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.1343091626962026
+P50 ttft =  0.12160158157348633
+P99 ttft =  0.2769492506980895
+Average tbt =  0.10934320953157227
+P50 tbt =  0.11103124618530273
+P99 tbt =  0.1752175145149231
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.14298609683388158
+P50 ttft =  0.13184893131256104
+P99 ttft =  0.27961996793746957
+Average tbt =  0.15315388096006313
+P50 tbt =  0.1635462522506714
+P99 tbt =  0.2562279963493347
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.14959312502930805
+P50 ttft =  0.13954782485961914
+P99 ttft =  0.28409755229949957
+Average tbt =  0.15738513091715386
+P50 tbt =  0.1879148006439209
+P99 tbt =  0.2527426519393922
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.16122625759669712
+P50 ttft =  0.1531050205230713
+P99 ttft =  0.29598030090332017
+Average tbt =  0.16668490845816503
+P50 tbt =  0.1885440826416016
+P99 tbt =  0.2630831289291382
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.06745944420496623
+P50 ttft =  0.06309652328491211
+P99 ttft =  0.10886097192764285
+Average tbt =  0.0228289524714152
+P50 tbt =  0.02289872169494629
+P99 tbt =  0.02306489562988281
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.07297255879356748
+P50 ttft =  0.07135558128356934
+P99 ttft =  0.11546053886413575
+Average tbt =  0.023264953068324493
+P50 tbt =  0.0230194091796875
+P99 tbt =  0.024054508209228515
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.08034695897783552
+P50 ttft =  0.07632851600646973
+P99 ttft =  0.12371047496795651
+Average tbt =  0.02430204255240305
+P50 tbt =  0.02422308921813965
+P99 tbt =  0.025157031059265138
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.07820282331327112
+P50 ttft =  0.07104063034057617
+P99 ttft =  0.12213973999023439
+Average tbt =  0.025038056257294446
+P50 tbt =  0.024561405181884766
+P99 tbt =  0.026941328048706054
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.0804356575012207
+P50 ttft =  0.07264065742492676
+P99 ttft =  0.12968872070312498
+Average tbt =  0.02615584945678711
+P50 tbt =  0.02627871036529541
+P99 tbt =  0.027107450485229494
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.08045442774891853
+P50 ttft =  0.07445251941680908
+P99 ttft =  0.13268610954284665
+Average tbt =  0.027122236043214804
+P50 tbt =  0.026514148712158202
+P99 tbt =  0.03890930366516122
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.08142319444107683
+P50 ttft =  0.0779263973236084
+P99 ttft =  0.12924075126647952
+Average tbt =  0.03402848962235131
+P50 tbt =  0.027005958557128906
+P99 tbt =  0.08186362075805666
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.08294311201716044
+P50 ttft =  0.07771182060241699
+P99 ttft =  0.132926297187805
+Average tbt =  0.041737722488771035
+P50 tbt =  0.029243898391723634
+P99 tbt =  0.08339085483551026
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.08706657937232484
+P50 ttft =  0.07993435859680176
+P99 ttft =  0.140121259689331
+Average tbt =  0.06240345721549184
+P50 tbt =  0.06314635276794478
+P99 tbt =  0.08495881748199463
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.08771447908310663
+P50 ttft =  0.08127546310424805
+P99 ttft =  0.15350799560546868
+Average tbt =  0.06932253383454826
+P50 tbt =  0.08382182121276856
+P99 tbt =  0.08550504493713379
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.08722390510417798
+P50 ttft =  0.08141052722930908
+P99 ttft =  0.15258025169372558
+Average tbt =  0.07557572656207617
+P50 tbt =  0.0859992265701294
+P99 tbt =  0.08706019639968873
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.0935452304968313
+P50 ttft =  0.0801095962524414
+P99 ttft =  0.19438776016235337
+Average tbt =  0.0782217526636204
+P50 tbt =  0.0863957405090332
+P99 tbt =  0.08784710884094238
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.09555100342806648
+P50 ttft =  0.08322787284851074
+P99 ttft =  0.19034463167190555
+Average tbt =  0.07938206791877744
+P50 tbt =  0.0871042013168335
+P99 tbt =  0.08790739297866822
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.09722698425901109
+P50 ttft =  0.08497226238250732
+P99 ttft =  0.18771119832992553
+Average tbt =  0.07795069563216057
+P50 tbt =  0.08758604526519775
+P99 tbt =  0.08828672647476196
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.10209203925397661
+P50 ttft =  0.08684134483337402
+P99 ttft =  0.1913768076896666
+Average tbt =  0.08094125588734946
+P50 tbt =  0.08865633010864257
+P99 tbt =  0.118091940402985
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.10439957443036531
+P50 ttft =  0.09604060649871826
+P99 ttft =  0.1902638030052185
+Average tbt =  0.0876539584837463
+P50 tbt =  0.08904490470886231
+P99 tbt =  0.12467698144912766
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.10704672772709917
+GPU clocks set to "(gpuClkMin 1200, gpuClkMax 1200)" for GPU 00000001:00:00.0
+
+Warning: persistence mode is disabled on device 00000001:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1200, gpuClkMax 1200)" for GPU 00000002:00:00.0
+
+Warning: persistence mode is disabled on device 00000002:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1200, gpuClkMax 1200)" for GPU 00000003:00:00.0
+
+Warning: persistence mode is disabled on device 00000003:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1200, gpuClkMax 1200)" for GPU 00000008:00:00.0
+
+Warning: persistence mode is disabled on device 00000008:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1200, gpuClkMax 1200)" for GPU 00000009:00:00.0
+
+Warning: persistence mode is disabled on device 00000009:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1200, gpuClkMax 1200)" for GPU 0000000A:00:00.0
+
+Warning: persistence mode is disabled on device 0000000A:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1200, gpuClkMax 1200)" for GPU 0000000B:00:00.0
+
+Warning: persistence mode is disabled on device 0000000B:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1200, gpuClkMax 1200)" for GPU 0000000C:00:00.0
+
+Warning: persistence mode is disabled on device 0000000C:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+All done.
+GPU clocks set to "(gpuClkMin 1400, gpuClkMax 1400)" for GPU 00000001:00:00.0
+
+Warning: persistence mode is disabled on device 00000001:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1400, gpuClkMax 1400)" for GPU 00000002:00:00.0
+
+Warning: persistence mode is disabled on device 00000002:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1400, gpuClkMax 1400)" for GPU 00000003:00:00.0
+
+Warning: persistence mode is disabled on device 00000003:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1400, gpuClkMax 1400)" for GPU 00000008:00:00.0
+
+Warning: persistence mode is disabled on device 00000008:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1400, gpuClkMax 1400)" for GPU 00000009:00:00.0
+
+Warning: persistence mode is disabled on device 00000009:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1400, gpuClkMax 1400)" for GPU 0000000A:00:00.0
+
+Warning: persistence mode is disabled on device 0000000A:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1400, gpuClkMax 1400)" for GPU 0000000B:00:00.0
+
+Warning: persistence mode is disabled on device 0000000B:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1400, gpuClkMax 1400)" for GPU 0000000C:00:00.0
+
+Warning: persistence mode is disabled on device 0000000C:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+All done.
+P50 ttft =  0.09507548809051514
+P99 ttft =  0.2071252393722534
+Average tbt =  0.09202404836329026
+P50 tbt =  0.09125099182128907
+P99 tbt =  0.1451914772987366
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.11160986627851213
+P50 ttft =  0.09752845764160156
+P99 ttft =  0.23342614650726318
+Average tbt =  0.10422196769714358
+P50 tbt =  0.1011129379272461
+P99 tbt =  0.15437434387207039
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.061376710732777916
+P50 ttft =  0.058211445808410645
+P99 ttft =  0.09552404880523684
+Average tbt =  0.019706038633982344
+P50 tbt =  0.01972475051879883
+P99 tbt =  0.019981942653656007
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.06480554171970912
+P50 ttft =  0.06493449211120605
+P99 ttft =  0.09757118225097657
+Average tbt =  0.020111626670474097
+P50 tbt =  0.019993686676025392
+P99 tbt =  0.02086921691894531
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.06629593712942941
+P50 ttft =  0.06374859809875488
+P99 ttft =  0.09739159584045408
+Average tbt =  0.02083338873726981
+P50 tbt =  0.02096877098083496
+P99 tbt =  0.021371996879577637
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.06697677402961545
+P50 ttft =  0.06266999244689941
+P99 ttft =  0.1048762321472168
+Average tbt =  0.0215424607439739
+P50 tbt =  0.02128591537475586
+P99 tbt =  0.02305513381958008
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.06625758647918702
+P50 ttft =  0.06121063232421875
+P99 ttft =  0.10325885772705078
+Average tbt =  0.02219186973571777
+P50 tbt =  0.021740436553955078
+P99 tbt =  0.02346586561203003
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.07073397934436798
+P50 ttft =  0.06704258918762207
+P99 ttft =  0.11153736829757688
+Average tbt =  0.024915980547666566
+P50 tbt =  0.02331874370574951
+P99 tbt =  0.05864769077301046
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.06915819155026788
+P50 ttft =  0.06730198860168457
+P99 ttft =  0.11007259368896485
+Average tbt =  0.02452528378734851
+P50 tbt =  0.023729991912841798
+P99 tbt =  0.05202265739440957
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.07242336617894919
+P50 ttft =  0.06845211982727051
+P99 ttft =  0.11318222999572747
+Average tbt =  0.030049980692116642
+P50 tbt =  0.023763418197631836
+P99 tbt =  0.07374788665771484
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.07359628220821948
+P50 ttft =  0.06797206401824951
+P99 ttft =  0.12420778751373251
+Average tbt =  0.03985391068965837
+P50 tbt =  0.02594759464263916
+P99 tbt =  0.07403615522384643
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.0729361647651309
+P50 ttft =  0.06809616088867188
+P99 ttft =  0.11136610984802245
+Average tbt =  0.04860268456595289
+P50 tbt =  0.05474419593811075
+P99 tbt =  0.07518957519531251
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.07384383899194223
+P50 ttft =  0.06837928295135498
+P99 ttft =  0.12905495405197137
+Average tbt =  0.056322084532843764
+P50 tbt =  0.07417595386505127
+P99 tbt =  0.0761630825996399
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.07676097525268041
+P50 ttft =  0.07269883155822754
+P99 ttft =  0.1292776584625244
+Average tbt =  0.06415436528310056
+P50 tbt =  0.07600774765014648
+P99 tbt =  0.07716313076019286
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.08187206177150502
+P50 ttft =  0.07305097579956055
+P99 ttft =  0.15324571132659925
+Average tbt =  0.06795318372109359
+P50 tbt =  0.07683696746826171
+P99 tbt =  0.07866511583328248
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.08201713838439056
+P50 ttft =  0.07363474369049072
+P99 ttft =  0.15341814756393432
+Average tbt =  0.07006808778514031
+P50 tbt =  0.07703232765197754
+P99 tbt =  0.07793999338150025
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.08510529498259227
+P50 ttft =  0.07513165473937988
+P99 ttft =  0.1581636834144591
+Average tbt =  0.07046908338864645
+P50 tbt =  0.07781260013580323
+P99 tbt =  0.0785101261138916
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.08589403095998262
+P50 ttft =  0.07596063613891602
+P99 ttft =  0.15134452342987062
+Average tbt =  0.07042116836497658
+P50 tbt =  0.07851245403289794
+P99 tbt =  0.0903873305320743
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.08751798112217973
+P50 ttft =  0.07584536075592041
+P99 ttft =  0.1561743927001953
+Average tbt =  0.07022400571078789
+P50 tbt =  0.07931299209594728
+P99 tbt =  0.08118138551712037
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.09046246937343053
+P50 ttft =  0.07874298095703125
+P99 ttft =  0.16646209716796873
+Average tbt =  0.07376674897330153
+P50 tbt =  0.07939262390136718
+P99 tbt =  0.11167396640777628
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.054429848988850914
+P50 ttft =  0.04806983470916748
+P99 ttft =  0.08547904729843141
+Average tbt =  0.01794309218724569
+P50 tbt =  0.01796090602874756
+P99 tbt =  0.01823225784301758
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.0523658934093657
+P50 ttft =  0.049612998962402344
+P99 ttft =  0.0819276809692383
+Average tbt =  0.018430659884498234
+P50 tbt =  0.018387556076049805
+P99 tbt =  0.019148759841918946
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.058929518290928434
+P50 ttft =  0.054776906967163086
+P99 ttft =  0.09209120750427245
+Average tbt =  0.018878702436174667
+P50 tbt =  0.018974828720092773
+P99 tbt =  0.019550804138183595
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.05752673381712378
+P50 ttft =  0.05399966239929199
+P99 ttft =  0.0900432586669922
+Average tbt =  0.01955509185791016
+P50 tbt =  0.0193267822265625
+P99 tbt =  0.021098413467407227
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.06028057098388672
+P50 ttft =  0.05558180809020996
+P99 ttft =  0.09406184434890746
+Average tbt =  0.020272798538208008
+P50 tbt =  0.019838070869445803
+P99 tbt =  0.02174126434326172
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.06014757230877876
+P50 ttft =  0.057195186614990234
+P99 ttft =  0.09429467916488646
+Average tbt =  0.02147371172904969
+P50 tbt =  0.02108721733093262
+P99 tbt =  0.031161356449127264
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.06060896507681233
+P50 ttft =  0.057019948959350586
+P99 ttft =  0.09702488899230957
+Average tbt =  0.02315774421169334
+P50 tbt =  0.021841382980346682
+P99 tbt =  0.06236510848999024
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.06088566205587732
+P50 ttft =  0.058028459548950195
+P99 ttft =  0.0948323059082031
+Average tbt =  0.022778126130621135
+P50 tbt =  0.021977615356445313
+P99 tbt =  0.046808954238891955
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.06124107888404359
+P50 ttft =  0.05823194980621338
+P99 ttft =  0.09744873046875
+Average tbt =  0.02779831581927363
+P50 tbt =  0.022514438629150396
+P99 tbt =  0.06619794750213623
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.06447906267075311
+P50 ttft =  0.061187744140625
+P99 ttft =  0.09893655776977538
+Average tbt =  0.038794309071132176
+P50 tbt =  0.024155282974243165
+P99 tbt =  0.06641145706176757
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.06467856742717602
+P50 ttft =  0.06134474277496338
+P99 ttft =  0.09644860029220581
+Average tbt =  0.046656755164817584
+P50 tbt =  0.04997987747192417
+P99 tbt =  0.06776577281951905
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.06576942195411489
+P50 ttft =  0.061853885650634766
+P99 ttft =  0.11737471103668208
+Average tbt =  0.04836898290810467
+P50 tbt =  0.050868988037109736
+P99 tbt =  0.068475341796875
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.07016094116603627
+P50 ttft =  0.06407606601715088
+P99 ttft =  0.13758744001388554
+Average tbt =  0.05737798003589403
+P50 tbt =  0.06785867214202881
+P99 tbt =  0.06881920099258422
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.07112185505853183
+P50 ttft =  0.06481361389160156
+P99 ttft =  0.13123463153839107
+Average tbt =  0.060125749698583676
+P50 tbt =  0.06886644363403321
+P99 tbt =  0.0701243119239807
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.07368199030558269
+P50 ttft =  0.06589019298553467
+P99 ttft =  GPU clocks set to "(gpuClkMin 1600, gpuClkMax 1600)" for GPU 00000001:00:00.0
+
+Warning: persistence mode is disabled on device 00000001:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1600, gpuClkMax 1600)" for GPU 00000002:00:00.0
+
+Warning: persistence mode is disabled on device 00000002:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1600, gpuClkMax 1600)" for GPU 00000003:00:00.0
+
+Warning: persistence mode is disabled on device 00000003:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1600, gpuClkMax 1600)" for GPU 00000008:00:00.0
+
+Warning: persistence mode is disabled on device 00000008:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1600, gpuClkMax 1600)" for GPU 00000009:00:00.0
+
+Warning: persistence mode is disabled on device 00000009:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1600, gpuClkMax 1600)" for GPU 0000000A:00:00.0
+
+Warning: persistence mode is disabled on device 0000000A:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1600, gpuClkMax 1600)" for GPU 0000000B:00:00.0
+
+Warning: persistence mode is disabled on device 0000000B:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1600, gpuClkMax 1600)" for GPU 0000000C:00:00.0
+
+Warning: persistence mode is disabled on device 0000000C:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+All done.
+GPU clocks set to "(gpuClkMin 1800, gpuClkMax 1800)" for GPU 00000001:00:00.0
+
+Warning: persistence mode is disabled on device 00000001:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1800, gpuClkMax 1800)" for GPU 00000002:00:00.0
+
+Warning: persistence mode is disabled on device 00000002:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1800, gpuClkMax 1800)" for GPU 00000003:00:00.0
+
+Warning: persistence mode is disabled on device 00000003:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1800, gpuClkMax 1800)" for GPU 00000008:00:00.0
+
+Warning: persistence mode is disabled on device 00000008:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1800, gpuClkMax 1800)" for GPU 00000009:00:00.0
+
+Warning: persistence mode is disabled on device 00000009:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1800, gpuClkMax 1800)" for GPU 0000000A:00:00.0
+
+Warning: persistence mode is disabled on device 0000000A:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1800, gpuClkMax 1800)" for GPU 0000000B:00:00.0
+
+Warning: persistence mode is disabled on device 0000000B:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1800, gpuClkMax 1800)" for GPU 0000000C:00:00.0
+
+Warning: persistence mode is disabled on device 0000000C:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+All done.
+0.1329973077774048
+Average tbt =  0.061766590674718264
+P50 tbt =  0.0691946029663086
+P99 tbt =  0.0700437331199646
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.07286589710335982
+P50 ttft =  0.06536412239074707
+P99 ttft =  0.14057047367095957
+Average tbt =  0.06152953505516052
+P50 tbt =  0.06956844329833983
+P99 tbt =  0.07068204116821289
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.07571643590927124
+P50 ttft =  0.0663154125213623
+P99 ttft =  0.15404314756393434
+Average tbt =  0.06133518480673075
+P50 tbt =  0.07048556804656983
+P99 tbt =  0.07245034551620484
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.07603669439043317
+P50 ttft =  0.06783771514892578
+P99 ttft =  0.13902017593383786
+Average tbt =  0.06655215099879677
+P50 tbt =  0.07083592414855958
+P99 tbt =  0.11486104774475099
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.05129891633987427
+P50 ttft =  0.04674673080444336
+P99 ttft =  0.0841638493537903
+Average tbt =  0.01697920560836792
+P50 tbt =  0.016977024078369138
+P99 tbt =  0.01729927110671997
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.05086501439412435
+P50 ttft =  0.047074317932128906
+P99 ttft =  0.08060545921325686
+Average tbt =  0.01745105470929827
+P50 tbt =  0.017397308349609376
+P99 tbt =  0.01811309814453125
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.05793056488037109
+P50 ttft =  0.05467486381530762
+P99 ttft =  0.08394462585449218
+Average tbt =  0.017924717494419644
+P50 tbt =  0.018028736114501953
+P99 tbt =  0.01873840045928955
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.05696286806246129
+P50 ttft =  0.05570220947265625
+P99 ttft =  0.08399047851562501
+Average tbt =  0.018403556870251168
+P50 tbt =  0.01834077835083008
+P99 tbt =  0.01962626457214356
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.058316121101379396
+P50 ttft =  0.05440652370452881
+P99 ttft =  0.08755557060241699
+Average tbt =  0.019062161445617676
+P50 tbt =  0.018715214729309083
+P99 tbt =  0.020625656604766847
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.05861929431557655
+P50 ttft =  0.05645644664764404
+P99 ttft =  0.08836079597473144
+Average tbt =  0.020347471535205847
+P50 tbt =  0.019948244094848633
+P99 tbt =  0.030174176216125552
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.057573511175913354
+P50 ttft =  0.055474042892456055
+P99 ttft =  0.08748687744140625
+Average tbt =  0.020499089646012818
+P50 tbt =  0.020583391189575195
+P99 tbt =  0.02200606536865235
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.061594055359622084
+P50 ttft =  0.05727839469909668
+P99 ttft =  0.16382656574249266
+Average tbt =  0.022048329732504233
+P50 tbt =  0.020779132843017578
+P99 tbt =  0.06026961994171143
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.059570315036367866
+P50 ttft =  0.056594133377075195
+P99 ttft =  0.0897704863548278
+Average tbt =  0.022640116671298418
+P50 tbt =  0.021059298515319826
+P99 tbt =  0.04724128007888816
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.059958031063988095
+P50 ttft =  0.05708026885986328
+P99 ttft =  0.09262042999267578
+Average tbt =  0.03422865822201688
+P50 tbt =  0.022700119018554687
+P99 tbt =  0.06356167411804199
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.05943398122434263
+P50 ttft =  0.056507229804992676
+P99 ttft =  0.0959146308898925
+Average tbt =  0.04179782690825289
+P50 tbt =  0.0461397171020511
+P99 tbt =  0.06447760057449341
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.06325227472962451
+P50 ttft =  0.05930614471435547
+P99 ttft =  0.10403344154357906
+Average tbt =  0.04837677538895813
+P50 tbt =  0.06293458938598633
+P99 tbt =  0.06560207366943359
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.06680081872379079
+P50 ttft =  0.06077408790588379
+P99 ttft =  0.11668213605880738
+Average tbt =  0.05181637055733629
+P50 tbt =  0.06423735618591309
+P99 tbt =  0.06536849975585939
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.06664824313011722
+P50 ttft =  0.060714125633239746
+P99 ttft =  0.12114991664886471
+Average tbt =  0.055962926408518944
+P50 tbt =  0.06507093906402589
+P99 tbt =  0.06664719724655152
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.06691586640146044
+P50 ttft =  0.06217384338378906
+P99 ttft =  0.1259576010704039
+Average tbt =  0.05681662824418811
+P50 tbt =  0.065838623046875
+P99 tbt =  0.06741759443283081
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.0686122084918775
+P50 ttft =  0.0626915693283081
+P99 ttft =  0.1171080565452576
+Average tbt =  0.05813235452300627
+P50 tbt =  0.0660036325454712
+P99 tbt =  0.06700242137908935
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.06786990311087632
+P50 ttft =  0.062471866607666016
+P99 ttft =  0.12256859302520756
+Average tbt =  0.058218701292828814
+P50 tbt =  0.06644728183746337
+P99 tbt =  0.0677485547065735
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.07135081018720354
+P50 ttft =  0.06524205207824707
+P99 ttft =  0.12494727611541734
+Average tbt =  0.06010408428737099
+P50 tbt =  0.06753573417663575
+P99 tbt =  0.06993472480773927
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.05115598440170288
+P50 ttft =  0.046564579010009766
+P99 ttft =  0.08076553583145143
+Average tbt =  0.016507160663604737
+P50 tbt =  0.016467857360839847
+P99 tbt =  0.01684741449356079
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.05094673520042783
+P50 ttft =  0.04804563522338867
+P99 ttft =  0.08096122741699222
+Average tbt =  0.01697716258821033
+P50 tbt =  0.01679263114929199
+P99 tbt =  0.017747907638549804
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.055807243074689594
+P50 ttft =  0.05235552787780762
+P99 ttft =  0.08364619255065917
+Average tbt =  0.017404433659144812
+P50 tbt =  0.017616891860961915
+P99 tbt =  0.018167579650878906
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.054168613945565575
+P50 ttft =  0.052466630935668945
+P99 ttft =  0.08249378204345703
+Average tbt =  0.017773406098528607
+P50 tbt =  0.017830801010131837
+P99 tbt =  0.018358020782470702
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.05653624534606934
+P50 ttft =  0.053938865661621094
+P99 ttft =  0.08249308586120606
+Average tbt =  0.01859158229827881
+P50 tbt =  0.01831355094909668
+P99 tbt =  0.02002924394607544
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.05670899152755737
+P50 ttft =  0.05491220951080322
+P99 ttft =  0.08315518140792846
+Average tbt =  0.020391986519098293
+P50 tbt =  0.019582223892211915
+P99 tbt =  0.050465418338775804
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.05779648806950818
+P50 ttft =  0.05664324760437012
+P99 ttft =  0.08388236045837402
+Average tbt =  0.02064023017883301
+P50 tbt =  0.019983386993408205
+P99 tbt =  0.04389767265319857
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.056837007223841655
+P50 ttft =  0.05444741249084473
+P99 ttft =  0.08506113529205321
+Average tbt =  0.020784804907189803
+P50 tbt =  0.02018108367919922
+P99 tbt =  0.04402038574218782
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.05852322882794319
+P50 ttft =  0.0567934513092041
+P99 ttft =  0.08626531839370717
+Average tbt =  0.021746039390563975
+P50 tbt =  0.02055652141571045
+P99 tbt =  0.04579851531982442
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.05900534448169527
+P50 ttft =  0.057515621185302734
+P99 ttft =  0.08563981056213378
+Average tbt =  0.03164268539065411
+P50 tbt =  0.022053909301757813
+P99 tbt =  0.062352142333984374
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.061897469891442194
+P50 ttft =  0.05849170684814453
+P99 ttft =  0.10874442338943476
+Average tbt =  0.038647885675783554
+P50 tbt =  0.02291393280029297
+P99 tbt =  0.0641599097251892
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.06162747214822208
+P50 ttft =  0.05746936798095703
+P99 ttft =  0.09368596076965331
+Average tbt =  0.044354156285774896
+P50 tbt =  0.04721207618713412
+P99 tbt =  0.0643799991607666
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average ttft =  0.06534194946289062
+P50 ttft =  0.0608295202255249
+P99 ttft =  0.1077573895454407
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 00000001:00:00.0
+
+Warning: persistence mode is disabled on device 00000001:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 00000002:00:00.0
+
+Warning: persistence mode is disabled on device 00000002:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 00000003:00:00.0
+
+Warning: persistence mode is disabled on device 00000003:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 00000008:00:00.0
+
+Warning: persistence mode is disabled on device 00000008:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 00000009:00:00.0
+
+Warning: persistence mode is disabled on device 00000009:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 0000000A:00:00.0
+
+Warning: persistence mode is disabled on device 0000000A:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 0000000B:00:00.0
+
+Warning: persistence mode is disabled on device 0000000B:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 0000000C:00:00.0
+
+Warning: persistence mode is disabled on device 0000000C:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+All done.
+All done.

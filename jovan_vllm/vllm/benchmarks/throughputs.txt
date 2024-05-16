@@ -1,0 +1,233 @@
+/home/azureuser/miniconda3/envs/jovan_vllm/lib/python3.10/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Open ttft file
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average latency =  2.033254604994519
+P50 latency =  1.8711194559873547
+P99 latency =  2.4566565618797904
+Average ttft =  0.3003361225128174
+P50 ttft =  0.3055424690246582
+P99 ttft =  0.32286881923675537
+Average tbt =  0.016465650285993307
+P50 tbt =  0.016458511352539062
+P99 tbt =  0.016785329818725585
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average latency =  2.1950800864646833
+P50 latency =  2.138309154979652
+P99 latency =  2.971437307555461
+Average ttft =  0.2984971841176351
+P50 ttft =  0.294482946395874
+P99 ttft =  0.33773375511169434
+Average tbt =  0.016809870402018225
+P50 tbt =  0.016693878173828124
+P99 tbt =  0.01770767116546631
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average latency =  2.1790726092616466
+P50 latency =  2.1621741539856885
+P99 latency =  2.976911129420041
+Average ttft =  0.2969581202456826
+P50 ttft =  0.29090404510498047
+P99 ttft =  0.3554857349395752
+Average tbt =  0.01668446440445749
+P50 tbt =  0.01660785675048828
+P99 tbt =  0.017431958198547363
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average latency =  2.2025140684843065
+P50 latency =  2.1820351280039176
+P99 latency =  2.9277812833071217
+Average ttft =  0.303456563949585
+P50 ttft =  0.30231547355651855
+P99 ttft =  0.3505110359191894
+Average tbt =  0.016728845596313477
+P50 tbt =  0.01657261848449707
+P99 tbt =  0.01765935325622559
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average latency =  2.609822767912244
+P50 latency =  2.467490167997312
+P99 latency =  3.729835576277109
+Average ttft =  0.3062602996826172
+P50 ttft =  0.2996644973754883
+P99 ttft =  0.36313974380493164
+Average tbt =  0.017348474775041856
+P50 tbt =  0.017497825622558593
+P99 tbt =  0.018298398971557616
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average latency =  2.9945546979433857
+P50 latency =  2.8455143329920247
+P99 latency =  5.123700570110232
+Average ttft =  0.3298526437659013
+P50 ttft =  0.3235907554626465
+P99 ttft =  0.44544212579727177
+Average tbt =  0.018146949065359016
+P50 tbt =  0.017414093017578125
+P99 tbt =  0.02008296728134155
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average latency =  2.9932041844902817
+P50 latency =  2.830999386002077
+P99 latency =  4.69527743344428
+Average ttft =  0.3096618970235189
+P50 ttft =  0.3020138740539551
+P99 ttft =  0.4192361450195314
+Average tbt =  0.018302854961819118
+P50 tbt =  0.017819976806640624
+P99 tbt =  0.020183792114257814
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average latency =  3.1599970665201544
+P50 latency =  3.1486585149978055
+P99 latency =  4.564957929392403
+Average ttft =  0.3179043817520142
+P50 ttft =  0.311487078666687
+P99 ttft =  0.4405684494972229
+Average tbt =  0.018704610824584963
+P50 tbt =  0.018247509002685548
+P99 tbt =  0.020239860534667968
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average latency =  3.4024595244808116
+P50 latency =  3.204484178495477
+P99 latency =  4.897839493500069
+Average ttft =  0.31907634823410597
+P50 ttft =  0.30905580520629883
+P99 ttft =  0.41103209018707276
+Average tbt =  0.018988618144282588
+P50 tbt =  0.019294333457946778
+P99 tbt =  0.020277105808258058
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average latency =  3.775323241438855
+P50 latency =  3.800596699977177
+P99 latency =  5.287396448112849
+Average ttft =  0.32907992973923683
+P50 ttft =  0.32388007640838623
+P99 ttft =  0.4536026406288145
+Average tbt =  0.019771873950958252
+P50 tbt =  0.019918966293334964
+P99 tbt =  0.020382636547088624
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Average latency =  3.946697021827484
+P50 latency =  3.84424079299788
+P99 latency =  5.428695969620312
+Average ttft =  0.32638284138270784
+P50 ttft =  0.32113564014434814
+P99 ttft =  0.43769538164138805
+Average tbt =  0.020253308159964418
+P50 tbt =  0.02015812397003174
+P99 tbt =  0.021687100410461426
+96
+256
+600
+96
+256
+600
+96
+256
+600
+467 - 96
+Traceback (most recent call last):
+  File "/home/azureuser/jovan-vllm/jovan_vllm/vllm/benchmarks/benchmark_load.py", line 240, in <module>
+    ttft = main(load, reqt)
+  File "/home/azureuser/jovan-vllm/jovan_vllm/vllm/benchmarks/benchmark_load.py", line 202, in main
+    time.sleep(st)
+KeyboardInterrupt
+Exception ignored in: <module 'threading' from '/home/azureuser/miniconda3/envs/jovan_vllm/lib/python3.10/threading.py'>
+Traceback (most recent call last):
+  File "/home/azureuser/miniconda3/envs/jovan_vllm/lib/python3.10/threading.py", line 1567, in _shutdown
+    lock.acquire()
+KeyboardInterrupt: 

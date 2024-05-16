@@ -221,18 +221,25 @@ def main(load_reqs, reqt):
     print("P50 tbt = ", np.percentile(tbts, 50))
     print("P99 tbt = ", np.percentile(tbts, 99))
     REQUEST_LATENCY = []
-    ttfts = []
+    # ttfts = []
 
     return np.percentile(ttfts, 99)
 
 
 if __name__ == "__main__":
+    # global ttfts
+    # global tbts
+
     SLOs = [1.5, 1.5, 1.5, 2, 2, 2, 3, 3, 3]
-    for reqt in range(9):
-        load = 0
+    for reqt in range(1):
+        load = float(sys.argv[1])
         while True:
             load += 0.2
-            ttft = main(load, reqt)
+            ttfts = []
+            tbts = []
+            reqtt = int(sys.argv[2])
+            ttft = main(load, reqtt)
+            break
             if ttft >= SLOs[reqt]:
                 print("Throughput = ", load - 0.2)
                 break

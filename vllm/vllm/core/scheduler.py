@@ -167,12 +167,14 @@ class Scheduler:
 
         # Blocks that need to be swaped or copied before model execution.
         blocks_to_swap_in: Dict[int, int] = {}
+
         blocks_to_swap_out: Dict[int, int] = {}
         blocks_to_copy: Dict[int, List[int]] = {}
 
         # Fix the current time.
         now = time.monotonic()
-
+        # os.system("sudo nvidia-smi -rgc > /dev/null 2>&1")
+        # subprocess.Popen(["sudo", "nvidia-smi", "-rgc"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         # Join waiting sequences if possible.
         if not self.swapped:
             ignored_seq_groups: List[SequenceGroup] = []
@@ -264,11 +266,11 @@ class Scheduler:
 
             # freq = 1980
             # os.system("sudo nvidia-smi -lgc " + str(freq) + " > /dev/null 2>&1")
-
+            # os.system("sudo nvidia-smi -rgc > /dev/null 2>&1")
             if scheduled or ignored_seq_groups:
                 
-                freq = 1980
-                os.system("sudo nvidia-smi -lgc " + str(freq) + " > /dev/null 2>&1")
+                # freq = 1980
+                # os.system("sudo nvidia-smi -lgc " + str(freq) + " > /dev/null 2>&1")
 
                 scheduler_outputs = SchedulerOutputs(
                     scheduled_seq_groups=scheduled,
