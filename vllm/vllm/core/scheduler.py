@@ -2,6 +2,7 @@ from collections import deque
 import enum
 import time
 import os
+import subprocess
 from typing import Deque, Dict, Iterable, List, Optional, Tuple, Union, Set
 
 from vllm.config import CacheConfig, LoRAConfig, SchedulerConfig
@@ -174,7 +175,7 @@ class Scheduler:
         # Fix the current time.
         now = time.monotonic()
         # os.system("sudo nvidia-smi -rgc > /dev/null 2>&1")
-        # subprocess.Popen(["sudo", "nvidia-smi", "-rgc"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        subprocess.Popen(["sudo", "nvidia-smi", "-rgc"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         # Join waiting sequences if possible.
         if not self.swapped:
             ignored_seq_groups: List[SequenceGroup] = []

@@ -5,10 +5,6 @@ from pyomo.environ import *
 import sys
 import time
 
-N = int(sys.argv[1])
-TL = float(sys.argv[2])
-RQT = int(sys.argv[3])
-
 
 def calculate_average_signal(signal_values, energy_values, idle_threshold, count_threshold):
     segments = []
@@ -204,122 +200,157 @@ for reqt in range(9):
             if freq == 6:
                 energies_tp2.append(segments_power_tp2[index - 1])
 
-max_load_tp2 = [5.0, 2.5, 1.0, 2.5, 1.0, 0.5, 0.0, 0.0, 0.0]
-max_load_tp4 = [7.0, 5.5, 4.0, 3.0, 3.0, 2.5, 2.0, 1.5, 1.0]
-max_load_tp8 = [9.5, 7.0, 5.0, 3.5, 3.5, 3.0, 2.5, 2.0, 1.5]
 
-t1 = time.time()
-max1 = max_load_tp2[RQT]
-max2 = max_load_tp4[RQT]
-max3 = max_load_tp8[RQT]
-
-max_load_tp2 = [7, 5, 4, 3, 3, 2.5, 2, 2, 1.5]
-max_load_tp4 = [7, 5, 4, 3, 3, 2.5, 2, 2, 1.5]
-max_load_tp8 = [9, 7, 5, 3.5, 3.5, 3, 2, 2, 1.5]
-
-load_values1 = [0]
-ml_1 = max_load_tp2[RQT]
-val_l = 0.5
-while val_l <= ml_1:
-    load_values1.append(val_l)
-    val_l += 0.5
-load_values2 = [0]
-ml_1 = max_load_tp4[RQT]
-val_l = 0.5
-while val_l <= ml_1:
-    load_values2.append(val_l)
-    val_l += 0.5
-load_values3 = [0]
-ml_1 = max_load_tp8[RQT]
-val_l = 0.5
-while val_l <= ml_1:
-    load_values3.append(val_l)
-    val_l += 0.5
-
-E1_values = []
-prev_values = 0
-for indR in range(RQT):
-    prev_values += max_load_tp2[indR] * 2
-prev_values = int(prev_values)
-for indR in range(int(2 * max_load_tp2[RQT])):
-    if indR == 0:
+def compute_optimal_shard(N, TL, RQT):
+    t1 = time.time()
+    max_load_tp2 = [5.0, 2.5, 1.0, 2.5, 1.0, 0.5, 0.0, 0.0, 0.0]
+    max_load_tp4 = [7.0, 5.5, 4.0, 3.0, 2.6, 1.6, 2.0, 1.5, 0.5]
+    max_load_tp8 = [9.5, 7.0, 5.0, 3.5, 3.5, 3.0, 2.5, 2.0, 1.9]
+    
+    max1 = max_load_tp2[RQT]
+    max2 = max_load_tp4[RQT]
+    max3 = max_load_tp8[RQT]
+    
+    max_load_tp2 = [7, 5, 4, 3, 3, 2.5, 2, 2, 1.5]
+    max_load_tp4 = [7, 5, 4, 3, 3, 2.5, 2, 2, 1.5]
+    max_load_tp8 = [9, 7, 5, 3.5, 3.5, 3, 2, 2, 1.5]
+    
+    load_values1 = [0]
+    ml_1 = max_load_tp2[RQT]
+    val_l = 0.5
+    while val_l <= ml_1:
+        load_values1.append(val_l)
+        val_l += 0.5
+    load_values2 = [0]
+    ml_1 = max_load_tp4[RQT]
+    val_l = 0.5
+    while val_l <= ml_1:
+        load_values2.append(val_l)
+        val_l += 0.5
+    load_values3 = [0]
+    ml_1 = max_load_tp8[RQT]
+    val_l = 0.5
+    while val_l <= ml_1:
+        load_values3.append(val_l)
+        val_l += 0.5
+    
+    E1_values = []
+    prev_values = 0
+    for indR in range(RQT):
+        prev_values += max_load_tp2[indR] * 2
+    prev_values = int(prev_values)
+    for indR in range(int(2 * max_load_tp2[RQT])):
+        if indR == 0:
+            E1_values.append(energies_tp2[prev_values + indR])
         E1_values.append(energies_tp2[prev_values + indR])
-    E1_values.append(energies_tp2[prev_values + indR])
-
-E2_values = []
-prev_values = 0
-for indR in range(RQT):
-    prev_values += max_load_tp4[indR] * 2
-prev_values = int(prev_values)
-for indR in range(int(2 * max_load_tp4[RQT])):
-    if indR == 0:
+    
+    E2_values = []
+    prev_values = 0
+    for indR in range(RQT):
+        prev_values += max_load_tp4[indR] * 2
+    prev_values = int(prev_values)
+    for indR in range(int(2 * max_load_tp4[RQT])):
+        if indR == 0:
+            E2_values.append(energies_tp4[prev_values + indR])
         E2_values.append(energies_tp4[prev_values + indR])
-    E2_values.append(energies_tp4[prev_values + indR])
-
-E3_values = []
-prev_values = 0
-for indR in range(RQT):
-    prev_values += max_load_tp8[indR] * 2
-prev_values = int(prev_values)
-for indR in range(int(2 * max_load_tp8[RQT])):
-    if indR == 0:
+    
+    E3_values = []
+    prev_values = 0
+    for indR in range(RQT):
+        prev_values += max_load_tp8[indR] * 2
+    prev_values = int(prev_values)
+    for indR in range(int(2 * max_load_tp8[RQT])):
+        if indR == 0:
+            E3_values.append(energies_tp8[prev_values + indR])
         E3_values.append(energies_tp8[prev_values + indR])
-    E3_values.append(energies_tp8[prev_values + indR])
+    
+    def e1_func(num):
+        a, b = np.polyfit(load_values1, E1_values, 1)
+        return a * num + b
+    
+    
+    def e2_func(num):
+        a, b = np.polyfit(load_values2, E2_values, 1)
+        return a * num + b
+    
+    
+    def e3_func(num):
+        a, b = np.polyfit(load_values3, E3_values, 1)
+        return a * num + b
+    
+    # Create a ConcreteModel
+    model = ConcreteModel()
+    
+    # Define decision variables
+    model.N1 = Var(within=NonNegativeIntegers)
+    model.N2 = Var(within=NonNegativeIntegers)
+    model.N3 = Var(within=NonNegativeIntegers)
+    model.L1 = Var(within=NonNegativeReals)
+    model.L2 = Var(within=NonNegativeReals)
+    model.L3 = Var(within=NonNegativeReals)
+    
+    # Define objective function
+    model.obj = Objective(expr=model.N1 * e1_func(model.L1) + model.N2 * e2_func(model.L2) + model.N3 * e3_func(model.L3), sense=minimize)
+    
+    # Define constraints
+    model.const1 = Constraint(expr=1/4 * model.N1 + 1/2 * model.N2 + model.N3 <= N)
+    model.const2 = Constraint(expr=model.L1 * model.N1 + model.L2 * model.N2 + model.L3 * model.N3 == TL)
+    model.const3 = Constraint(expr=model.L1 <= max1)
+    model.const4 = Constraint(expr=model.L2 <= max2)
+    model.const5 = Constraint(expr=model.L3 <= max3)
+    
+    # Nonlinear constraint bounds
+    model.const6 = Constraint(expr=model.L1 >= 0)
+    model.const7 = Constraint(expr=model.L2 >= 0)
+    model.const8 = Constraint(expr=model.L3 >= 0)
+    
+    # Solve the optimization problem
+    solver = SolverFactory('mindtpy')
+    results = solver.solve(model, mip_solver='glpk', nlp_solver='ipopt')
+    t2 = time.time()
+    # Print the optimal values of decision variables
+    print("Optimal values:")
+    print("N1:", model.N1.value)
+    print("N2:", model.N2.value)
+    print("N3:", model.N3.value)
+    print("Time = ", t2-t1)
 
-E1_function = interp1d(load_values1, E1_values, kind='linear', fill_value='extrapolate')
-E2_function = interp1d(load_values2, E2_values, kind='linear', fill_value='extrapolate')
-E3_function = interp1d(load_values3, E3_values, kind='linear', fill_value='extrapolate')
+Ns = [6, 6, 6, 6, 4, 4, 4, 4, 4, 4, 4, 4]
+TLs = [8.035248672139064, 6.705987445678416, 6.269000482858523, 4.835248672139063, 6.296764847899565, 5.127522935779816, 3.4509174311926603, 3.31542732979237, 5.8266537904394005, 3.1982617093191688, 6.866006760019314, 6.137952679864799]
+RQT = 8
+
+Ns = [1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3]
+TLs = [2.2, 2.2, 2.2, 2.2, 4.4, 4.4, 4.4, 4.4, 5.6, 6.6, 3.6, 4.0]
+RQT = 7
+
+Ns = [2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1]
+TLs = [3, 4.8, 4.8, 3, 4.8, 4.8, 4.8, 3, 4, 4, 3, 2]
+RQT = 6
+
+Ns = [3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2]
+TLs = [8.372587917042381, 8.2636789900811541, 7.004688908926962, 8.372587917042381, 5.908385933273219, 5.976284941388638, 5.431109107303877, 4.431109107303877, 5.3404869251578, 5.7404869251578, 5.7404869251578, 5.2622182146077545]
+RQT = 5
 
 
-def e1_func(num):
-    a, b = np.polyfit(load_values1, E1_values, 1)
-    return a * num + b
+Ns = [1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2]
+TLs = [5.0, 5.2, 4.0, 5.0, 5.2, 5.2, 3.5, 3.5, 7.0, 6.0, 4.0, 5.0]
+RQT = 4
 
 
-def e2_func(num):
-    a, b = np.polyfit(load_values2, E2_values, 1)
-    return a * num + b
+Ns = [3, 3, 4, 4]
+TLs = [1, 1, 1, 1]
+RQT = 3
 
 
-def e3_func(num):
-    a, b = np.polyfit(load_values3, E3_values, 1)
-    return a * num + b
+Ns = [1, 1, 1, 1, 1, 1, 1, 1]
+TLs = [2.0999999999999996, 0.09999999999999964, 1.0999999999999996, 2.0999999999999996, 4.1, 5.1, 6.1, 6.1, 3.0999999999999996, 3.0999999999999996, 3.0999999999999996, 7.0]
+RQT = 2
 
-# Create a ConcreteModel
-model = ConcreteModel()
+Ns = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+TLs = [8.0, 7.0, 8.0, 9.0, 10.0, 11.0, 11.0, 11.0, 10.0, 9.0, 9.0, 6.0]
+RQT = 1
 
-# Define decision variables
-model.N1 = Var(within=NonNegativeIntegers)
-model.N2 = Var(within=NonNegativeIntegers)
-model.N3 = Var(within=NonNegativeIntegers)
-model.L1 = Var(within=NonNegativeReals)
-model.L2 = Var(within=NonNegativeReals)
-model.L3 = Var(within=NonNegativeReals)
-
-# Define objective function
-model.obj = Objective(expr=model.N1 * e1_func(model.L1) + model.N2 * e2_func(model.L2) + model.N3 * e3_func(model.L3), sense=minimize)
-
-# Define constraints
-model.const1 = Constraint(expr=1/4 * model.N1 + 1/2 * model.N2 + model.N3 <= N)
-model.const2 = Constraint(expr=model.L1 * model.N1 + model.L2 * model.N2 + model.L3 * model.N3 == TL)
-model.const3 = Constraint(expr=model.L1 <= max1)
-model.const4 = Constraint(expr=model.L2 <= max2)
-model.const5 = Constraint(expr=model.L3 <= max3)
-
-# Nonlinear constraint bounds
-model.const6 = Constraint(expr=model.L1 >= 0)
-model.const7 = Constraint(expr=model.L2 >= 0)
-model.const8 = Constraint(expr=model.L3 >= 0)
-
-# Solve the optimization problem
-solver = SolverFactory('mindtpy')
-results = solver.solve(model, mip_solver='glpk', nlp_solver='ipopt')
-t2 = time.time()
-# Print the optimal values of decision variables
-print("Optimal values:")
-print("N1:", model.N1.value)
-print("N2:", model.N2.value)
-print("N3:", model.N3.value)
-print("Time = ", t2-t1)
+for ind, n in enumerate(Ns):
+    compute_optimal_shard(n, TLs[ind], RQT)
 
 
