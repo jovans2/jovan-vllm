@@ -123,6 +123,8 @@ def calc_load():
         if len(good_energies) > 0:
             min_energy = min(good_energies)
             correct_freq = good_freqs[good_energies.index(min_energy)]
+        if load == 0:
+            correct_freq = 800
         os.system("sudo nvidia-smi -lgc " + str(correct_freq))
         if correct_freq == 1980:
             os.system("sudo nvidia-smi -rgc")
