@@ -69,6 +69,26 @@ def update_epoch():
     return jsonify({"Response: ": "OK"}), 200
 
 
+@app.route('/epoch_reset', methods=['POST'])
+def reset_epoch():
+    global CURRENT_EPOCH
+    global INSTANCE_FREQ
+    global INSTANCE_LOADS
+    global INSTANCE_TYPE
+    global INSTANCE_ADDRESSES
+    global INSTANCE_THROUGHPUT
+
+    CURRENT_EPOCH = -1
+
+    INSTANCE_FREQ = []
+    INSTANCE_LOADS = []
+    INSTANCE_TYPE = []
+    INSTANCE_ADDRESSES = []
+    INSTANCE_THROUGHPUT = []
+
+    return jsonify({"Response: ": "OK"}), 200
+
+
 @app.route('/freq_update', methods=['POST'])
 def update_frequency():
     global INSTANCE_FREQ

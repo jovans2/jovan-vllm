@@ -148,6 +148,11 @@ def compute_instances():
 
     max_throughput = [9.5, 7.0, 5.0, 3.5, 3.5, 3.0, 2.5, 2.0, 1.9]
 
+    for pool_port in POOL_PORTS:
+        api_url = "http://localhost:" + str(pool_port) + "/epoch_reset"
+        data = {'num_instances': 0}
+        requests.post(api_url, json=data)
+
     while True:
         DATA_LOCK.acquire()
 
