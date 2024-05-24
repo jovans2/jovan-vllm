@@ -110,8 +110,8 @@ def calc_load():
         energies = []
         performances = []
         for freq in frequencies:
-            energies.append(model_energy_func(MY_PARALLEL, freq, load))
-            performances.append(model_perf_func(MY_PARALLEL, freq, load))
+            energies.append(model_energy_func(freq, load))
+            performances.append(model_perf_func(freq, load))
         good_energies = []
         good_freqs = []
         for indP, perf in enumerate(performances):
@@ -128,8 +128,8 @@ def calc_load():
             os.system("sudo nvidia-smi -rgc")
 
 
-def model_energy_func(p_type, freq, load):
-    dataPoint = {"load": load, "parallelization_strategy": p_type, "frequency": freq,
+def model_energy_func(freq, load):
+    dataPoint = {"load": load, "parallelization_strategy": MY_PARALLEL, "frequency": freq,
                  "request_type": MY_TYPE}
     dataPoint_df = pd.DataFrame(dataPoint, index=[0])
     dataPoint_encoded = pd.get_dummies(dataPoint_df)
@@ -137,8 +137,8 @@ def model_energy_func(p_type, freq, load):
     return model_energy.predict(dataPoint_encoded)
 
 
-def model_perf_func(p_type, freq, load):
-    dataPoint = {"load": load, "parallelization_strategy": p_type, "frequency": freq,
+def model_perf_func(freq, load):
+    dataPoint = {"load": load, "parallelization_strategy": MY_PARALLEL, "frequency": freq,
                  "request_type": MY_TYPE}
     dataPoint_df = pd.DataFrame(dataPoint, index=[0])
     dataPoint_encoded = pd.get_dummies(dataPoint_df)
