@@ -33,7 +33,7 @@ y_pred = model_energy.predict(X_test)
 mape = mean_absolute_percentage_error(y_test, y_pred) * 100
 print("Model's (energy) mean absolute percentage error (MAPE) = ", mape)
 
-data_train = pd.read_csv('characterization_perf.csv')
+data_train = pd.read_csv('characterization_performance.csv')
 X = data_train[['load', 'parallelization_strategy', 'frequency', 'request_type']]
 y = data_train['performance']
 X = pd.get_dummies(X)
@@ -114,7 +114,7 @@ def calc_load():
             performances.append(model_perf_func(MY_PARALLEL, freq, load))
         good_energies = []
         good_freqs = []
-        for indP, perf in performances:
+        for indP, perf in enumerate(performances):
             if perf <= MY_SLO:
                 good_freqs.append(frequencies[indP])
                 good_energies.append(energies[indP])
