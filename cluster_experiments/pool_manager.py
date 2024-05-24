@@ -4,7 +4,6 @@ from flask import Flask, request, jsonify
 import requests
 import threading
 import sys
-import time
 
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -14,7 +13,7 @@ from sklearn.metrics import mean_absolute_percentage_error
 MY_TYPE = sys.argv[2]
 TYPES = ["SS", "SM", "SL", "MS", "MM", "ML", "LS", "LM", "LL"]
 
-data_train = pd.read_csv('characterization.csv')
+data_train = pd.read_csv('characterization_energy.csv')
 X = data_train[['load', 'parallelization_strategy', 'frequency', 'request_type']]
 y = data_train['energy']
 X = pd.get_dummies(X)
