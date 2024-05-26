@@ -87,7 +87,7 @@ def process_request():
     MY_TYPE = data.get("MY_TYPE", "LL")
     input_len = len(prompt)
 
-    api_url = "http://localhost:" + str(int(sys.argv[1]) + 1000) + "/generate"
+    api_url = "http://localhost:" + str(int(sys.argv[2]) + 1000) + "/generate"
 
     DATA_LOCK.acquire()
     ADMITED_TOKENS += input_len
