@@ -148,6 +148,7 @@ def process_request():
     global INSTANCE_THROUGHPUT
 
     data = request.get_json()
+    data["MY_TYPE"] = MY_TYPE
     DATA_LOCK.acquire()
     TEMP_LOADS = []
     for load in INSTANCE_LOADS:

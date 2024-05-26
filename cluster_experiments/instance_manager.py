@@ -15,12 +15,11 @@ DATA_LOCK = threading.Lock()
 ADMITED_TOKENS = 0
 CURRENT_LOAD = 0
 FREQ_FREQ_S = 5  # Time in seconds to recalculate frequency
-MY_TYPE = sys.argv[2]
-MY_PARALLEL = sys.argv[3]
+MY_TYPE = "LL"
+MY_PARALLEL = sys.argv[2]
 TYPES = ["SS", "SM", "SL", "MS", "MM", "ML", "LS", "LM", "LL"]
 
 SLOs = [0.25, 0.5, 1.5]
-MY_SLO = SLOs[TYPES.index(MY_TYPE) // 3]
 
 data_train = pd.read_csv('characterization_energy.csv')
 X = data_train[['load', 'parallelization_strategy', 'frequency', 'request_type']]
@@ -80,9 +79,11 @@ OUTS = [short_out, medium_out, long_out]
 @app.route('/generate', methods=['POST'])
 def process_request():
     global ADMITED_TOKENS
+    global MY_TYPE
 
     data = request.get_json()
     prompt = data.get("prompt", "")
+    MY_TYPE = data.get("MY_TYPE", "LL")
     input_len = len(prompt)
 
     api_url = "http://localhost:" + str(int(sys.argv[1]) + 1000) + "/generate"
@@ -99,19 +100,21 @@ def process_request():
 def calc_load():
     global ADMITED_TOKENS
     global CURRENT_LOAD
+    global MY_TYPE
 
     last_tokens = 0
     frequencies = [800, 1000, 1200, 1400, 1600, 1800, 1980]
     while True:
         time.sleep(FREQ_FREQ_S)
+        MY_SLO = SLOs[TYPES.index(MY_TYPE) // 3]
         token_difference = ADMITED_TOKENS - last_tokens
         load = token_difference / FREQ_FREQ_S
         load = load / MY_INPUT_LEN
         energies = []
         performances = []
         for freq in frequencies:
-            energies.append(model_energy_func(freq, load))
-            performances.append(model_perf_func(freq, load))
+            energies.append(model_energy_func(freq, load, MY_TYPE))
+            performances.append(model_perf_func(freq, load, MY_TYPE))
         good_energies = []
         good_freqs = []
         for indP, perf in enumerate(performances):
@@ -130,18 +133,18 @@ def calc_load():
             os.system("sudo nvidia-smi -rgc")
 
 
-def model_energy_func(freq, load):
+def model_energy_func(freq, load, reqt):
     dataPoint = {"load": load, "parallelization_strategy": MY_PARALLEL, "frequency": freq,
-                 "request_type": MY_TYPE}
+                 "request_type": reqt}
     dataPoint_df = pd.DataFrame(dataPoint, index=[0])
     dataPoint_encoded = pd.get_dummies(dataPoint_df)
     dataPoint_encoded = dataPoint_encoded.reindex(columns=X.columns, fill_value=0)
     return model_energy.predict(dataPoint_encoded)
 
 
-def model_perf_func(freq, load):
+def model_perf_func(freq, load, reqt):
     dataPoint = {"load": load, "parallelization_strategy": MY_PARALLEL, "frequency": freq,
-                 "request_type": MY_TYPE}
+                 "request_type": reqt}
     dataPoint_df = pd.DataFrame(dataPoint, index=[0])
     dataPoint_encoded = pd.get_dummies(dataPoint_df)
     dataPoint_encoded = dataPoint_encoded.reindex(columns=X.columns, fill_value=0)
