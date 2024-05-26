@@ -79,6 +79,9 @@ def process_request():
     req_type = in_type + out_type
     pool_ind = POOL_TYPES.index(req_type)
 
+    print("Receive a request of type ", req_type)
+    print("Pool ind = ", pool_ind)
+
     DATA_LOCK.acquire()
 
     LOAD_PER_TYPE[pool_ind] += 1
@@ -94,11 +97,14 @@ def process_request():
     pool_port = POOL_PORTS[pool_ind]
 
     api_url = "http://localhost:" + str(pool_port) + "/generate"
+    print("Forward the request to ", api_url)
     SENT_TOKENS[pool_ind] += output_len
 
     DATA_LOCK.release()
 
     response = requests.post(api_url, json=data)
+
+    print(response.text)
 
     DATA_LOCK.acquire()
     RETURNED_TOKENS[pool_ind] += real_output
