@@ -16,8 +16,8 @@ ADMITED_TOKENS = 0
 CURRENT_LOAD = 0
 FREQ_FREQ_S = 5  # Time in seconds to recalculate frequency
 MY_TYPE = "LL"
-MY_PARALLEL = sys.argv[2]
-MY_GPUs = sys.argv[3]
+MY_PARALLEL = sys.argv[3]
+MY_GPUs = sys.argv[4]
 TYPES = ["SS", "SM", "SL", "MS", "MM", "ML", "LS", "LM", "LL"]
 
 SLOs = [0.25, 0.5, 1.5]
@@ -156,5 +156,5 @@ if __name__ == '__main__':
     thread_calc_load = threading.Thread(target=calc_load)
     thread_calc_load.start()
 
-    app.run(debug=True, port=int(sys.argv[1]))
+    app.run(debug=True, port=int(sys.argv[2]), host=sys.argv[1])
 
