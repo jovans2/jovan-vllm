@@ -129,9 +129,9 @@ def calc_load():
             correct_freq = good_freqs[good_energies.index(min_energy)]
         if load == 0:
             correct_freq = 800
-        os.system("sudo nvidia-smi -i " + MY_GPUs + " -lgc " + str(correct_freq))
+        os.system("sudo nvidia-smi -i " + MY_GPUs + " -lgc " + str(correct_freq) + " &> /dev/null")
         if correct_freq == 1980:
-            os.system("sudo nvidia-smi -i " + MY_GPUs + " -rgc")
+            os.system("sudo nvidia-smi -i " + MY_GPUs + " -rgc &> /dev/null")
 
 
 def model_energy_func(freq, load, reqt):
