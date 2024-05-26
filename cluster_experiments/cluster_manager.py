@@ -110,6 +110,7 @@ def avail_pools():
     global SENT_TOKENS
     global RETURNED_TOKENS
     global DATA_LOCK
+    global POOL_EXIST
     while True:
         DATA_LOCK.acquire()
         for pool_ind, pool_exist in enumerate(POOL_EXIST):
@@ -124,6 +125,7 @@ def avail_pools():
                         POOL_AVAILABLE[pool_ind] = 1
                 except ZeroDivisionError:
                     POOL_AVAILABLE[pool_ind] = 1
+                POOL_AVAILABLE[pool_ind] = 1
         DATA_LOCK.release()
         time.sleep(5)
 
