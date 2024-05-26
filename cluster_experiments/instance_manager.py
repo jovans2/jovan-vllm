@@ -85,6 +85,7 @@ def process_request():
     data = request.get_json()
     prompt = data.get("prompt", "")
     MY_TYPE = data.get("MY_TYPE", "LL")
+    del data["MY_TYPE"]
     input_len = len(prompt)
 
     api_url = "http://localhost:" + str(int(sys.argv[2]) + 1000) + "/generate"
