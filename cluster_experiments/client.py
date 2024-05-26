@@ -41,8 +41,11 @@ def send_req(headers, payload):
 
 
 def generate_load():
+    global inputs
 
-    time.sleep(10)
+    time.sleep(1)
+
+    inputs = [inputs[0]]
 
     last_req = 0
     for ind, input in enumerate(inputs):
