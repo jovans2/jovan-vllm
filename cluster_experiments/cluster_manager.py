@@ -208,7 +208,7 @@ def generate_load():
     time.sleep(10)
 
     last_req = 0
-    for ind, input in inputs:
+    for ind, input in enumerate(inputs):
         timestamp = timestamps[ind]
         sleep_time = timestamp - last_req
         time.sleep(sleep_time)
