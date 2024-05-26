@@ -205,6 +205,8 @@ def send_req(headers, payload):
 
 def generate_load():
 
+    time.sleep(10)
+
     last_req = 0
     for ind, input in inputs:
         timestamp = timestamps[ind]
