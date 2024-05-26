@@ -6,6 +6,11 @@ import math
 import pandas as pd
 import numpy as np
 
+with open("prompts", "r") as file:
+    text = file.read()
+texts = text.split("*" * 35)
+prompts = [t.strip() for t in texts if t.strip()]
+
 df = pd.read_csv("AzureLLMInferenceTrace_conv.csv")
 df['Timestamp'] = pd.to_datetime(df['TIMESTAMP'])
 earliest_timestamp = df['Timestamp'].min()
@@ -193,6 +198,53 @@ def compute_instances():
         time.sleep(5 * 60)
 
 
+def send_req(headers, payload):
+    api_url = "http://localhost:" + str(8080) + "/generate"
+    requests.post(api_url, headers=headers, json=payload)
+
+
+def generate_load():
+
+    last_req = 0
+    for ind, input in inputs:
+        timestamp = timestamps[ind]
+        sleep_time = timestamp - last_req
+        time.sleep(sleep_time)
+        last_req = timestamp
+
+        in_type = 2
+        if input <= INS[0]:
+            in_type = 0
+        elif input <= INS[1]:
+            in_type = 1
+        out_type = 2
+        if out_type <= OUTS[0]:
+            out_type = 0
+        elif out_type <= OUTS[1]:
+            out_type = 1
+
+        correct_input = prompts[in_type]
+        correct_len = OUTS[out_type]
+
+        headers = {"User-Agent": "Benchmark Client"}
+        payload = {
+            "prompt": correct_input,
+            "n": 1,
+            "best_of": 1,
+            "use_beam_search": False,
+            "temperature": 1.0,
+            "top_p": 1.0,
+            "max_tokens": correct_len,
+            "ignore_eos": True,
+            "stream": False,
+        }
+
+        thread_send = threading.Thread(target=send_req, args=(headers, payload))
+        thread_send.start()
+
+    return 0
+
+
 if __name__ == '__main__':
     thread_pool_avail = threading.Thread(target=avail_pools)
     thread_pool_avail.start()
@@ -202,5 +254,8 @@ if __name__ == '__main__':
 
     thread_instances = threading.Thread(target=compute_instances)
     thread_instances.start()
+
+    thread_load = threading.Thread(target=generate_load)
+    thread_load.start()
 
     app.run(debug=True, port=8080)
