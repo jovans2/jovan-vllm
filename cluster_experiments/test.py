@@ -11,10 +11,11 @@ payload = {
             "temperature": 1.0,
             "top_p": 1.0,
             "max_tokens": 100,
+            "MY_TYPE": "MM",
             "ignore_eos": True,
             "stream": False,
         }
 
-api_url1 = "http://10.0.0.6:" + str(9082) + "/generate"
+api_url1 = "http://10.0.0.6:" + str(8082) + "/generate"
 response = requests.post(api_url1, headers=headers, json=payload)
 print(response.text)
