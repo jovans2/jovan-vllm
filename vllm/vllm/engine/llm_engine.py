@@ -1,6 +1,7 @@
 import copy
 from collections import defaultdict
 import os
+import torch
 import numpy as np
 import time
 from typing import (TYPE_CHECKING, Any, Dict, Iterable, List, Optional, Tuple,
@@ -721,7 +722,7 @@ class LLMEngine:
         scheduled_seq_groups = scheduler_outputs.scheduled_seq_groups
         for seq_group, outputs in zip(scheduled_seq_groups, output):
             self._process_sequence_group_outputs(seq_group, outputs)
-
+            torch.cuda.synchronize()
             if scheduler_outputs.prompt_run:
                 currTime = time.time()
                 #ttft = currTime - scheduler_outputs.start_time

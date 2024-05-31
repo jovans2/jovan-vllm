@@ -10,6 +10,13 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_absolute_percentage_error
 
+from opencensus.stats import aggregation as aggregation_module
+from opencensus.stats import measure as measure_module
+from opencensus.stats import stats as stats_module
+from opencensus.stats import view as view_module
+from opencensus.tags import tag_map as tag_map_module
+from opencensus.ext.azure import metrics_exporter
+
 app = Flask(__name__)
 DATA_LOCK = threading.Lock()
 ADMITED_TOKENS = 0
@@ -20,6 +27,21 @@ MY_PARALLEL = sys.argv[3]
 MY_GPUs = sys.argv[4]
 TYPES = ["SS", "SM", "SL", "MS", "MM", "ML", "LS", "LM", "LL"]
 
+AZ_METADATA_IP = "169.254.169.254"
+AZ_METADATA_ENDPOINT  = f"http://{AZ_METADATA_IP}/metadata/instance"
+AZ_SCHEDULED_ENDPOINT = f"http://{AZ_METADATA_IP}/metadata/scheduledevents"
+
+
+def get_az_vm_name():
+    headers_l = {'Metadata': 'True'}
+    query_params_l = {'api-version': '2019-06-01'}
+    rsp_l = requests.get(AZ_METADATA_ENDPOINT, headers=headers_l, params=query_params_l).json()
+    if "compute" in rsp_l and "name" in rsp_l["compute"]:
+        return rsp_l["compute"]["name"]
+    return None
+
+
+my_az_name = get_az_vm_name()
 SLOs = [0.25, 0.5, 1.5]
 
 data_train = pd.read_csv('characterization_energy.csv')
@@ -76,6 +98,68 @@ long_out = np.percentile(outputs, 99)
 
 OUTS = [short_out, medium_out, long_out]
 
+# Register Power tracker in AppInsights
+m_power_w = measure_module.MeasureFloat("repl/power", "Power consumption of GPUs", "W")
+stats = stats_module.stats
+view_manager = stats.view_manager
+stats_recorder = stats.stats_recorder
+mmap1 = stats_recorder.new_measurement_map()
+tmap1 = tag_map_module.TagMap()
+power_view = view_module.View(f"power_{my_az_name}",
+                              "The power consumption measurements",
+                              [],
+                              m_power_w,
+                              aggregation_module.LastValueAggregation())
+view_manager.register_view(power_view)
+exporter = metrics_exporter.new_metrics_exporter(connection_string=os.environ['APPLICATIONINSIGHTS_CONNECTION_STRING'])
+view_manager.register_exporter(exporter)
+
+# Register Frequency tracker in AppInsights
+frequency_mhz = measure_module.MeasureFloat("repl/frequency", "The frequency in MHz of GPUs", "MHz")
+view_manager_freq = stats.view_manager
+stats_recorder_freq = stats.stats_recorder
+mmap1_max_freq = stats_recorder_freq.new_measurement_map()
+tmap1_max_freq = tag_map_module.TagMap()
+frequency_view = view_module.View(f"frequency_{my_az_name}",
+                                  "The distribution of the frequency",
+                                  [],
+                                  frequency_mhz,
+                                  aggregation_module.LastValueAggregation())
+view_manager_freq.register_view(frequency_view)
+exporter_freq = metrics_exporter.new_metrics_exporter(connection_string=os.environ['APPLICATIONINSIGHTS_CONNECTION_STRING'])
+view_manager_freq.register_exporter(exporter_freq)
+
+# Register Energy tracker in AppInsights
+energy_mj = measure_module.MeasureFloat("repl/energy", "The energy in mJ of GPU cores", "mJ")
+view_manager_energy = stats.view_manager
+stats_recorder_energy = stats.stats_recorder
+mmap1_energy = stats_recorder_energy.new_measurement_map()
+tmap1_energy = tag_map_module.TagMap()
+energy_view = view_module.View(f"min_frequency_{my_az_name}",
+                               "The distribution of the energy",
+                               [],
+                               energy_mj,
+                               aggregation_module.LastValueAggregation())
+view_manager_energy.register_view(energy_view)
+exporter_energy = metrics_exporter.new_metrics_exporter(connection_string=os.environ['APPLICATIONINSIGHTS_CONNECTION_STRING'])
+view_manager_energy.register_exporter(exporter_energy)
+
+
+# Register Energy tracker in AppInsights
+latency_ms = measure_module.MeasureFloat("repl/latency", "The TTFT in ms", "ms")
+view_manager_latency = stats.view_manager
+stats_recorder_latency = stats.stats_recorder
+mmap1_latency = stats_recorder_latency.new_measurement_map()
+tmap1_latency = tag_map_module.TagMap()
+latency_view = view_module.View(f"latency_{my_az_name}",
+                                "The distribution of the TTFT latency",
+                                [],
+                                latency_ms,
+                                aggregation_module.LastValueAggregation())
+view_manager_latency.register_view(latency_view)
+exporter_latency = metrics_exporter.new_metrics_exporter(connection_string=os.environ['APPLICATIONINSIGHTS_CONNECTION_STRING'])
+view_manager_latency.register_exporter(exporter_latency)
+
 
 @app.route('/generate', methods=['POST'])
 def process_request():
@@ -125,6 +209,8 @@ def calc_load():
                 good_energies.append(energies[indP])
 
         correct_freq = 1980
+        mmap1_max_freq.measure_float_put(frequency_mhz, correct_freq)
+        mmap1_max_freq.record(tmap1_max_freq)
         if len(good_energies) > 0:
             min_energy = min(good_energies)
             correct_freq = good_freqs[good_energies.index(min_energy)]
@@ -153,9 +239,16 @@ def model_perf_func(freq, load, reqt):
     return model_perf.predict(dataPoint_encoded)
 
 
+def export_metrics():
+    return 0
+
+
 if __name__ == '__main__':
     thread_calc_load = threading.Thread(target=calc_load)
     thread_calc_load.start()
+
+    thread_export_metrics = threading.Thread(target=export_metrics)
+    thread_export_metrics.start()
 
     app.run(debug=True, port=int(sys.argv[2]), host=sys.argv[1])
 

@@ -1226,7 +1226,9 @@ P99 tbt =  0.08316222190856934
 467 - 96
 Average ttft =  0.08731907080201541
 P50 ttft =  0.07719695568084717
-P99 ttft =  GPU clocks set to "(gpuClkMin 1800, gpuClkMax 1800)" for GPU 00000001:00:00.0
+P99 ttft =  0.18710093498229978
+
+GPU clocks set to "(gpuClkMin 1800, gpuClkMax 1800)" for GPU 00000001:00:00.0
 
 Warning: persistence mode is disabled on device 00000001:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
 GPU clocks set to "(gpuClkMin 1800, gpuClkMax 1800)" for GPU 00000002:00:00.0

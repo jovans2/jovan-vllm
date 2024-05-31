@@ -5165,7 +5165,9 @@ P99 tbt =  0.06257295274734496
 1010 - 256
 Average ttft =  4.280401263918195
 P50 ttft =  0.5246918201446533
-P99 ttft =  GPU clocks set to "(gpuClkMin 1200, gpuClkMax 1200)" for GPU 00000001:00:00.0
+P99 ttft =  5.1353666421
+
+GPU clocks set to "(gpuClkMin 1200, gpuClkMax 1200)" for GPU 00000001:00:00.0
 
 Warning: persistence mode is disabled on device 00000001:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
 GPU clocks set to "(gpuClkMin 1200, gpuClkMax 1200)" for GPU 00000002:00:00.0
@@ -7344,7 +7346,9 @@ P50 ttft =  8.338407278060913
 P99 ttft =  16.582200884819027
 Average tbt =  0.051116929735456194
 P50 tbt =  0.05128836631774902
-P99 tbt =  GPU clocks set to "(gpuClkMin 1200, gpuClkMax 1200)" for GPU 00000001:00:00.0
+P99 tbt =  0.051353156131
+
+GPU clocks set to "(gpuClkMin 1200, gpuClkMax 1200)" for GPU 00000001:00:00.0
 
 Warning: persistence mode is disabled on device 00000001:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
 GPU clocks set to "(gpuClkMin 1200, gpuClkMax 1200)" for GPU 00000002:00:00.0
@@ -8152,7 +8156,9 @@ P99 tbt =  0.03927910327911377
 4085 - 600
 Average ttft =  1.3037411841479214
 P50 ttft =  1.147373080253601
-P99 ttft =  GPU clocks set to "(gpuClkMin 1800, gpuClkMax 1800)" for GPU 00000001:00:00.0
+P99 ttft =  1.5362431641
+
+GPU clocks set to "(gpuClkMin 1800, gpuClkMax 1800)" for GPU 00000001:00:00.0
 
 Warning: persistence mode is disabled on device 00000001:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
 GPU clocks set to "(gpuClkMin 1800, gpuClkMax 1800)" for GPU 00000002:00:00.0
