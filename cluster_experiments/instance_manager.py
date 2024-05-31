@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify
 import requests
 import sys
+import re
 import os
 import time
 import threading
@@ -180,7 +181,15 @@ def process_request():
     DATA_LOCK.release()
 
     response = requests.post(api_url, json=data)
-    print(response.text)
+    pattern = r"MY TTFT = (\d+\.\d+)"
+
+    match = re.search(pattern, response.text)
+    ttft_number = float(match.group(1)) * 1000.0
+
+    mmap1_latency.measure_float_put(latency_ms, ttft_number)
+    mmap1_latency.record(tmap1_latency)
+
+    print(ttft_number)
 
     return jsonify(response.json()), response.status_code
 
