@@ -15,6 +15,6 @@ payload = {
             "stream": False,
         }
 
-api_url1 = "http://localhost:" + str(8080) + "/epoch_update"
+api_url1 = "http://10.0.0.6:" + str(9082) + "/generate"
 response = requests.post(api_url1, headers=headers, json=payload)
-
+print(response.text)

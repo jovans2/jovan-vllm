@@ -228,7 +228,7 @@ def calc_load():
         if load == 0:
             correct_freq = 800
 
-        print("Next frequency = ", correct_freq)
+        print("Current load = ", load, " Next frequency = ", correct_freq)
 
         mmap1_max_freq.measure_float_put(frequency_mhz, correct_freq)
         mmap1_max_freq.record(tmap1_max_freq)
