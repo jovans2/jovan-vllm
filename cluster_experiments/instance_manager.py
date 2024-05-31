@@ -209,13 +209,15 @@ def calc_load():
                 good_energies.append(energies[indP])
 
         correct_freq = 1980
-        mmap1_max_freq.measure_float_put(frequency_mhz, correct_freq)
-        mmap1_max_freq.record(tmap1_max_freq)
         if len(good_energies) > 0:
             min_energy = min(good_energies)
             correct_freq = good_freqs[good_energies.index(min_energy)]
         if load == 0:
             correct_freq = 800
+
+        mmap1_max_freq.measure_float_put(frequency_mhz, correct_freq)
+        mmap1_max_freq.record(tmap1_max_freq)
+
         os.system("sudo nvidia-smi -i " + MY_GPUs + " -lgc " + str(correct_freq) + " > /dev/null 2>&1")
         if correct_freq == 1980:
             os.system("sudo nvidia-smi -i " + MY_GPUs + " -rgc > /dev/null 2>&1")
