@@ -4,6 +4,7 @@ import sys
 import os
 import time
 import threading
+import subprocess
 import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -179,6 +180,7 @@ def process_request():
     DATA_LOCK.release()
 
     response = requests.post(api_url, json=data)
+    print(response.text)
 
     return jsonify(response.json()), response.status_code
 
@@ -242,10 +244,25 @@ def model_perf_func(freq, load, reqt):
 
 
 def export_metrics():
-    return 0
+    readfile = "dcgm_monitor_test"
+    while True:
+        time.sleep(1)
+        result = subprocess.run(["tail", "-n", "1", readfile], stdout=subprocess.PIPE)
+        last_line = result.stdout.decode('utf-8').strip()
+        try:
+            power = float(last_line.split()[6])
+        except:
+            power = 300.0
+
+        mmap1.measure_float_put(m_power_w, power)
+        mmap1.record(tmap1)
 
 
 if __name__ == '__main__':
+
+    command = "dcgmi dmon -e 100,101,112,156,157,140,150,203,204 -d 1000 > dcgm_monitor_test"
+    process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+
     thread_calc_load = threading.Thread(target=calc_load)
     thread_calc_load.start()
 
