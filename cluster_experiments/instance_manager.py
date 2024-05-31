@@ -168,6 +168,8 @@ def process_request():
     global ADMITED_TOKENS
     global MY_TYPE
 
+    print("Receive a request!")
+
     data = request.get_json()
     prompt = data.get("prompt", "")
     MY_TYPE = data.get("MY_TYPE", "LL")
@@ -226,6 +228,8 @@ def calc_load():
         if load == 0:
             correct_freq = 800
 
+        print("Next frequency = ", correct_freq)
+
         mmap1_max_freq.measure_float_put(frequency_mhz, correct_freq)
         mmap1_max_freq.record(tmap1_max_freq)
 
@@ -255,13 +259,15 @@ def model_perf_func(freq, load, reqt):
 def export_metrics():
     readfile = "dcgm_monitor_test"
     while True:
-        time.sleep(1)
+        time.sleep(5)
         result = subprocess.run(["tail", "-n", "1", readfile], stdout=subprocess.PIPE)
         last_line = result.stdout.decode('utf-8').strip()
         try:
             power = float(last_line.split()[6])
         except:
             power = 300.0
+
+        print("Current power = ", power)
 
         mmap1.measure_float_put(m_power_w, power)
         mmap1.record(tmap1)
