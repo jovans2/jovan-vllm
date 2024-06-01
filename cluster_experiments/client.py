@@ -82,6 +82,7 @@ def generate_load():
             "max_tokens": correct_len,
             "ignore_eos": True,
             "stream": False,
+            "MY_TYPE": "MM",
         }
 
         thread_send = threading.Thread(target=send_req, args=(headers, payload))
