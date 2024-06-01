@@ -36,7 +36,7 @@ OUTS = [short_out, medium_out, long_out]
 
 
 def send_req(headers, payload):
-    api_url = "http://localhost:" + str(8080) + "/generate"
+    api_url = "http://10.0.0.6:" + str(8082) + "/generate"
     requests.post(api_url, headers=headers, json=payload)
 
 
