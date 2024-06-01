@@ -168,8 +168,6 @@ def process_request():
     global ADMITED_TOKENS
     global MY_TYPE
 
-    print("Receive a request!")
-
     data = request.get_json()
     prompt = data.get("prompt", "")
     MY_TYPE = data.get("MY_TYPE", "LL")
@@ -190,8 +188,6 @@ def process_request():
 
     mmap1_latency.measure_float_put(latency_ms, ttft_number)
     mmap1_latency.record(tmap1_latency)
-
-    print(ttft_number)
 
     return jsonify(response.json()), response.status_code
 
@@ -228,8 +224,6 @@ def calc_load():
         if load == 0:
             correct_freq = 800
 
-        print("Current load = ", load, " Next frequency = ", correct_freq)
-
         mmap1_max_freq.measure_float_put(frequency_mhz, correct_freq)
         mmap1_max_freq.record(tmap1_max_freq)
 
@@ -265,7 +259,7 @@ def export_metrics():
         try:
             power = float(last_line.split()[6])
         except:
-            power = 300.0
+            power = 120.0
 
         print("Current power = ", power)
 
@@ -274,7 +268,8 @@ def export_metrics():
 
 
 def start_process_dcgmi():
-    command = "dcgmi dmon -e 100,101,112,156,157,140,150,203,204 -d 1000 > dcgm_monitor_test"
+    first_gpu = MY_GPUs.split(",")[0]
+    command = "dcgmi dmon -i " + first_gpu + " -e 100,101,112,156,157,140,150,203,204 -d 1000 > dcgm_monitor_test"
     return subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
 
