@@ -48,6 +48,7 @@ def generate_load():
     inputs = [inputs[0]]
 
     last_req = 0
+    num_good_req = 0
     for ind, input in enumerate(inputs):
         timestamp = timestamps[ind]
         sleep_time = timestamp - last_req
@@ -66,6 +67,10 @@ def generate_load():
             out_type = 1
 
         if in_type > 1 or out_type > 1:
+            continue
+
+        num_good_req += 1
+        if num_good_req % 5 != 0:
             continue
 
         correct_input = prompts[in_type]
