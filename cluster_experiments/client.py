@@ -65,6 +65,9 @@ def generate_load():
         elif out_type <= OUTS[1]:
             out_type = 1
 
+        if in_type > 1 or out_type > 1:
+            continue
+
         correct_input = prompts[in_type]
         correct_len = OUTS[out_type]
 

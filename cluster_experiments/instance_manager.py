@@ -253,15 +253,13 @@ def model_perf_func(freq, load, reqt):
 def export_metrics():
     readfile = "dcgm_monitor_test"
     while True:
-        time.sleep(5)
+        time.sleep(1)
         result = subprocess.run(["tail", "-n", "1", readfile], stdout=subprocess.PIPE)
         last_line = result.stdout.decode('utf-8').strip()
         try:
             power = float(last_line.split()[6])
         except:
             power = 120.0
-
-        print("Current power = ", power)
 
         mmap1.measure_float_put(m_power_w, power)
         mmap1.record(tmap1)
