@@ -46,8 +46,6 @@ def generate_load():
 
     time.sleep(1)
 
-    inputs = [inputs[0]]
-
     last_req = 0
     num_good_req = 0
     sending_threads = []
