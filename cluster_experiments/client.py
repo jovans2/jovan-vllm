@@ -36,6 +36,7 @@ OUTS = [short_out, medium_out, long_out]
 
 
 def send_req(headers, payload):
+    print("Send request")
     api_url = "http://10.0.0.6:" + str(8082) + "/generate"
     requests.post(api_url, headers=headers, json=payload)
 
@@ -68,6 +69,8 @@ def generate_load():
 
         if in_type > 1 or out_type > 1:
             continue
+
+        print("Good request")
 
         num_good_req += 1
         if num_good_req % 5 != 0:
