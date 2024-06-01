@@ -50,6 +50,7 @@ def generate_load():
 
     last_req = 0
     num_good_req = 0
+    sending_threads = []
     for ind, input in enumerate(inputs):
         timestamp = timestamps[ind]
         sleep_time = timestamp - last_req
@@ -73,28 +74,32 @@ def generate_load():
         print("Good request")
 
         num_good_req += 1
-        if num_good_req % 5 != 0:
-            continue
+        if num_good_req % 5 == 0:
 
-        correct_input = prompts[in_type]
-        correct_len = OUTS[out_type]
+            correct_input = prompts[in_type]
+            correct_len = OUTS[out_type]
 
-        headers = {"User-Agent": "Benchmark Client"}
-        payload = {
-            "prompt": correct_input,
-            "n": 1,
-            "best_of": 1,
-            "use_beam_search": False,
-            "temperature": 1.0,
-            "top_p": 1.0,
-            "max_tokens": correct_len,
-            "ignore_eos": True,
-            "stream": False,
-            "MY_TYPE": "MM",
-        }
+            headers = {"User-Agent": "Benchmark Client"}
+            payload = {
+                "prompt": correct_input,
+                "n": 1,
+                "best_of": 1,
+                "use_beam_search": False,
+                "temperature": 1.0,
+                "top_p": 1.0,
+                "max_tokens": correct_len,
+                "ignore_eos": True,
+                "stream": False,
+                "MY_TYPE": "MM",
+            }
 
-        thread_send = threading.Thread(target=send_req, args=(headers, payload))
-        thread_send.start()
+            thread_send = threading.Thread(target=send_req, args=(headers, payload))
+            thread_send.start()
+
+            sending_threads.append(thread_send)
+
+    for thr in sending_threads:
+        thr.join()
 
     return 0
 
@@ -103,3 +108,5 @@ if __name__ == '__main__':
 
     thread_load = threading.Thread(target=generate_load)
     thread_load.start()
+
+    thread_load.join()
