@@ -288,6 +288,78 @@ def check_dcgmi():
             process = restart_process_dcgmi(process)
 
 
+def send_req(headers, payload):
+    print("Send request")
+    api_url = "http://10.0.0.6:" + str(9082) + "/generate"
+    requests.post(api_url, headers=headers, json=payload)
+
+
+def generate_load():
+    global inputs
+
+    with open("prompts", "r") as file:
+        text = file.read()
+    texts = text.split("*" * 35)
+    prompts = [t.strip() for t in texts if t.strip()]
+
+    time.sleep(1)
+
+    last_req = 0
+    num_good_req = 0
+    sending_threads = []
+    for ind, input in enumerate(inputs):
+        timestamp = timestamps[ind]
+        sleep_time = timestamp - last_req
+        time.sleep(sleep_time)
+        last_req = timestamp
+
+        in_type = 2
+        if input <= INS[0]:
+            in_type = 0
+        elif input <= INS[1]:
+            in_type = 1
+        out_type = 2
+        if out_type <= OUTS[0]:
+            out_type = 0
+        elif out_type <= OUTS[1]:
+            out_type = 1
+
+        if in_type <= 1 and out_type <= 1:
+
+            num_good_req += 1
+            if num_good_req % 5 == 0:
+
+                correct_input = prompts[in_type]
+                correct_len = OUTS[out_type]
+
+                headers = {"User-Agent": "Benchmark Client"}
+                payload = {
+                    "prompt": correct_input,
+                    "n": 1,
+                    "best_of": 1,
+                    "use_beam_search": False,
+                    "temperature": 1.0,
+                    "top_p": 1.0,
+                    "max_tokens": correct_len,
+                    "ignore_eos": True,
+                    "stream": False,
+                    "MY_TYPE": "MM",
+                }
+
+                thread_send = threading.Thread(target=send_req, args=(headers, payload))
+                thread_send.start()
+
+                sending_threads.append(thread_send)
+
+    print("Number of sending threads = ", len(sending_threads))
+    for thr in sending_threads:
+        thr.join()
+
+    print("I'm done?")
+
+    return 0
+
+
 if __name__ == '__main__':
 
     thread_dcgmi = threading.Thread(target=check_dcgmi)
@@ -298,6 +370,9 @@ if __name__ == '__main__':
 
     thread_export_metrics = threading.Thread(target=export_metrics)
     thread_export_metrics.start()
+
+    thread_load = threading.Thread(target=generate_load)
+    thread_load.start()
 
     app.run(debug=True, port=int(sys.argv[2]), host=sys.argv[1])
 
