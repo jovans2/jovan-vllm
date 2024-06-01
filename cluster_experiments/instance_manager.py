@@ -291,7 +291,16 @@ def check_dcgmi():
 def send_req(headers, payload):
     print("Send request")
     api_url = "http://10.0.0.6:" + str(9082) + "/generate"
-    requests.post(api_url, headers=headers, json=payload)
+    response = requests.post(api_url, headers=headers, json=payload)
+    pattern = r"MY TTFT = (\d+\.\d+)"
+
+    match = re.search(pattern, response.text)
+    ttft_number = float(match.group(1)) * 1000.0
+
+    mmap1_latency.measure_float_put(latency_ms, ttft_number)
+    mmap1_latency.record(tmap1_latency)
+
+    print("Receive response with TTFT = ", ttft_number)
 
 
 def generate_load():
@@ -343,7 +352,6 @@ def generate_load():
                     "max_tokens": correct_len,
                     "ignore_eos": True,
                     "stream": False,
-                    "MY_TYPE": "MM",
                 }
 
                 thread_send = threading.Thread(target=send_req, args=(headers, payload))
