@@ -68,38 +68,40 @@ def generate_load():
         elif out_type <= OUTS[1]:
             out_type = 1
 
-        if in_type > 1 or out_type > 1:
-            continue
+        if in_type <= 1 and out_type <= 1:
 
-        print("Good request")
+            print("Good request")
 
-        num_good_req += 1
-        if num_good_req % 5 == 0:
+            num_good_req += 1
+            if num_good_req % 5 == 0:
 
-            correct_input = prompts[in_type]
-            correct_len = OUTS[out_type]
+                correct_input = prompts[in_type]
+                correct_len = OUTS[out_type]
 
-            headers = {"User-Agent": "Benchmark Client"}
-            payload = {
-                "prompt": correct_input,
-                "n": 1,
-                "best_of": 1,
-                "use_beam_search": False,
-                "temperature": 1.0,
-                "top_p": 1.0,
-                "max_tokens": correct_len,
-                "ignore_eos": True,
-                "stream": False,
-                "MY_TYPE": "MM",
-            }
+                headers = {"User-Agent": "Benchmark Client"}
+                payload = {
+                    "prompt": correct_input,
+                    "n": 1,
+                    "best_of": 1,
+                    "use_beam_search": False,
+                    "temperature": 1.0,
+                    "top_p": 1.0,
+                    "max_tokens": correct_len,
+                    "ignore_eos": True,
+                    "stream": False,
+                    "MY_TYPE": "MM",
+                }
 
-            thread_send = threading.Thread(target=send_req, args=(headers, payload))
-            thread_send.start()
+                thread_send = threading.Thread(target=send_req, args=(headers, payload))
+                thread_send.start()
 
-            sending_threads.append(thread_send)
+                sending_threads.append(thread_send)
 
+    print("Number of sending threads = ", len(sending_threads))
     for thr in sending_threads:
         thr.join()
+
+    print("I'm done?")
 
     return 0
 
