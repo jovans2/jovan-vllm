@@ -273,10 +273,32 @@ def export_metrics():
         mmap1.record(tmap1)
 
 
+def start_process_dcgmi():
+    command = "dcgmi dmon -e 100,101,112,156,157,140,150,203,204 -d 1000 > dcgm_monitor_test"
+    return subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+
+
+def check_process_dcgmi(process):
+    return process.poll() is None
+
+
+def restart_process_dcgmi(process):
+    process.kill()
+    return start_process_dcgmi()
+
+
+def check_dcgmi():
+    process = start_process_dcgmi()
+    while True:
+        time.sleep(20)
+        if not check_process_dcgmi(process):
+            process = restart_process_dcgmi(process)
+
+
 if __name__ == '__main__':
 
-    command = "dcgmi dmon -e 100,101,112,156,157,140,150,203,204 -d 1000 > dcgm_monitor_test"
-    process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    thread_dcgmi = threading.Thread(target=check_dcgmi)
+    thread_dcgmi.start()
 
     thread_calc_load = threading.Thread(target=calc_load)
     thread_calc_load.start()
