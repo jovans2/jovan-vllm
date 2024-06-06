@@ -175,7 +175,7 @@ class Scheduler:
         # Fix the current time.
         now = time.monotonic()
         # os.system("sudo nvidia-smi -rgc > /dev/null 2>&1")
-        subprocess.Popen(["sudo", "nvidia-smi", "-rgc"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        # subprocess.Popen(["sudo", "nvidia-smi", "-rgc"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         # Join waiting sequences if possible.
         if not self.swapped:
             ignored_seq_groups: List[SequenceGroup] = []
