@@ -116,6 +116,8 @@ def generate_load():
 
     last_req = 0
     sending_threads = []
+    max_inl = [1, 3, 2, 4, 4, 4, 4, 4, 11]
+    good_reqs = 0
     for indReq, inputReq in enumerate(inputs):
 
         timestamp = timestamps[indReq]
@@ -134,28 +136,34 @@ def generate_load():
         elif out_type <= OUTS[1]:
             out_type = 1
 
-        if indReq % 8 == MY_ID:
+        req_type = in_type * 3 + out_type
 
-            correct_input = prompts[in_type]
-            correct_len = OUTS[out_type]
+        if req_type == MY_ID:
 
-            headers = {"User-Agent": "Benchmark Client"}
-            payload = {
-                "prompt": correct_input,
-                "n": 1,
-                "best_of": 1,
-                "use_beam_search": False,
-                "temperature": 1.0,
-                "top_p": 1.0,
-                "max_tokens": correct_len,
-                "ignore_eos": True,
-                "stream": False,
-            }
+            good_reqs += 1
 
-            thread_send = threading.Thread(target=send_req, args=(headers, payload))
-            thread_send.start()
+            if good_reqs % max_inl[req_type] == 0:
 
-            sending_threads.append(thread_send)
+                correct_input = prompts[in_type]
+                correct_len = OUTS[out_type]
+
+                headers = {"User-Agent": "Benchmark Client"}
+                payload = {
+                    "prompt": correct_input,
+                    "n": 1,
+                    "best_of": 1,
+                    "use_beam_search": False,
+                    "temperature": 1.0,
+                    "top_p": 1.0,
+                    "max_tokens": correct_len,
+                    "ignore_eos": True,
+                    "stream": False,
+                }
+
+                thread_send = threading.Thread(target=send_req, args=(headers, payload))
+                thread_send.start()
+
+                sending_threads.append(thread_send)
 
     for thr in sending_threads:
         thr.join()
