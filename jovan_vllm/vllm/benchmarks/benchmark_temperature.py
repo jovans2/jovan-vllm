@@ -18,6 +18,29 @@ RANDOM_SEED = 100
 OVERSAMPLING_FACTOR = 2
 
 
+def start_process_dcgmi():
+    first_gpu = "0"
+    command = "dcgmi dmon -i " + first_gpu + " -e  -d 140,150,157,100,101 > dcgm_monitor_temperature"
+    return subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+
+
+def check_process_dcgmi(process):
+    return process.poll() is None
+
+
+def restart_process_dcgmi(process):
+    process.kill()
+    return start_process_dcgmi()
+
+
+def check_dcgmi():
+    process = start_process_dcgmi()
+    while True:
+        time.sleep(20)
+        if not check_process_dcgmi(process):
+            process = restart_process_dcgmi(process)
+
+
 def EnforceActivityWindow(start_time, end_time, instance_events):
     ret = []
     events_abs = [0] + instance_events
@@ -228,17 +251,20 @@ def main(load_reqs, reqt):
 
 if __name__ == "__main__":
 
+    thread_dcgmi = threading.Thread(target=check_dcgmi)
+    thread_dcgmi.start()
+
     max_load = [9, 7, 5, 3.5, 3.5, 3, 2.4, 2.2, 1.6]
     max_load = [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]
-    freqs = [800, 1000, 1200, 1400, 1600, 1800, 1980]
+    freqs = [800, 1200, 1600, 1980]
 
     for reqt in range(9):
         for freq in freqs:
 
-            time.sleep(10)
-            #os.system("sudo nvidia-smi -lgc " + str(freq))
-            #if freq == 1980:
-            #    os.system("sudo nvidia-smi -rgc")
+            # time.sleep(10)
+            os.system("sudo nvidia-smi -lgc " + str(freq))
+            if freq == 1980:
+                os.system("sudo nvidia-smi -rgc")
             load = 0.5
             while True:
                 ttfts = []
@@ -254,7 +280,6 @@ if __name__ == "__main__":
                 process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE)
                 tStart_cold = time.time()
                 while True:
-
 
                     output = process.stdout.readline().decode('utf-8')
                     if output == '' and process.poll() is not None:
