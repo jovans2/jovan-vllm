@@ -252,10 +252,10 @@ if __name__ == "__main__":
                 # Continuously read and print the output
                 command = "dcgmi dmon -e 140,150"
                 process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE)
-
+                tStart_cold = time.time()
                 while True:
 
-                    tStart_cold = time.time()
+
                     output = process.stdout.readline().decode('utf-8')
                     if output == '' and process.poll() is not None:
                         break
