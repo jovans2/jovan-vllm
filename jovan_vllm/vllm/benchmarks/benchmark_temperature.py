@@ -8,6 +8,7 @@ import os
 import threading
 import requests
 import numpy as np
+import subprocess
 from tqdm.asyncio import tqdm
 from transformers import PreTrainedTokenizerBase
 from vllm.transformers_utils.tokenizer import get_tokenizer
@@ -230,6 +231,9 @@ if __name__ == "__main__":
     max_load = [9, 7, 5, 3.5, 3.5, 3, 2.4, 2.2, 1.6]
     max_load = [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]
     freqs = [800, 1000, 1200, 1400, 1600, 1800, 1980]
+    command = "dcgmi dmon -e 140,150"
+    process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE)
+
     for reqt in range(9):
         for freq in freqs:
 
@@ -244,9 +248,6 @@ if __name__ == "__main__":
                 reqtt = reqt
                 ttft = main(load, 6)
                 # time.sleep(10)
-                
-                command = "dcgmi dmon -e 140,150"
-                process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE)
 
                 gpus_temps = []
                 mems_temps = []
@@ -274,6 +275,8 @@ if __name__ == "__main__":
 
                                 mems_temps = []
                                 gpus_temps = []
+                        except:
+                            pass
 
                 load += 0.5
                 if load > max_load[reqt]:
