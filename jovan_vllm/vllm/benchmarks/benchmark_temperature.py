@@ -231,8 +231,6 @@ if __name__ == "__main__":
     max_load = [9, 7, 5, 3.5, 3.5, 3, 2.4, 2.2, 1.6]
     max_load = [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]
     freqs = [800, 1000, 1200, 1400, 1600, 1800, 1980]
-    command = "dcgmi dmon -e 140,150"
-    process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE)
 
     for reqt in range(9):
         for freq in freqs:
@@ -252,7 +250,11 @@ if __name__ == "__main__":
                 gpus_temps = []
                 mems_temps = []
                 # Continuously read and print the output
+                command = "dcgmi dmon -e 140,150"
+                process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE)
+
                 while True:
+
                     tStart_cold = time.time()
                     output = process.stdout.readline().decode('utf-8')
                     if output == '' and process.poll() is not None:
@@ -277,7 +279,7 @@ if __name__ == "__main__":
                                 gpus_temps = []
                         except:
                             pass
-
+                process.terminate()
                 load += 0.5
                 if load > max_load[reqt]:
                     break
