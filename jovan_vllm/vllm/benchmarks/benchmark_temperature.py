@@ -19,8 +19,7 @@ OVERSAMPLING_FACTOR = 2
 
 
 def start_process_dcgmi():
-    first_gpu = "0"
-    command = "dcgmi dmon -i " + first_gpu + " -e  -d 140,150,157,100,101 > dcgm_monitor_temperature"
+    command = "dcgmi dmon -d 100 -e 140,150,157,100,101 > dcgm_monitor_temperature"
     return subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
 
