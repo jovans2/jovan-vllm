@@ -36,6 +36,9 @@ tempLines = tempLines + tempFile.readlines()
 tempFile = open("dcgm_monitor_temperature_tp4_cold_gpus", "r")
 tempLines = tempFile.readlines()
 
+tempFile = open("dcgm_monitor_temperature_tp4_hot_gpus", "r")
+tempLines = tempFile.readlines()
+
 temperatures_mem = []
 for _ in range(8):
     temperatures_mem.append([])
