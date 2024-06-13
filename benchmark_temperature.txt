@@ -580,7 +580,8 @@ P99 ttft =  10.380073151588439
 Average tbt =  10.289361194521184
 P50 tbt =  10.26706328392029
 P99 tbt =  20.374068925857546
-All GPUs and memories are cold after  Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+All GPUs and memories are cold after  72.1
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
 To disable this warning, you can either:
 	- Avoid using `tokenizers` before the fork if possible
