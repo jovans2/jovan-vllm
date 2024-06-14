@@ -1,0 +1,1309 @@
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 00000001:00:00.0
+
+Warning: persistence mode is disabled on device 00000001:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 00000002:00:00.0
+
+Warning: persistence mode is disabled on device 00000002:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 00000003:00:00.0
+
+Warning: persistence mode is disabled on device 00000003:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 00000008:00:00.0
+
+Warning: persistence mode is disabled on device 00000008:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 00000009:00:00.0
+
+Warning: persistence mode is disabled on device 00000009:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 0000000A:00:00.0
+
+Warning: persistence mode is disabled on device 0000000A:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 0000000B:00:00.0
+
+Warning: persistence mode is disabled on device 0000000B:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 0000000C:00:00.0
+
+Warning: persistence mode is disabled on device 0000000C:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+All done.
+All done.
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 00000001:00:00.0
+
+Warning: persistence mode is disabled on device 00000001:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 00000002:00:00.0
+
+Warning: persistence mode is disabled on device 00000002:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 00000003:00:00.0
+
+Warning: persistence mode is disabled on device 00000003:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 00000008:00:00.0
+
+Warning: persistence mode is disabled on device 00000008:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 00000009:00:00.0
+
+Warning: persistence mode is disabled on device 00000009:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 0000000A:00:00.0
+
+Warning: persistence mode is disabled on device 0000000A:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 0000000B:00:00.0
+
+Warning: persistence mode is disabled on device 0000000B:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 0000000C:00:00.0
+
+Warning: persistence mode is disabled on device 0000000C:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+All done.
+All done.
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 00000001:00:00.0
+
+Warning: persistence mode is disabled on device 00000001:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 00000002:00:00.0
+
+Warning: persistence mode is disabled on device 00000002:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 00000003:00:00.0
+
+Warning: persistence mode is disabled on device 00000003:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 00000008:00:00.0
+
+Warning: persistence mode is disabled on device 00000008:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 00000009:00:00.0
+
+Warning: persistence mode is disabled on device 00000009:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 0000000A:00:00.0
+
+Warning: persistence mode is disabled on device 0000000A:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 0000000B:00:00.0
+
+Warning: persistence mode is disabled on device 0000000B:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 0000000C:00:00.0
+
+Warning: persistence mode is disabled on device 0000000C:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+All done.
+All done.
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Open ttft file
+92886
+288  -  96
+288  -  256
+288  -  1024
+1053  -  96
+1053  -  256
+1053  -  600
+8170  -  5
+8170  -  256
+8170  -  600
+8170 - 5
+Average ttft =  0.5556196371714274
+P50 ttft =  0.4533200263977051
+P99 ttft =  1.0532098007202149
+Average tbt =  0.15785654385884607
+P50 tbt =  0.020253586769104003
+P99 tbt =  0.612615584611893
+All GPUs and memories are cold after  13.096689701080322
+92886
+288  -  96
+288  -  256
+288  -  1024
+1053  -  96
+1053  -  256
+1053  -  600
+8170  -  5
+8170  -  256
+8170  -  600
+8170 - 5
+Average ttft =  0.6646809918539864
+P50 ttft =  0.5372796058654785
+P99 ttft =  1.3847331047058107
+Average tbt =  0.35738518124534985
+P50 tbt =  0.3292740583419801
+P99 tbt =  1.1998832654953007
+All GPUs and memories are cold after  36.150636196136475
+92886
+288  -  96
+288  -  256
+288  -  1024
+1053  -  96
+1053  -  256
+1053  -  600
+8170  -  5
+8170  -  256
+8170  -  600
+8170 - 5
+Average ttft =  0.9723348276955741
+P50 ttft =  0.7984144687652588
+P99 ttft =  2.0291479539871204
+Average tbt =  0.9474197714669365
+P50 tbt =  0.6407181262969972
+P99 tbt =  3.6591446957588194
+All GPUs and memories are cold after  52.12626910209656
+92886
+288  -  96
+288  -  256
+288  -  1024
+1053  -  96
+1053  -  256
+1053  -  600
+8170  -  5
+8170  -  256
+8170  -  600
+8170 - 5
+Average ttft =  1.1728044428476474
+P50 ttft =  0.8913016319274902
+P99 ttft =  2.884770345687867
+Average tbt =  1.9776726455223275
+P50 tbt =  1.7565831899642947
+P99 tbt =  5.358858876228334
+All GPUs and memories are cold after  59.087196826934814
+92886
+288  -  96
+288  -  256
+288  -  1024
+1053  -  96
+1053  -  256
+1053  -  600
+8170  -  5
+8170  -  256
+8170  -  600
+8170 - 5
+Average ttft =  2.525284547805786
+P50 ttft =  2.598868727684021
+P99 ttft =  4.437700564861298
+Average tbt =  7.693898620605471
+P50 tbt =  7.688757717609407
+P99 tbt =  15.234749724388125
+All GPUs and memories are cold after  60.1118745803833
+92886
+288  -  96
+288  -  256
+288  -  1024
+1053  -  96
+1053  -  256
+1053  -  600
+8170  -  5
+8170  -  256
+8170  -  600
+8170 - 5
+Average ttft =  4.81087339669466
+P50 ttft =  5.2018983364105225
+P99 ttft =  9.222312150001525
+Average tbt =  9.953609680011866
+P50 tbt =  9.943558394908907
+P99 tbt =  19.633672151803975
+All GPUs and memories are cold after  61.128275871276855
+92886
+288  -  96
+288  -  256
+288  -  1024
+1053  -  96
+1053  -  256
+1053  -  600
+8170  -  5
+8170  -  256
+8170  -  600
+8170 - 5
+Average ttft =  6.9140095024892725
+P50 ttft =  7.226052761077881
+P99 ttft =  13.425250873565675
+Average tbt =  11.321311949377188
+P50 tbt =  11.283328294754032
+P99 tbt =  22.327469485282904
+All GPUs and memories are cold after  66.09890699386597
+92886
+288  -  96
+288  -  256
+288  -  1024
+1053  -  96
+1053  -  256
+1053  -  600
+8170  -  5
+8170  -  256
+8170  -  600
+8170 - 5
+Average ttft =  9.14473540237151
+P50 ttft =  8.927051305770874
+P99 ttft =  17.51064390659332
+Average tbt =  12.932701663511347
+P50 tbt =  12.886015534400943
+P99 tbt =  25.497560438156132
+All GPUs and memories are cold after  63.09126138687134
+92886
+288  -  96
+288  -  256
+288  -  1024
+1053  -  96
+1053  -  256
+1053  -  600
+8170  -  5
+8170  -  256
+8170  -  600
+8170 - 5
+Average ttft =  0.5509135921796163
+P50 ttft =  0.45144402980804443
+P99 ttft =  1.0483402800559998
+Average tbt =  0.1486055970191956
+P50 tbt =  0.01866248846054077
+P99 tbt =  0.6040709607601168
+All GPUs and memories are cold after  14.028202772140503
+92886
+288  -  96
+288  -  256
+288  -  1024
+1053  -  96
+1053  -  256
+1053  -  600
+8170  -  5
+8170  -  256
+8170  -  600
+8170 - 5
+Average ttft =  0.6626119386582148
+P50 ttft =  0.5304484367370605
+P99 ttft =  1.3818024635314943
+Average tbt =  0.3563536723454794
+P50 tbt =  0.32866253852844246
+P99 tbt =  1.1985097599029546
+All GPUs and memories are cold after  24.142767667770386
+92886
+288  -  96
+288  -  256
+288  -  1024
+1053  -  96
+1053  -  256
+1053  -  600
+8170  -  5
+8170  -  256
+8170  -  600
+8170 - 5
+Average ttft =  0.9705313410077776
+P50 ttft =  0.7935638427734375
+P99 ttft =  2.0184096193313588
+Average tbt =  0.9472482490539554
+P50 tbt =  0.6390256404876711
+P99 tbt =  3.6497876257896427
+All GPUs and memories are cold after  37.07483768463135
+92886
+288  -  96
+288  -  256
+288  -  1024
+1053  -  96
+1053  -  256
+1053  -  600
+8170  -  5
+8170  -  256
+8170  -  600
+8170 - 5
+Average ttft =  1.1740417596770496
+P50 ttft =  0.8940834999084473
+P99 ttft =  2.8911443710327154
+Average tbt =  1.9619116788957176
+P50 tbt =  1.7170825958251956
+P99 tbt =  5.32269814014435
+All GPUs and memories are cold after  44.09534978866577
+92886
+288  -  96
+288  -  256
+288  -  1024
+1053  -  96
+1053  -  256
+1053  -  600
+8170  -  5
+8170  -  256
+8170  -  600
+8170 - 5
+Average ttft =  2.482570753097534
+P50 ttft =  2.563231348991394
+P99 ttft =  4.392324180603027
+Average tbt =  7.666247492313386
+P50 tbt =  7.660632181167604
+P99 tbt =  15.179374483585361
+All GPUs and memories are cold after  46.07301926612854
+92886
+288  -  96
+288  -  256
+288  -  1024
+1053  -  96
+1053  -  256
+1053  -  600
+8170  -  5
+8170  -  256
+8170  -  600
+8170 - 5
+Average ttft =  4.780890475958586
+P50 ttft =  5.187954306602478
+P99 ttft =  9.181417980194091
+Average tbt =  9.886567005142568
+P50 tbt =  9.863739597797396
+P99 tbt =  19.54038180756569
+All GPUs and memories are cold after  57.09124732017517
+92886
+288  -  96
+288  -  256
+288  -  1024
+1053  -  96
+1053  -  256
+1053  -  600
+8170  -  5
+8170  -  256
+8170  -  600
+8170 - 5
+Average ttft =  6.913194907854681
+P50 ttft =  7.217830181121826
+P99 ttft =  13.393341503143311
+Average tbt =  11.294327979218469
+P50 tbt =  11.254316854476931
+P99 tbt =  22.30243720912934
+All GPUs and memories are cold after  57.07563638687134
+92886
+288  -  96
+288  -  256
+288  -  1024
+1053  -  96
+1053  -  256
+1053  -  600
+8170  -  5
+8170  -  256
+8170  -  600
+8170 - 5
+Average ttft =  9.14325669012874
+P50 ttft =  8.915164232254028
+P99 ttft =  17.49349390029907
+Average tbt =  12.9188597862979
+P50 tbt =  12.879862356185917
+P99 tbt =  25.48535348129273
+All GPUs and memories are cold after  65.09339547157288
+92886
+288  -  96
+288  -  256
+288  -  1024
+1053  -  96
+1053  -  256
+1053  -  600
+8170  -  5
+8170  -  256
+8170  -  600
+8170 - 5
+Average ttft =  0.5514104763666788
+P50 ttft =  0.45127248764038086
+P99 ttft =  1.0494330263137819
+Average tbt =  0.1477914392948151
+P50 tbt =  0.018847060203552243
+P99 tbt =  0.6042584631443026
+All GPUs and memories are cold after  14.032635927200317
+92886
+288  -  96
+288  -  256
+288  -  1024
+1053  -  96
+1053  -  256
+1053  -  600
+8170  -  5
+8170  -  256
+8170  -  600
+8170 - 5
+Average ttft =  0.6636855715797061
+P50 ttft =  0.5335142612457275
+P99 ttft =  1.3812271118164063
+Average tbt =  0.3561726456596738
+P50 tbt =  0.32849678993225107
+P99 tbt =  1.1966464614868169
+All GPUs and memories are cold after  27.04091763496399
+92886
+288  -  96
+288  -  256
+288  -  1024
+1053  -  96
+1053  -  256
+1053  -  600
+8170  -  5
+8170  -  256
+8170  -  600
+8170 - 5
+Average ttft =  0.9706198624202184
+P50 ttft =  0.7972817420959473
+P99 ttft =  2.0261106586456283
+Average tbt =  0.9453729833875386
+P50 tbt =  0.6390401124954226
+P99 tbt =  3.653746528625488
+All GPUs and memories are cold after  45.061726570129395
+92886
+288  -  96
+288  -  256
+288  -  1024
+1053  -  96
+1053  -  256
+1053  -  600
+8170  -  5
+8170  -  256
+8170  -  600
+8170 - 5
+Average ttft =  1.1757774585630836
+P50 ttft =  0.896754264831543
+P99 ttft =  2.8860216617584236
+Average tbt =  1.978159485212187
+P50 tbt =  1.7520276308059695
+P99 tbt =  5.354265065193178
+All GPUs and memories are cold after  49.07401943206787
+92886
+288  -  96
+288  -  256
+288  -  1024
+1053  -  96
+1053  -  256
+1053  -  600
+8170  -  5
+8170  -  256
+8170  -  600
+8170 - 5
+Average ttft =  2.3883940029144286
+P50 ttft =  2.454533576965332
+P99 ttft =  4.289393990039826
+Average tbt =  7.655879591464997
+P50 tbt =  7.653672802448275
+P99 tbt =  15.1004187412262
+All GPUs and memories are cold after  59.12061047554016
+92886
+288  -  96
+288  -  256
+288  -  1024
+1053  -  96
+1053  -  256
+1053  -  600
+8170  -  5
+8170  -  256
+8170  -  600
+8170 - 5
+Average ttft =  4.775165274739265
+P50 ttft =  5.176452994346619
+P99 ttft =  9.168101429939268
+Average tbt =  9.880253274738793
+P50 tbt =  9.86416999101639
+P99 tbt =  19.529572927951815
+All GPUs and memories are cold after  70.09968638420105
+92886
+288 huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 00000001:00:00.0
+
+Warning: persistence mode is disabled on device 00000001:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 00000002:00:00.0
+
+Warning: persistence mode is disabled on device 00000002:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 00000003:00:00.0
+
+Warning: persistence mode is disabled on device 00000003:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 00000008:00:00.0
+
+Warning: persistence mode is disabled on device 00000008:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 00000009:00:00.0
+
+Warning: persistence mode is disabled on device 00000009:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 0000000A:00:00.0
+
+Warning: persistence mode is disabled on device 0000000A:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 0000000B:00:00.0
+
+Warning: persistence mode is disabled on device 0000000B:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 0000000C:00:00.0
+
+Warning: persistence mode is disabled on device 0000000C:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+All done.
+All done.
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 00000001:00:00.0
+
+Warning: persistence mode is disabled on device 00000001:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 00000002:00:00.0
+
+Warning: persistence mode is disabled on device 00000002:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 00000003:00:00.0
+
+Warning: persistence mode is disabled on device 00000003:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 00000008:00:00.0
+
+Warning: persistence mode is disabled on device 00000008:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 00000009:00:00.0
+
+Warning: persistence mode is disabled on device 00000009:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 0000000A:00:00.0
+
+Warning: persistence mode is disabled on device 0000000A:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 0000000B:00:00.0
+
+Warning: persistence mode is disabled on device 0000000B:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 0000000C:00:00.0
+
+Warning: persistence mode is disabled on device 0000000C:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+All done.
+All done.
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 00000001:00:00.0
+
+Warning: persistence mode is disabled on device 00000001:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 00000002:00:00.0
+
+Warning: persistence mode is disabled on device 00000002:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 00000003:00:00.0
+
+Warning: persistence mode is disabled on device 00000003:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 00000008:00:00.0
+
+Warning: persistence mode is disabled on device 00000008:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 00000009:00:00.0
+
+Warning: persistence mode is disabled on device 00000009:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 0000000A:00:00.0
+
+Warning: persistence mode is disabled on device 0000000A:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 0000000B:00:00.0
+
+Warning: persistence mode is disabled on device 0000000B:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 0000000C:00:00.0
+
+Warning: persistence mode is disabled on device 0000000C:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+All done.
+All done.
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+ -  96
+288  -  256
+288  -  1024
+1053  -  96
+1053  -  256
+1053  -  600
+8170  -  5
+8170  -  256
+8170  -  600
+8170 - 5
+Average ttft =  6.923712593235382
+P50 ttft =  7.217448472976685
+P99 ttft =  13.476069641113282
+Average tbt =  11.345872496252193
+P50 tbt =  11.317285370826724
+P99 tbt =  22.35634179496766
+All GPUs and memories are cold after  70.09291219711304
+92886
+288  -  96
+288  -  256
+288  -  1024
+1053  -  96
+1053  -  256
+1053  -  600
+8170  -  5
+8170  -  256
+8170  -  600
+8170 - 5
+Average ttft =  9.031254558678134
+P50 ttft =  8.752646923065186
+P99 ttft =  17.317026963233946
+Average tbt =  12.87593433770789
+P50 tbt =  12.876576375961307
+P99 tbt =  25.370063736438755
+All GPUs and memories are cold after  85.1517550945282
+92886
+288  -  96
+288  -  256
+288  -  1024
+1053  -  96
+1053  -  256
+1053  -  600
+8170  -  5
+8170  -  256
+8170  -  600
+8170 - 5
+Average ttft =  0.5506309469540914
+P50 ttft =  0.4514424800872803
+P99 ttft =  1.0489046931266786
+Average tbt =  0.14788125157356266
+P50 tbt =  0.018861496448516847
+P99 tbt =  0.6054407994747165
+All GPUs and memories are cold after  20.047983646392822
+92886
+288  -  96
+288  -  256
+288  -  1024
+1053  -  96
+1053  -  256
+1053  -  600
+8170  -  5
+8170  -  256
+8170  -  600
+8170 - 5
+Average ttft =  0.6635774884905133
+P50 ttft =  0.5345768928527832
+P99 ttft =  1.3845118045806886
+Average tbt =  0.35653943447839653
+P50 tbt =  0.3283386945724488
+P99 tbt =  1.198325076103211
+All GPUs and memories are cold after  34.087050676345825
+92886
+288  -  96
+288  -  256
+288  -  1024
+1053  -  96
+1053  -  256
+1053  -  600
+8170  -  5
+8170  -  256
+8170  -  600
+8170 - 5
+Average ttft =  0.9651118210383824
+P50 ttft =  0.7947983741760254
+P99 ttft =  2.0096179914474472
+Average tbt =  0.9425851583480839
+P50 tbt =  0.6365731477737429
+P99 tbt =  3.6410373616218568
+All GPUs and memories are cold after  52.074514627456665
+92886
+288  -  96
+288  -  256
+288  -  1024
+1053  -  96
+1053  -  256
+1053  -  600
+8170  -  5
+8170  -  256
+8170  -  600
+8170 - 5
+Average ttft =  1.1758547992241093
+P50 ttft =  0.8955943584442139
+P99 ttft =  2.89278211593628
+Average tbt =  1.9625359116531003
+P50 tbt =  1.7186573505401614
+P99 tbt =  5.324622850418092
+All GPUs and memories are cold after  52.07568025588989
+92886
+288  -  96
+288  -  256
+288  -  1024
+1053  -  96
+1053  -  256
+1053  -  600
+8170  -  5
+8170  -  256
+8170  -  600
+8170 - 5
+Average ttft =  2.4956262922286987
+P50 ttft =  2.573141574859619
+P99 ttft =  4.4064677047729495
+Average tbt =  7.674359641075134
+P50 tbt =  7.663448905944826
+P99 tbt =  15.19325029587746
+All GPUs and memories are cold after  54.07193160057068
+92886
+288  -  96
+288  -  256
+288  -  1024
+1053  -  96
+1053  -  256
+1053  -  600
+8170  -  5
+8170  -  256
+8170  -  600
+8170 - 5
+Average ttft =  4.761213533580303
+P50 ttft =  5.171201467514038
+P99 ttft =  9.158113946914671
+Average tbt =  9.88370034880936
+P50 tbt =  9.85649679899216
+P99 tbt =  19.515009022235873
+All GPUs and memories are cold after  60.09644103050232
+92886
+288  -  96
+288  -  256
+288  -  1024
+1053  -  96
+1053  -  256
+1053  -  600
+8170  -  5
+8170  -  256
+8170  -  600
+8170 - 5
+Average ttft =  6.919484742700237
+P50 ttft =  7.223394870758057
+P99 ttft =  13.418682622909547
+Average tbt =  11.313898060093193
+P50 tbt =  11.266889572143558
+P99 tbt =  22.323397862434394
+All GPUs and memories are cold after  62.094900608062744
+92886
+288  -  96
+288  -  256
+288  -  1024
+1053  -  96
+1053  -  256
+1053  -  600
+8170  -  5
+8170  -  256
+8170  -  600
+8170 - 5
+Average ttft =  9.111764399402112
+P50 ttft =  8.889923572540283
+P99 ttft =  17.462308073043822
+Average tbt =  12.917896638433618
+P50 tbt =  12.873699331283571
+P99 tbt =  25.45640094470978
+All GPUs and memories are cold after  65.09740328788757
+92886
+288  -  96
+288  -  256
+288  -  1024
+1053  -  96
+1053  -  256
+1053  -  600
+8170  -  5
+8170  -  256
+8170  -  600
+8170 - 5
+Average ttft =  0.5517303546269735
+P50 ttft =  0.4518674612045288
+P99 ttft =  1.0501350831985474
+Average tbt =  0.14769626657168075
+P50 tbt =  0.01884218454360962
+P99 tbt =  0.6043532123565677
+All GPUs and memories are cold after  18.0565185546875
+92886
+288  -  96
+288  -  256
+288  -  1024
+1053  -  96
+1053  -  256
+1053  -  600
+8170  -  5
+8170  -  256
+8170  -  600
+8170 - 5
+Average ttft =  0.6626417069208055
+P50 ttft =  0.5335009098052979
+P99 ttft =  1.3775278568267824
+Average tbt =  0.35601805959429067
+P50 tbt =  0.32857298851013195
+P99 tbt =  1.1949315929412847
+All GPUs and memories are cold after  31.060744524002075
+92886
+288  -  96
+288  -  256
+288  -  1024
+1053  -  96
+1053  -  256
+1053  -  600
+8170  -  5
+8170  -  256
+8170  -  600
+8170 - 5
+Average ttft =  0.9679089341844831
+P50 ttft =  0.7945952415466309
+P99 ttft =  2.0185676956176746
+Average tbt =  0.9444747522899084
+P50 tbt =  0.6381376981735232
+P99 tbt =  3.6485803608894347
+All GPUs and memories are cold after  44.063010692596436
+92886
+288  -  96
+288  -  256
+288  -  1024
+1053  -  96
+1053  -  256
+1053  -  600
+8170  -  5
+8170  -  256
+8170  -  600
+8170 - 5
+Average ttft =  1.1757048164925925
+P50 ttft =  0.8935337066650391
+P99 ttft =  2.8951684474945076
+Average tbt =  1.9623959314532398
+P50 tbt =  1.717157053947449
+P99 tbt =  5.3262991333007825
+All GPUs and memories are cold after  49.068114042282104
+92886
+288  -  96
+288  -  256
+288  -  1024
+1053  -  96
+1053  -  256
+1053  -  600
+8170  -  5
+8170  -  256
+8170  -  600
+8170 - 5
+Average ttft =  2.493864312171936
+P50 ttft =  2.576968789100647
+P99 ttft =  4.412727262973785
+Average tbt =  7.681406260013582
+P50 tbt =  7.672404503822328
+P99 tbt =  15.201808702707295
+All GPUs and memories are cold after  53.07418370246887
+92886
+288  -  96
+288  -  256
+288  -  1024
+1053  -  96
+1053  -  256
+1053  -  600
+8170  -  5
+8170  -  256
+8170  -  600
+8170 - 5
+Average ttft =  4.756895288825035
+P50 ttft =  5.174387454986572
+P99 ttft =  9.15136711835861
+Average tbt =  9.880560084432364
+P50 tbt =  9.849267995357515
+P99 tbt =  19.51083029341698
+All GPUs and memories are cold after  59.086671352386475
+92886
+288  -  96
+288  -  256
+288  -  1024
+1053  -  96
+1053  -  256
+1053  -  600
+8170  -  5
+8170  -  256
+8170  -  600
+8170 - 5
+Average ttft =  6.918937892129977
+P50 ttft =  7.229804039001465
+P99 ttft =  13.430531511306762
+Average tbt =  11.325142569084692
+P50 tbt =  11.278558397293093
+P99 tbt =  22.336755812644967
+All GPUs and memories are cold after  61.08868145942688
+92886
+288  -  96
+288  -  256
+288  -  1024
+1053  -  96
+1053  -  256
+1053  -  600
+8170  -  5
+8170  -  256
+8170  -  600
+8170 - 5
+Average ttft =  9.108022612261484
+P50 ttft =  8.889997005462646
+P99 ttft =  17.465853881835937
+Average tbt =  12.926800294669274
+P50 tbt =  12.876031661033633
+P99 tbt =  25.46167252969742
+All GPUs and memories are cold after  66.0947744846344
+92886
+288  -  96
+288  -  256
+288  -  1024
+1053  -  96
+1053  -  256
+1053  -  600
+8170  -  5
+8170  -  256
+8170  -  600
+8170 - 5
+Average ttft =  0.5519717534383138
+P50 ttft =  0.45148301124572754
+P99 ttft =  1.0497394847869874
+Average tbt =  0.14768015344937646
+P50 tbt =  0.01867786645889282
+P99 tbt =  0.6044289445877078
+All GPUs and memories are cold after  16.029886484146118
+92886
+288  -  96
+288  -  256
+288  -  1024
+1053  -  96
+1053  -  256
+1053  -  600
+8170  -  5
+8170  -  256
+8170  -  600
+8170 - 5
+Average ttft =  0.6642050970168341
+P50 ttft =  0.532839298248291
+P99 ttft =  1.3839564323425295
+Average tbt =  0.356654833611988
+P50 tbt =  0.32815485000610356
+P99 tbt =  1.19979992389679
+All GPUs and memories are cold after  29.069968461990356
+92886
+288  -  96
+288  -  256
+288  -  1024
+1053  -  96
+1053  -  256
+1053  -  600
+8170  -  5
+8170  -  256
+8170  -  600
+8170 - 5
+Average ttft =  0.968684264591762
+P50 ttft =  0.7961199283599854
+P99 ttft =  2.016914753913878
+Average tbt =  0.9440930822917396
+P50 tbt =  0.638407325744629
+P99 tbt =  3.6469798979759216
+All GPUs and memories are cold after  42.069242000579834
+92886
+288  -  96
+288  -  256
+288  -  1024
+1053  -  96
+1053  -  256
+1053  -  600
+8170  -  5
+8170  -  256
+8170  -  600
+8170 - 5
+Average ttft =  1.1754604258188388
+P50 ttft =  0.894672155380249
+P99 ttft =  2.890109539031983
+Average tbt =  1.961978159299711
+P50 tbt =  1.7175390481948856
+P99 tbt =  5.320445299148561
+All GPUs and memories are cold after  49.070151805877686
+92886
+288  -  96
+288  -  256
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 00000001:00:00.0
+
+Warning: persistence mode is disabled on device 00000001:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 00000002:00:00.0
+
+Warning: persistence mode is disabled on device 00000002:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 00000003:00:00.0
+
+Warning: persistence mode is disabled on device 00000003:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 00000008:00:00.0
+
+Warning: persistence mode is disabled on device 00000008:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 00000009:00:00.0
+
+Warning: persistence mode is disabled on device 00000009:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 0000000A:00:00.0
+
+Warning: persistence mode is disabled on device 0000000A:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 0000000B:00:00.0
+
+Warning: persistence mode is disabled on device 0000000B:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 0000000C:00:00.0
+
+Warning: persistence mode is disabled on device 0000000C:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+All done.
+All done.
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 00000001:00:00.0
+
+Warning: persistence mode is disabled on device 00000001:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 00000002:00:00.0
+
+Warning: persistence mode is disabled on device 00000002:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 00000003:00:00.0
+
+Warning: persistence mode is disabled on device 00000003:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 00000008:00:00.0
+
+Warning: persistence mode is disabled on device 00000008:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 00000009:00:00.0
+
+Warning: persistence mode is disabled on device 00000009:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 0000000A:00:00.0
+
+Warning: persistence mode is disabled on device 0000000A:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 0000000B:00:00.0
+
+Warning: persistence mode is disabled on device 0000000B:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 0000000C:00:00.0
+
+Warning: persistence mode is disabled on device 0000000C:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+All done.
+All done.
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
