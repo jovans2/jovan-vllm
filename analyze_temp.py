@@ -45,6 +45,15 @@ tempLines_all = tempFile.readlines()
 tempFile = open("dcgm_monitor_temperature_tp8_all_gpus", "r")
 tempLines = tempFile.readlines()
 
+tempFile = open("dcgm_monitor_temperature_11a", "r")
+tempLines = tempFile.readlines()
+
+tempFile = open("dcgm_monitor_temperature_11b", "r")
+tempLines = tempLines + tempFile.readlines()
+
+tempFile = open("dcgm_monitor_temperature_11c", "r")
+tempLines = tempLines + tempFile.readlines()
+
 temperatures_mem = []
 for _ in range(8):
     temperatures_mem.append([])
@@ -79,10 +88,10 @@ for line in tempLines:
         pass
 
 for gpuId in range(8):
-    temperatures_gpu[gpuId] = temperatures_gpu[gpuId][:32000]
-    temperatures_mem[gpuId] = temperatures_mem[gpuId][:32000]
-    powers_gpu[gpuId] = powers_gpu[gpuId][:32000]
-    frequencies_gpu[gpuId] = frequencies_gpu[gpuId][:32000]
+    temperatures_gpu[gpuId] = temperatures_gpu[gpuId][:435806]
+    temperatures_mem[gpuId] = temperatures_mem[gpuId][:435806]
+    powers_gpu[gpuId] = powers_gpu[gpuId][:435806]
+    frequencies_gpu[gpuId] = frequencies_gpu[gpuId][:435806]
 
 x_vals = []
 for ind, val in enumerate(temperatures_gpu[0]):
