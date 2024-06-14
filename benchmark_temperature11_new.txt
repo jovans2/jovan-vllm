@@ -1,0 +1,31 @@
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 00000001:00:00.0
+
+Warning: persistence mode is disabled on device 00000001:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 00000002:00:00.0
+
+Warning: persistence mode is disabled on device 00000002:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 00000003:00:00.0
+
+Warning: persistence mode is disabled on device 00000003:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 00000008:00:00.0
+
+Warning: persistence mode is disabled on device 00000008:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 00000009:00:00.0
+
+Warning: persistence mode is disabled on device 00000009:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 0000000A:00:00.0
+
+Warning: persistence mode is disabled on device 0000000A:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 0000000B:00:00.0
+
+Warning: persistence mode is disabled on device 0000000B:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 0000000C:00:00.0
+
+Warning: persistence mode is disabled on device 0000000C:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+All done.
+All done.
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
