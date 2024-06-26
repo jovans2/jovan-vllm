@@ -725,8 +725,8 @@ class LLMEngine:
             torch.cuda.synchronize()
             if scheduler_outputs.prompt_run:
                 currTime = time.time()
-                #ttft = currTime - scheduler_outputs.start_time
-                ttft = currTime - seq_group.arrival_time
+                ttft = currTime - scheduler_outputs.start_time
+                # ttft = currTime - seq_group.arrival_time
                 seq_group.ttft = ttft
                 seq_group.last_time = currTime
                 print(f"Time to first token = {ttft}", file=ttft_file, flush=True)
@@ -736,7 +736,7 @@ class LLMEngine:
                 seq_group.last_time = currTime
                 seq_group.tbts.append(tbt)
                 seq_group.tbt = np.percentile(seq_group.tbts, 90)
-                # print(f"Time between tokens = {tbt}", file=ttft_file, flush=True)
+                print(f"Time between tokens = {tbt}", file=ttft_file, flush=True)
         lens = ""
         for seq_group in scheduled_seq_groups:
             for seqId in seq_group.seqs_dict:

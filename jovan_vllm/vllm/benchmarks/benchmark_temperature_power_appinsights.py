@@ -13,31 +13,48 @@ from tqdm.asyncio import tqdm
 from transformers import PreTrainedTokenizerBase
 from vllm.transformers_utils.tokenizer import get_tokenizer
 
+from opencensus.stats import aggregation as aggregation_module
+from opencensus.stats import measure as measure_module
+from opencensus.stats import stats as stats_module
+from opencensus.stats import view as view_module
+from opencensus.tags import tag_map as tag_map_module
+from opencensus.ext.azure import metrics_exporter
+
+AZ_METADATA_IP = "169.254.169.254"
+AZ_METADATA_ENDPOINT  = f"http://{AZ_METADATA_IP}/metadata/instance"
+AZ_SCHEDULED_ENDPOINT = f"http://{AZ_METADATA_IP}/metadata/scheduledevents"
+
+
+def get_az_vm_name():
+    headers_l = {'Metadata': 'True'}
+    query_params_l = {'api-version': '2019-06-01'}
+    rsp_l = requests.get(AZ_METADATA_ENDPOINT, headers=headers_l, params=query_params_l).json()
+    if "compute" in rsp_l and "name" in rsp_l["compute"]:
+        return rsp_l["compute"]["name"]
+    return None
+
+
+my_az_name = get_az_vm_name()
+
+m_power_w0 = measure_module.MeasureFloat("repl/ttft", "TTFT Latency", "ms")
+stats = stats_module.stats
+view_manager0 = stats.view_manager
+stats_recorder0 = stats.stats_recorder
+mmap0 = stats_recorder0.new_measurement_map()
+tmap0 = tag_map_module.TagMap()
+power_view0 = view_module.View(f"ttft_{my_az_name}",
+                               "The TTFT latency measurements",
+                               [],
+                               m_power_w0,
+                               aggregation_module.LastValueAggregation())
+view_manager0.register_view(power_view0)
+exporter0 = metrics_exporter.new_metrics_exporter(connection_string=
+                                                  os.environ['APPLICATIONINSIGHTS_CONNECTION_STRING'])
+view_manager0.register_exporter(exporter0)
+
 
 RANDOM_SEED = 100
 OVERSAMPLING_FACTOR = 2
-
-
-def start_process_dcgmi():
-    command = "dcgmi dmon -d 100 -e 140,150,157,100,101 > dcgm_monitor_temperature"
-    return subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-
-
-def check_process_dcgmi(process):
-    return process.poll() is None
-
-
-def restart_process_dcgmi(process):
-    process.kill()
-    return start_process_dcgmi()
-
-
-def check_dcgmi():
-    process = start_process_dcgmi()
-    while True:
-        time.sleep(20)
-        if not check_process_dcgmi(process):
-            process = restart_process_dcgmi(process)
 
 
 def EnforceActivityWindow(start_time, end_time, instance_events):
@@ -68,6 +85,7 @@ def generate_poisson_distribution(rates, duration):
 REQUEST_LATENCY = []
 ttfts = []
 tbts = []
+
 
 def sample_requests(
     dataset_path: str,
@@ -106,7 +124,6 @@ def sample_requests(
     for i in range(len(prompts)):
         output_len = 100
         tokenized_dataset.append((prompts[i], prompt_token_ids[i], output_len))
-    
 
     my_req_ss = "", 0, 0
     my_req_sm = "", 0, 0
@@ -191,6 +208,9 @@ def send_request(backend: str, model: str, api_url: str, prompt: str, prompt_len
 
     match = re.search(pattern, rsp)
     ttft_number = float(match.group(1))
+
+    mmap0.measure_float_put(m_power_w0, ttft_number)
+    mmap0.record(tmap0)
     
     pattern = r"MY TBT = (\d+\.\d+)"
 
@@ -215,7 +235,7 @@ def main(load_reqs, reqt):
     print(data[1], "-", data[2])
     api_url = f"http://localhost:8000/generate"
     
-    instance_events = generate_poisson_distribution([load_reqs], 240)[0]
+    instance_events = generate_poisson_distribution([load_reqs], 600)[0]
     after_time, before_time = 0, 0
     st = 0
     threads = []
@@ -253,11 +273,8 @@ def main(load_reqs, reqt):
 
 if __name__ == "__main__":
 
-    thread_dcgmi = threading.Thread(target=check_dcgmi)
-    thread_dcgmi.start()
-
     reqts = [2, 6]
-    loads = {2: [3.5, 9.5, 16], 6: [0.5, 1.5, 2.5]}
+    loads = {2: [3.5, 8.0, 16], 6: [0.5, 1.5, 2.5]}
     freqs = [1980]
 
     for reqt in reqts:
@@ -271,48 +288,5 @@ if __name__ == "__main__":
                 reqtt = reqt
                 ttft = main(load, reqt)
 
-                gpus_temps = {}
-                mems_temps = {}
-                for indgpu in range(8):
-                    gpus_temps[indgpu] = []
-                    mems_temps[indgpu] = []
-                # Continuously read and print the output
-                command = "dcgmi dmon -e 140,150"
-                process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE)
-                tStart_cold = time.time()
-                indline = 0
-                while True:
-                    output = process.stdout.readline().decode('utf-8')
-                    if output == '' and process.poll() is not None:
-                        break
-                    if output:
-                        outputList = output.split()
-                        try:
-                            gpuId = int(outputList[1])
-                            gpuTemp = float(outputList[3])
-                            memTemp = float(outputList[2])
-
-                            mems_temps[gpuId].append(memTemp)
-                            gpus_temps[gpuId].append(gpuTemp)
-
-                            endTrue = True
-                            for indgpu in gpus_temps:
-                                if len(gpus_temps[indgpu]) < 10:
-                                    continue
-                                max_temp = max(gpus_temps[indgpu][-100:])
-                                min_temp = min(gpus_temps[indgpu][-100:])
-                                if max_temp - min_temp > 1:
-                                    endTrue = False
-                            if endTrue:
-                                tEnd_cold = time.time()
-                                print("All GPUs and memories are cold after ", tEnd_cold - tStart_cold)
-                                break
-                        except:
-                            pass
-
-                    indline += 1
-                    if indline == 10:
-                        time.sleep(10)
-                        indline = 0
-                process.terminate()
+                time.sleep(600)
             

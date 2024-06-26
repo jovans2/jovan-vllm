@@ -1,6 +1,18 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
+readlines = open("batch.txt", "r").readlines()
+y = []
+x = []
+ind = 0
+for line in readlines:
+    y.append(int(line.split()[-1]))
+    x.append(ind)
+    ind += 1
+plt.plot(x, y)
+plt.show()
+plt.clf()
+
 # tempFile = open("dcgm_temp_monitor_sleep", "r")
 # tempLines = tempFile.readlines()
 
@@ -18,40 +30,37 @@ plt.plot(x_vals, recover_times)
 plt.xlabel("Config")
 plt.ylabel("Recovery time [s]")
 plt.grid(axis="both")
-plt.show()
+# plt.show()
 plt.clf()
 
-tempFile = open("dcgm_monitor_temperature_a", "r")
+tempFile = open("dcgm_monitor_temperature_power1", "r")
 tempLines = tempFile.readlines()
 
-tempFile = open("dcgm_monitor_temperature_b", "r")
+tempFile = open("dcgm_monitor_temperature_power2", "r")
 tempLines = tempLines + tempFile.readlines()
 
-tempFile = open("dcgm_monitor_temperature_c", "r")
+tempFile = open("dcgm_monitor_temperature_power3", "r")
 tempLines = tempLines + tempFile.readlines()
 
-tempFile = open("dcgm_monitor_temperature_d", "r")
+tempFile = open("dcgm_monitor_temperature_power4", "r")
 tempLines = tempLines + tempFile.readlines()
 
-tempFile = open("dcgm_monitor_temperature_tp4_cold_gpus", "r")
-tempLines_cold = tempFile.readlines()
+tempFile = open("dcgm_monitor_temperature_power5", "r")
+tempLines = tempLines + tempFile.readlines()
 
-tempFile = open("dcgm_monitor_temperature_tp4_hot_gpus", "r")
-tempLines_hot = tempFile.readlines()
-
-tempFile = open("dcgm_monitor_temperature_tp4_all_gpus", "r")
-tempLines_all = tempFile.readlines()
-
-tempFile = open("dcgm_monitor_temperature_tp8_all_gpus", "r")
+tempFile = open("dcgm_monitor_temperature_power_batch1", "r")
 tempLines = tempFile.readlines()
 
-tempFile = open("dcgm_monitor_temperature_11a", "r")
-tempLines = tempFile.readlines()
-
-tempFile = open("dcgm_monitor_temperature_11b", "r")
+tempFile = open("dcgm_monitor_temperature_power_batch2", "r")
 tempLines = tempLines + tempFile.readlines()
 
-tempFile = open("dcgm_monitor_temperature_11c", "r")
+tempFile = open("dcgm_monitor_temperature_power_batch3", "r")
+tempLines = tempLines + tempFile.readlines()
+
+tempFile = open("dcgm_monitor_temperature_power_batch4", "r")
+tempLines = tempLines + tempFile.readlines()
+
+tempFile = open("dcgm_monitor_temperature_power_batch5", "r")
 tempLines = tempLines + tempFile.readlines()
 
 temperatures_mem = []
@@ -88,17 +97,17 @@ for line in tempLines:
         pass
 
 for gpuId in range(8):
-    temperatures_gpu[gpuId] = temperatures_gpu[gpuId][:435806]
-    temperatures_mem[gpuId] = temperatures_mem[gpuId][:435806]
-    powers_gpu[gpuId] = powers_gpu[gpuId][:435806]
-    frequencies_gpu[gpuId] = frequencies_gpu[gpuId][:435806]
+    temperatures_gpu[gpuId] = temperatures_gpu[gpuId][:120000]
+    temperatures_mem[gpuId] = temperatures_mem[gpuId][:120000]
+    powers_gpu[gpuId] = powers_gpu[gpuId][:120000]
+    frequencies_gpu[gpuId] = frequencies_gpu[gpuId][:120000]
 
 x_vals = []
 for ind, val in enumerate(temperatures_gpu[0]):
-    x_vals.append(ind)
+    x_vals.append(ind * 0.1)
 for gpuId in range(len(temperatures_gpu)):
     plt.plot(x_vals, temperatures_gpu[gpuId], label="GPU"+str(gpuId))
-plt.xlabel("Time [100ms]")
+plt.xlabel("Time [s]")
 plt.ylabel("GPU Temp [C]")
 plt.grid(axis="both")
 plt.legend()
@@ -107,7 +116,7 @@ plt.clf()
 
 for gpuId in range(len(temperatures_gpu)):
     plt.plot(x_vals, temperatures_mem[gpuId], label="GPU"+str(gpuId))
-plt.xlabel("Time [100ms]")
+plt.xlabel("Time [s]")
 plt.ylabel("Mem Temp [C]")
 plt.grid(axis="both")
 plt.legend()
@@ -124,7 +133,7 @@ for ind in range(len(temperatures_gpu[0])):
     max_diff_temp.append(max_temp - min_temp)
 
 plt.plot(x_vals, max_diff_temp)
-plt.xlabel("Time [100ms]")
+plt.xlabel("Time [s]")
 plt.ylabel("Max GPU Temp Diff [C]")
 plt.grid(axis="both")
 plt.show()
@@ -139,7 +148,7 @@ for ind in range(len(temperatures_mem[0])):
     max_diff_temp.append(max_temp - min_temp)
 
 plt.plot(x_vals, max_diff_temp)
-plt.xlabel("Time [100ms]")
+plt.xlabel("Time [s]")
 plt.ylabel("Max Mem Temp Diff [C]")
 plt.grid(axis="both")
 plt.show()
@@ -147,7 +156,7 @@ plt.clf()
 
 for gpuId in range(len(temperatures_gpu)):
     plt.plot(x_vals, powers_gpu[gpuId], label="GPU"+str(gpuId))
-plt.xlabel("Time [100ms]")
+plt.xlabel("Time [s]")
 plt.ylabel("GPU Power [W]")
 plt.grid(axis="both")
 plt.legend()
@@ -164,7 +173,7 @@ for ind in range(len(powers_gpu[0])):
     max_diff_power.append(max_temp - min_temp)
 
 plt.plot(x_vals, max_diff_power)
-plt.xlabel("Time [100ms]")
+plt.xlabel("Time [s]")
 plt.ylabel("Max GPU Power Diff [W]")
 plt.grid(axis="both")
 plt.show()
@@ -172,7 +181,7 @@ plt.clf()
 
 for gpuId in range(len(frequencies_gpu)):
     plt.plot(x_vals, frequencies_gpu[gpuId], label="GPU"+str(gpuId))
-plt.xlabel("Time [100ms]")
+plt.xlabel("Time [s]")
 plt.ylabel("GPU Frequency [MHz]")
 plt.grid(axis="both")
 plt.legend()

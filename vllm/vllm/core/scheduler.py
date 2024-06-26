@@ -16,6 +16,7 @@ from vllm.prefix import PrefixPool
 
 logger = init_logger(__name__)
 
+batch_file = open("batch.txt", "a")
 
 class PreemptionMode(enum.Enum):
     """Preemption modes.
@@ -272,7 +273,7 @@ class Scheduler:
                 
                 # freq = 1980
                 # os.system("sudo nvidia-smi -lgc " + str(freq) + " > /dev/null 2>&1")
-
+                print(f"Batch size = {len(scheduled)}", file=batch_file, flush=True)
                 scheduler_outputs = SchedulerOutputs(
                     scheduled_seq_groups=scheduled,
                     prompt_run=True,
@@ -367,6 +368,7 @@ class Scheduler:
             seq_group.num_seqs(status=SequenceStatus.RUNNING)
             for seq_group in self.running)
 
+        print(f"Batch size = {len(self.running)}", file=batch_file, flush=True)
         scheduler_outputs = SchedulerOutputs(
             scheduled_seq_groups=self.running,
             prompt_run=False,
