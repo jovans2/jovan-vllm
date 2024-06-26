@@ -1,0 +1,41 @@
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 00000001:00:00.0
+
+Warning: persistence mode is disabled on device 00000001:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 00000002:00:00.0
+
+Warning: persistence mode is disabled on device 00000002:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 00000003:00:00.0
+
+Warning: persistence mode is disabled on device 00000003:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 00000004:00:00.0
+
+Warning: persistence mode is disabled on device 00000004:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 0000000B:00:00.0
+
+Warning: persistence mode is disabled on device 0000000B:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 0000000C:00:00.0
+
+Warning: persistence mode is disabled on device 0000000C:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 0000000D:00:00.0
+
+Warning: persistence mode is disabled on device 0000000D:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+GPU clocks set to "(gpuClkMin 1980, gpuClkMax 1980)" for GPU 0000000E:00:00.0
+
+Warning: persistence mode is disabled on device 0000000E:00:00.0. See the Known Issues section of the nvidia-smi(1) man page for more information. Run with [--help | -h] switch to get more information on how to enable persistence mode.
+All done.
+All done.
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Open ttft file
+Traceback (most recent call last):
+  File "benchmark_temperature_power.py", line 269, in <module>
+    ttft = main(load, reqt)
+  File "benchmark_temperature_power.py", line 213, in main
+    dataset = sample_requests("../../../../ShareGPT_V3_unfiltered_cleaned_split.json", tokenizer)
+  File "benchmark_temperature_power.py", line 79, in sample_requests
+    with open(dataset_path) as f:
+FileNotFoundError: [Errno 2] No such file or directory: '../../../../ShareGPT_V3_unfiltered_cleaned_split.json'
+Exception ignored in: <module 'threading' from '/usr/lib/python3.8/threading.py'>
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 1388, in _shutdown
+    lock.acquire()
+KeyboardInterrupt: 
