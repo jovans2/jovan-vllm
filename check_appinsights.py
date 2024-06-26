@@ -29,7 +29,7 @@ my_az_name = get_az_vm_name()
 
 print(my_az_name)
 
-m_power_w0 = measure_module.MeasureFloat("repl/power", "Power consumption of GPU 0", "W")
+m_power_w0 = measure_module.MeasureFloat("repl/power0", "Power consumption of GPU 0", "W")
 stats = stats_module.stats
 view_manager0 = stats.view_manager
 stats_recorder0 = stats.stats_recorder
@@ -45,7 +45,7 @@ exporter0 = metrics_exporter.new_metrics_exporter(connection_string=
                                                   os.environ['APPLICATIONINSIGHTS_CONNECTION_STRING'])
 view_manager0.register_exporter(exporter0)
 
-m_power_w1 = measure_module.MeasureFloat("repl/power", "Power consumption of GPU 1", "W")
+m_power_w1 = measure_module.MeasureFloat("repl/power1", "Power consumption of GPU 1", "W")
 view_manager1 = stats.view_manager
 stats_recorder1 = stats.stats_recorder
 mmap1 = stats_recorder1.new_measurement_map()
@@ -60,7 +60,7 @@ exporter1 = metrics_exporter.new_metrics_exporter(connection_string=
                                                   os.environ['APPLICATIONINSIGHTS_CONNECTION_STRING'])
 view_manager1.register_exporter(exporter1)
 
-m_power_w2 = measure_module.MeasureFloat("repl/power", "Power consumption of GPU 2", "W")
+m_power_w2 = measure_module.MeasureFloat("repl/power2", "Power consumption of GPU 2", "W")
 view_manager2 = stats.view_manager
 stats_recorder2 = stats.stats_recorder
 mmap2 = stats_recorder2.new_measurement_map()
@@ -75,7 +75,7 @@ exporter2 = metrics_exporter.new_metrics_exporter(connection_string=
                                                   os.environ['APPLICATIONINSIGHTS_CONNECTION_STRING'])
 view_manager2.register_exporter(exporter2)
 
-m_power_w3 = measure_module.MeasureFloat("repl/power", "Power consumption of GPU 3", "W")
+m_power_w3 = measure_module.MeasureFloat("repl/power3", "Power consumption of GPU 3", "W")
 view_manager3 = stats.view_manager
 stats_recorder3 = stats.stats_recorder
 mmap3 = stats_recorder3.new_measurement_map()
@@ -90,7 +90,7 @@ exporter3 = metrics_exporter.new_metrics_exporter(connection_string=
                                                   os.environ['APPLICATIONINSIGHTS_CONNECTION_STRING'])
 view_manager3.register_exporter(exporter3)
 
-m_power_w4 = measure_module.MeasureFloat("repl/power", "Power consumption of GPU 4", "W")
+m_power_w4 = measure_module.MeasureFloat("repl/power4", "Power consumption of GPU 4", "W")
 view_manager4 = stats.view_manager
 stats_recorder4 = stats.stats_recorder
 mmap4 = stats_recorder4.new_measurement_map()
@@ -105,7 +105,7 @@ exporter4 = metrics_exporter.new_metrics_exporter(connection_string=
                                                   os.environ['APPLICATIONINSIGHTS_CONNECTION_STRING'])
 view_manager4.register_exporter(exporter4)
 
-m_power_w5 = measure_module.MeasureFloat("repl/power", "Power consumption of GPU 5", "W")
+m_power_w5 = measure_module.MeasureFloat("repl/power5", "Power consumption of GPU 5", "W")
 view_manager5 = stats.view_manager
 stats_recorder5 = stats.stats_recorder
 mmap5 = stats_recorder5.new_measurement_map()
@@ -120,7 +120,7 @@ exporter5 = metrics_exporter.new_metrics_exporter(connection_string=
                                                   os.environ['APPLICATIONINSIGHTS_CONNECTION_STRING'])
 view_manager5.register_exporter(exporter5)
 
-m_power_w6 = measure_module.MeasureFloat("repl/power", "Power consumption of GPU 6", "W")
+m_power_w6 = measure_module.MeasureFloat("repl/power6", "Power consumption of GPU 6", "W")
 view_manager6 = stats.view_manager
 stats_recorder6 = stats.stats_recorder
 mmap6 = stats_recorder6.new_measurement_map()
@@ -135,7 +135,7 @@ exporter6 = metrics_exporter.new_metrics_exporter(connection_string=
                                                   os.environ['APPLICATIONINSIGHTS_CONNECTION_STRING'])
 view_manager6.register_exporter(exporter6)
 
-m_power_w7 = measure_module.MeasureFloat("repl/power", "Power consumption of GPU 7", "W")
+m_power_w7 = measure_module.MeasureFloat("repl/power7", "Power consumption of GPU 7", "W")
 view_manager7 = stats.view_manager
 stats_recorder7 = stats.stats_recorder
 mmap7 = stats_recorder7.new_measurement_map()
@@ -150,7 +150,7 @@ exporter7 = metrics_exporter.new_metrics_exporter(connection_string=
                                                   os.environ['APPLICATIONINSIGHTS_CONNECTION_STRING'])
 view_manager7.register_exporter(exporter7)
 
-m_temp_w0 = measure_module.MeasureFloat("repl/temp", "temp consumption of GPU 0", "W")
+m_temp_w0 = measure_module.MeasureFloat("repl/temp0", "temp consumption of GPU 0", "W")
 view_manager0t = stats.view_manager
 stats_recorder0t = stats.stats_recorder
 mmap0t = stats_recorder0t.new_measurement_map()
@@ -165,7 +165,7 @@ exporter0t = metrics_exporter.new_metrics_exporter(connection_string=
                                                    os.environ['APPLICATIONINSIGHTS_CONNECTION_STRING'])
 view_manager0t.register_exporter(exporter0t)
 
-m_temp_w1 = measure_module.MeasureFloat("repl/temp", "temp consumption of GPU 1", "W")
+m_temp_w1 = measure_module.MeasureFloat("repl/temp1", "temp consumption of GPU 1", "W")
 view_manager1t = stats.view_manager
 stats_recorder1t = stats.stats_recorder
 mmap1t = stats_recorder1t.new_measurement_map()
@@ -180,7 +180,7 @@ exporter1t = metrics_exporter.new_metrics_exporter(connection_string=
                                                    os.environ['APPLICATIONINSIGHTS_CONNECTION_STRING'])
 view_manager1t.register_exporter(exporter1t)
 
-m_temp_w2 = measure_module.MeasureFloat("repl/temp", "temp consumption of GPU 2", "W")
+m_temp_w2 = measure_module.MeasureFloat("repl/temp2", "temp consumption of GPU 2", "W")
 view_manager2t = stats.view_manager
 stats_recorder2t = stats.stats_recorder
 mmap2t = stats_recorder2t.new_measurement_map()
@@ -195,7 +195,7 @@ exporter2t = metrics_exporter.new_metrics_exporter(connection_string=
                                                    os.environ['APPLICATIONINSIGHTS_CONNECTION_STRING'])
 view_manager2t.register_exporter(exporter2t)
 
-m_temp_w3 = measure_module.MeasureFloat("repl/temp", "temp consumption of GPU 3", "W")
+m_temp_w3 = measure_module.MeasureFloat("repl/temp3", "temp consumption of GPU 3", "W")
 view_manager3t = stats.view_manager
 stats_recorder3t = stats.stats_recorder
 mmap3t = stats_recorder3t.new_measurement_map()
@@ -210,7 +210,7 @@ exporter3t = metrics_exporter.new_metrics_exporter(connection_string=
                                                    os.environ['APPLICATIONINSIGHTS_CONNECTION_STRING'])
 view_manager3t.register_exporter(exporter3t)
 
-m_temp_w4 = measure_module.MeasureFloat("repl/temp", "temp consumption of GPU 4", "W")
+m_temp_w4 = measure_module.MeasureFloat("repl/temp4", "temp consumption of GPU 4", "W")
 view_manager4t = stats.view_manager
 stats_recorder4t = stats.stats_recorder
 mmap4t = stats_recorder4t.new_measurement_map()
@@ -225,7 +225,7 @@ exporter4t = metrics_exporter.new_metrics_exporter(connection_string=
                                                    os.environ['APPLICATIONINSIGHTS_CONNECTION_STRING'])
 view_manager4t.register_exporter(exporter4t)
 
-m_temp_w5 = measure_module.MeasureFloat("repl/temp", "temp consumption of GPU 5", "W")
+m_temp_w5 = measure_module.MeasureFloat("repl/temp5", "temp consumption of GPU 5", "W")
 view_manager5t = stats.view_manager
 stats_recorder5t = stats.stats_recorder
 mmap5t = stats_recorder5t.new_measurement_map()
@@ -240,7 +240,7 @@ exporter5t = metrics_exporter.new_metrics_exporter(connection_string=
                                                    os.environ['APPLICATIONINSIGHTS_CONNECTION_STRING'])
 view_manager5t.register_exporter(exporter5t)
 
-m_temp_w6 = measure_module.MeasureFloat("repl/temp", "temp consumption of GPU 6", "W")
+m_temp_w6 = measure_module.MeasureFloat("repl/temp6", "temp consumption of GPU 6", "W")
 view_manager6t = stats.view_manager
 stats_recorder6t = stats.stats_recorder
 mmap6t = stats_recorder6t.new_measurement_map()
@@ -255,7 +255,7 @@ exporter6t = metrics_exporter.new_metrics_exporter(connection_string=
                                                    os.environ['APPLICATIONINSIGHTS_CONNECTION_STRING'])
 view_manager6t.register_exporter(exporter6t)
 
-m_temp_w7 = measure_module.MeasureFloat("repl/temp", "temp consumption of GPU 7", "W")
+m_temp_w7 = measure_module.MeasureFloat("repl/temp7", "temp consumption of GPU 7", "W")
 view_manager7t = stats.view_manager
 stats_recorder7t = stats.stats_recorder
 mmap7t = stats_recorder7t.new_measurement_map()
@@ -271,7 +271,7 @@ exporter7t = metrics_exporter.new_metrics_exporter(connection_string=
 view_manager7t.register_exporter(exporter7t)
 
 
-m_memp_w0 = measure_module.MeasureFloat("repl/memp", "memp consumption of GPU 0", "W")
+m_memp_w0 = measure_module.MeasureFloat("repl/memp0", "memp consumption of GPU 0", "W")
 view_manager0m = stats.view_manager
 stats_recorder0m = stats.stats_recorder
 mmap0m = stats_recorder0m.new_measurement_map()
@@ -286,7 +286,7 @@ exporter0m = metrics_exporter.new_metrics_exporter(connection_string=
                                                    os.environ['APPLICATIONINSIGHTS_CONNECTION_STRING'])
 view_manager0m.register_exporter(exporter0m)
 
-m_memp_w1 = measure_module.MeasureFloat("repl/memp", "memp consumption of GPU 1", "W")
+m_memp_w1 = measure_module.MeasureFloat("repl/memp1", "memp consumption of GPU 1", "W")
 view_manager1m = stats.view_manager
 stats_recorder1m = stats.stats_recorder
 mmap1m = stats_recorder1m.new_measurement_map()
@@ -301,7 +301,7 @@ exporter1m = metrics_exporter.new_metrics_exporter(connection_string=
                                                    os.environ['APPLICATIONINSIGHTS_CONNECTION_STRING'])
 view_manager1m.register_exporter(exporter1m)
 
-m_memp_w2 = measure_module.MeasureFloat("repl/memp", "memp consumption of GPU 2", "W")
+m_memp_w2 = measure_module.MeasureFloat("repl/memp2", "memp consumption of GPU 2", "W")
 view_manager2m = stats.view_manager
 stats_recorder2m = stats.stats_recorder
 mmap2m = stats_recorder2m.new_measurement_map()
@@ -316,7 +316,7 @@ exporter2m = metrics_exporter.new_metrics_exporter(connection_string=
                                                    os.environ['APPLICATIONINSIGHTS_CONNECTION_STRING'])
 view_manager2m.register_exporter(exporter2m)
 
-m_memp_w3 = measure_module.MeasureFloat("repl/memp", "memp consumption of GPU 3", "W")
+m_memp_w3 = measure_module.MeasureFloat("repl/memp3", "memp consumption of GPU 3", "W")
 view_manager3m = stats.view_manager
 stats_recorder3m = stats.stats_recorder
 mmap3m = stats_recorder3m.new_measurement_map()
@@ -331,7 +331,7 @@ exporter3m = metrics_exporter.new_metrics_exporter(connection_string=
                                                    os.environ['APPLICATIONINSIGHTS_CONNECTION_STRING'])
 view_manager3m.register_exporter(exporter3m)
 
-m_memp_w4 = measure_module.MeasureFloat("repl/memp", "memp consumption of GPU 4", "W")
+m_memp_w4 = measure_module.MeasureFloat("repl/memp4", "memp consumption of GPU 4", "W")
 view_manager4m = stats.view_manager
 stats_recorder4m = stats.stats_recorder
 mmap4m = stats_recorder4m.new_measurement_map()
@@ -346,7 +346,7 @@ exporter4m = metrics_exporter.new_metrics_exporter(connection_string=
                                                    os.environ['APPLICATIONINSIGHTS_CONNECTION_STRING'])
 view_manager4m.register_exporter(exporter4m)
 
-m_memp_w5 = measure_module.MeasureFloat("repl/memp", "memp consumption of GPU 5", "W")
+m_memp_w5 = measure_module.MeasureFloat("repl/memp5", "memp consumption of GPU 5", "W")
 view_manager5m = stats.view_manager
 stats_recorder5m = stats.stats_recorder
 mmap5m = stats_recorder5m.new_measurement_map()
@@ -361,7 +361,7 @@ exporter5m = metrics_exporter.new_metrics_exporter(connection_string=
                                                    os.environ['APPLICATIONINSIGHTS_CONNECTION_STRING'])
 view_manager5m.register_exporter(exporter5m)
 
-m_memp_w6 = measure_module.MeasureFloat("repl/memp", "memp consumption of GPU 6", "W")
+m_memp_w6 = measure_module.MeasureFloat("repl/memp6", "memp consumption of GPU 6", "W")
 view_manager6m = stats.view_manager
 stats_recorder6m = stats.stats_recorder
 mmap6m = stats_recorder6m.new_measurement_map()
@@ -376,7 +376,7 @@ exporter6m = metrics_exporter.new_metrics_exporter(connection_string=
                                                    os.environ['APPLICATIONINSIGHTS_CONNECTION_STRING'])
 view_manager6t.register_exporter(exporter6m)
 
-m_memp_w7 = measure_module.MeasureFloat("repl/memp", "memp consumption of GPU 7", "W")
+m_memp_w7 = measure_module.MeasureFloat("repl/memp7", "memp consumption of GPU 7", "W")
 view_manager7m = stats.view_manager
 stats_recorder7m = stats.stats_recorder
 mmap7m = stats_recorder7m.new_measurement_map()
