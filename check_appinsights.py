@@ -49,10 +49,12 @@ view_manager.register_exporter(exporter)
 
 def export_metrics():
     readfile = "dcgm_monitor_test"
+    print("Start exporting metrics")
     while True:
         time.sleep(1)
-        result = subprocess.run(["tail", "-n", "1", readfile], stdout=subprocess.PIPE)
+        result = subprocess.run(["tail", "-n", "8", readfile], stdout=subprocess.PIPE)
         last_line = result.stdout.decode('utf-8').strip()
+        last_lines = last_line.split("\n")
         try:
             power = float(last_line.split()[6])
         except:
@@ -62,8 +64,7 @@ def export_metrics():
         mmap1.record(tmap1)
 
 def start_process_dcgmi():
-    first_gpu = "0"
-    command = "dcgmi dmon -i " + first_gpu + " -e 100,101,112,156,157,140,150,203,204 -d 1000 > dcgm_monitor_test"
+    command = "dcgmi dmon -e 100,101,112,156,157,140,150,203,204 -d 1000 > dcgm_monitor_test"
     return subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
 
@@ -87,3 +88,6 @@ if __name__ == '__main__':
 
     thread_dcgmi = threading.Thread(target=check_dcgmi)
     thread_dcgmi.start()
+
+    thread_exporter = threading.Thread(target=export_metrics)
+    thread_exporter.start()
