@@ -20,12 +20,123 @@ from opencensus.stats import view as view_module
 from opencensus.tags import tag_map as tag_map_module
 from opencensus.ext.azure import metrics_exporter
 
+cmd1 = ['python3',
+        '-m',
+        'vllm.entrypoints.api_server',
+        '--model',
+        'meta-llama/Llama-2-70b-chat-hf',
+        '--swap-space',
+        '16',
+        '--disable-log-requests',
+        '--tensor-parallel-size=8',
+        '--max-num-seqs=256']
+
+cmd2 = ['python3',
+        '-m',
+        'vllm.entrypoints.api_server',
+        '--model',
+        'meta-llama/Llama-2-70b-chat-hf',
+        '--swap-space',
+        '16',
+        '--disable-log-requests',
+        '--tensor-parallel-size=4',
+        '--max-num-seqs=256']
+
+cmd3 = ['python3',
+        '-m',
+        'vllm.entrypoints.api_server',
+        '--model',
+        'meta-llama/Llama-2-70b-chat-hf',
+        '--swap-space',
+        '16',
+        '--disable-log-requests',
+        '--tensor-parallel-size=2',
+        '--max-num-seqs=256']
+
+cmd4 = ['python3',
+        '-m',
+        'vllm.entrypoints.api_server',
+        '--model',
+        'meta-llama/Llama-2-7b-chat-hf',
+        '--swap-space',
+        '16',
+        '--disable-log-requests',
+        '--tensor-parallel-size=8',
+        '--max-num-seqs=256']
+
+cmd5 = ['python3',
+        '-m',
+        'vllm.entrypoints.api_server',
+        '--model',
+        'meta-llama/Llama-2-13b-chat-hf',
+        '--swap-space',
+        '16',
+        '--disable-log-requests',
+        '--tensor-parallel-size=8',
+        '--max-num-seqs=256']
+
+cmd6 = ['python3',
+        '-m',
+        'vllm.entrypoints.api_server',
+        '--model',
+        'meta-llama/Llama-2-70b-chat-hf',
+        '--swap-space',
+        '16',
+        '--disable-log-requests',
+        '--tensor-parallel-size=8',
+        '--max-num-seqs=64']
+
+cmd7 = ['python3',
+        '-m',
+        'vllm.entrypoints.api_server',
+        '--model',
+        'meta-llama/Llama-2-70b-chat-hf',
+        '--swap-space',
+        '16',
+        '--disable-log-requests',
+        '--tensor-parallel-size=8',
+        '--max-num-seqs=16']
+
+cmd8 = ['python3',
+        '-m',
+        'vllm.entrypoints.api_server',
+        '--model',
+        'meta-llama/Llama-2-70b-chat-hf',
+        '--swap-space',
+        '16',
+        '--disable-log-requests',
+        '--tensor-parallel-size=8',
+        '--max-num-seqs=1']
+
+cmd9 = ['python3',
+        '-m',
+        'vllm.entrypoints.api_server',
+        '--model',
+        'Llama-2-70b-chat-hf-awq',
+        '--swap-space',
+        '16',
+        '--disable-log-requests',
+        '--tensor-parallel-size=8',
+        '--max-num-seqs=256',
+        '--quantization=awq']
+
+commands = [cmd1, cmd2, cmd3, cmd4, cmd5, cmd6, cmd7, cmd8, cmd9]
+
+
+def start_server(command):
+    # Start the process in the background
+    process = subprocess.Popen(command, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+
+    return process
+
+
 AZ_METADATA_IP = "169.254.169.254"
-AZ_METADATA_ENDPOINT  = f"http://{AZ_METADATA_IP}/metadata/instance"
+AZ_METADATA_ENDPOINT = f"http://{AZ_METADATA_IP}/metadata/instance"
 AZ_SCHEDULED_ENDPOINT = f"http://{AZ_METADATA_IP}/metadata/scheduledevents"
 
 RANDOM_SEED = 100
 OVERSAMPLING_FACTOR = 2
+
 
 def get_az_vm_name():
     headers_l = {'Metadata': 'True'}
@@ -34,6 +145,7 @@ def get_az_vm_name():
     if "compute" in rsp_l and "name" in rsp_l["compute"]:
         return rsp_l["compute"]["name"]
     return None
+
 
 my_az_name = get_az_vm_name()
 
@@ -104,7 +216,7 @@ view_manager_latency1 = stats.view_manager
 stats_recorder_latency1 = stats.stats_recorder
 mmap1_latency1 = stats_recorder_latency1.new_measurement_map()
 tmap1_latency1 = tag_map_module.TagMap()
-latency_view1 = view_module.View(f"latency_{my_az_name}1",
+latency1_view = view_module.View(f"latency_{my_az_name}1",
                                  "The distribution of the TBT latency",
                                  [],
                                  latency1_ms,
@@ -113,6 +225,7 @@ view_manager_latency1.register_view(latency1_view)
 exporter_latency1 = metrics_exporter.new_metrics_exporter(connection_string=
                                                           os.environ['APPLICATIONINSIGHTS_CONNECTION_STRING'])
 view_manager_latency1.register_exporter(exporter_latency1)
+
 
 def start_process_dcgmi():
     first_gpu = "0"
@@ -135,6 +248,7 @@ def check_dcgmi():
         time.sleep(20)
         if not check_process_dcgmi(process):
             process = restart_process_dcgmi(process)
+
 
 def export_metrics():
     readfile = "dcgm_monitor_test"
@@ -159,6 +273,7 @@ def export_metrics():
 
         mmap1_memp.measure_float_put(m_memperature_c, memp)
         mmap1_memp.record(tmap1_memp)
+
 
 def EnforceActivityWindow(start_time, end_time, instance_events):
     ret = []
@@ -189,11 +304,11 @@ REQUEST_LATENCY = []
 ttfts = []
 tbts = []
 
+
 def sample_requests(
     dataset_path: str,
     tokenizer: PreTrainedTokenizerBase,
 ) -> List[Tuple[str, int, int]]:
-
 
     # Load the dataset.
     with open(dataset_path) as f:
@@ -226,7 +341,6 @@ def sample_requests(
     for i in range(len(prompts)):
         output_len = 100
         tokenized_dataset.append((prompts[i], prompt_token_ids[i], output_len))
-
 
     my_req_ss = "", 0, 0
     my_req_sm = "", 0, 0
@@ -266,6 +380,7 @@ def sample_requests(
         print(elem[1], " - ", elem[2])
 
     return filtered_dataset
+
 
 def send_request(backend: str, model: str, api_url: str, prompt: str, prompt_len: int, output_len: int, best_of: int, use_beam_search: bool) -> None:
     global ttfts
@@ -328,7 +443,8 @@ def send_request(backend: str, model: str, api_url: str, prompt: str, prompt_len
 
     mmap1_latency1.measure_float_put(latency1_ms, tbt_number)
     mmap1_latency1.record(tmap1_latency1)
-   
+
+
 def main(load_reqs, reqt):
     global REQUEST_LATENCY
     global ttfts
@@ -365,19 +481,28 @@ if __name__ == "__main__":
     thread_export_metrics = threading.Thread(target=export_metrics)
     thread_export_metrics.start()
 
-    reqts = [4]
-    loads = {4: [0.5, 1.5, 2.3]}
-    freqs = [1980]
+    for cmd in commands:
+        # Start the server
+        server_process = start_server(cmd)
 
-    for reqt in reqts:
-        for freq in freqs:
-            os.system("sudo nvidia-smi -lgc " + str(freq))
-            if freq == 1980:
-                os.system("sudo nvidia-smi -rgc")
-            for load in loads[reqt]:
-                ttfts = []
-                tbts = []
-                reqtt = reqt
-                ttft = main(load, reqt)
+        print("Server started with PID:", server_process.pid)
 
-                time.sleep(600)
+        # Sleep for 5 minutes
+        print("Sleeping for 5 minutes before killing the server...")
+        time.sleep(300)  # 300 seconds = 5 minutes
+
+        reqts = [4]
+        loads = {4: [0.5, 1.5, 2.3]}
+        freqs = [1980]
+
+        for reqt in reqts:
+            for freq in freqs:
+                os.system("sudo nvidia-smi -lgc " + str(freq))
+                if freq == 1980:
+                    os.system("sudo nvidia-smi -rgc")
+                for load in loads[reqt]:
+                    ttfts = []
+                    tbts = []
+                    reqtt = reqt
+                    main(load, reqt)
+                    time.sleep(600)
