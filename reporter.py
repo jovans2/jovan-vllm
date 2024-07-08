@@ -1,6 +1,5 @@
 import json
 import ast
-import sys
 import time
 import re
 from typing import List, Tuple
@@ -9,7 +8,6 @@ import threading
 import requests
 import numpy as np
 import subprocess
-from tqdm.asyncio import tqdm
 from transformers import PreTrainedTokenizerBase
 from vllm.transformers_utils.tokenizer import get_tokenizer
 
@@ -20,105 +18,15 @@ from opencensus.stats import view as view_module
 from opencensus.tags import tag_map as tag_map_module
 from opencensus.ext.azure import metrics_exporter
 
-cmd1 = ['python3',
-        '-m',
-        'vllm.entrypoints.api_server',
-        '--model',
-        'meta-llama/Llama-2-70b-chat-hf',
-        '--swap-space',
-        '16',
-        '--disable-log-requests',
-        '--tensor-parallel-size=8',
-        '--max-num-seqs=256']
-
-cmd2 = ['python3',
-        '-m',
-        'vllm.entrypoints.api_server',
-        '--model',
-        'meta-llama/Llama-2-70b-chat-hf',
-        '--swap-space',
-        '16',
-        '--disable-log-requests',
-        '--tensor-parallel-size=4',
-        '--max-num-seqs=256']
-
-cmd3 = ['python3',
-        '-m',
-        'vllm.entrypoints.api_server',
-        '--model',
-        'meta-llama/Llama-2-70b-chat-hf',
-        '--swap-space',
-        '16',
-        '--disable-log-requests',
-        '--tensor-parallel-size=2',
-        '--max-num-seqs=256']
-
-cmd4 = ['python3',
-        '-m',
-        'vllm.entrypoints.api_server',
-        '--model',
-        'meta-llama/Llama-2-7b-chat-hf',
-        '--swap-space',
-        '16',
-        '--disable-log-requests',
-        '--tensor-parallel-size=8',
-        '--max-num-seqs=256']
-
-cmd5 = ['python3',
-        '-m',
-        'vllm.entrypoints.api_server',
-        '--model',
-        'meta-llama/Llama-2-13b-chat-hf',
-        '--swap-space',
-        '16',
-        '--disable-log-requests',
-        '--tensor-parallel-size=8',
-        '--max-num-seqs=256']
-
-cmd6 = ['python3',
-        '-m',
-        'vllm.entrypoints.api_server',
-        '--model',
-        'meta-llama/Llama-2-70b-chat-hf',
-        '--swap-space',
-        '16',
-        '--disable-log-requests',
-        '--tensor-parallel-size=8',
-        '--max-num-seqs=64']
-
-cmd7 = ['python3',
-        '-m',
-        'vllm.entrypoints.api_server',
-        '--model',
-        'meta-llama/Llama-2-70b-chat-hf',
-        '--swap-space',
-        '16',
-        '--disable-log-requests',
-        '--tensor-parallel-size=8',
-        '--max-num-seqs=16']
-
-cmd8 = ['python3',
-        '-m',
-        'vllm.entrypoints.api_server',
-        '--model',
-        'meta-llama/Llama-2-70b-chat-hf',
-        '--swap-space',
-        '16',
-        '--disable-log-requests',
-        '--tensor-parallel-size=8',
-        '--max-num-seqs=1']
-
-cmd9 = ['python3',
-        '-m',
-        'vllm.entrypoints.api_server',
-        '--model',
-        'Llama-2-70b-chat-hf-awq',
-        '--swap-space',
-        '16',
-        '--disable-log-requests',
-        '--tensor-parallel-size=8',
-        '--max-num-seqs=256',
-        '--quantization=awq']
+cmd1 = ['python3', '-m', 'vllm.entrypoints.api_server', '--model', 'meta-llama/Llama-2-70b-chat-hf', '--swap-space', '16', '--disable-log-requests', '--tensor-parallel-size=8', '--max-num-seqs=256']
+cmd2 = ['python3', '-m', 'vllm.entrypoints.api_server', '--model', 'meta-llama/Llama-2-70b-chat-hf', '--swap-space', '16', '--disable-log-requests', '--tensor-parallel-size=4', '--max-num-seqs=256']
+cmd3 = ['python3', '-m', 'vllm.entrypoints.api_server', '--model', 'meta-llama/Llama-2-70b-chat-hf', '--swap-space', '16', '--disable-log-requests', '--tensor-parallel-size=2', '--max-num-seqs=256']
+cmd4 = ['python3', '-m', 'vllm.entrypoints.api_server', '--model', 'meta-llama/Llama-2-7b-chat-hf', '--swap-space', '16', '--disable-log-requests', '--tensor-parallel-size=8', '--max-num-seqs=256']
+cmd5 = ['python3', '-m', 'vllm.entrypoints.api_server', '--model', 'meta-llama/Llama-2-13b-chat-hf', '--swap-space', '16', '--disable-log-requests', '--tensor-parallel-size=8', '--max-num-seqs=256']
+cmd6 = ['python3', '-m', 'vllm.entrypoints.api_server', '--model', 'meta-llama/Llama-2-70b-chat-hf', '--swap-space', '16', '--disable-log-requests', '--tensor-parallel-size=8', '--max-num-seqs=64']
+cmd7 = ['python3', '-m', 'vllm.entrypoints.api_server', '--model', 'meta-llama/Llama-2-70b-chat-hf', '--swap-space', '16', '--disable-log-requests', '--tensor-parallel-size=8', '--max-num-seqs=16']
+cmd8 = ['python3', '-m', 'vllm.entrypoints.api_server', '--model', 'meta-llama/Llama-2-70b-chat-hf', '--swap-space', '16', '--disable-log-requests', '--tensor-parallel-size=8', '--max-num-seqs=1']
+cmd9 = ['python3', '-m', 'vllm.entrypoints.api_server', '--model', 'Llama-2-70b-chat-hf-awq', '--swap-space', '16', '--disable-log-requests', '--tensor-parallel-size=8', '--max-num-seqs=256', '--quantization=awq']
 
 commands = [cmd1, cmd2, cmd3, cmd4, cmd5, cmd6, cmd7, cmd8, cmd9]
 
@@ -126,7 +34,6 @@ commands = [cmd1, cmd2, cmd3, cmd4, cmd5, cmd6, cmd7, cmd8, cmd9]
 def start_server(command):
     # Start the process in the background
     process = subprocess.Popen(command, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-
     return process
 
 
@@ -172,10 +79,10 @@ mmap1_temp = stats_recorder_temp.new_measurement_map()
 tmap1_temp = tag_map_module.TagMap()
 
 temp_view = view_module.View(f"temp_{my_az_name}",
-                              "The temperature measurements",
-                              [],
-                              m_temperature_c,
-                              aggregation_module.LastValueAggregation())
+                             "The temperature measurements",
+                             [],
+                             m_temperature_c,
+                             aggregation_module.LastValueAggregation())
 view_manager_temp.register_view(temp_view)
 exporter_temp = metrics_exporter.new_metrics_exporter(connection_string=
                                                       os.environ['APPLICATIONINSIGHTS_CONNECTION_STRING'])
