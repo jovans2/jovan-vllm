@@ -398,6 +398,8 @@ if __name__ == "__main__":
         print("Sleeping for 5 minutes before killing the server...")
         time.sleep(300)  # 300 seconds = 5 minutes
 
+        print("Starting the load...")
+
         reqts = [4]
         loads = {4: [0.5, 1.5, 2.3]}
         freqs = [1980]
