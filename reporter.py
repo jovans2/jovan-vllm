@@ -118,7 +118,7 @@ exporter_latency = metrics_exporter.new_metrics_exporter(connection_string=
                                                          os.environ['APPLICATIONINSIGHTS_CONNECTION_STRING'])
 view_manager_latency.register_exporter(exporter_latency)
 
-latency1_ms = measure_module.MeasureFloat("repl/latency", "The TBT in ms", "ms")
+latency1_ms = measure_module.MeasureFloat("repl/latency1", "The TBT in ms", "ms")
 view_manager_latency1 = stats.view_manager
 stats_recorder_latency1 = stats.stats_recorder
 mmap1_latency1 = stats_recorder_latency1.new_measurement_map()
