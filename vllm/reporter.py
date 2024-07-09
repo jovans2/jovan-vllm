@@ -28,7 +28,7 @@ cmd7 = ['python3', '-m', 'vllm.entrypoints.api_server', '--model', 'meta-llama/L
 cmd8 = ['python3', '-m', 'vllm.entrypoints.api_server', '--model', 'meta-llama/Llama-2-70b-chat-hf', '--swap-space', '16', '--disable-log-requests', '--tensor-parallel-size=8', '--max-num-seqs=1']
 cmd9 = ['python3', '-m', 'vllm.entrypoints.api_server', '--model', 'Llama-2-70b-chat-hf-awq', '--swap-space', '16', '--disable-log-requests', '--tensor-parallel-size=8', '--max-num-seqs=256', '--quantization=awq']
 
-commands = [cmd1, cmd2, cmd3, cmd4, cmd5, cmd6, cmd7, cmd8, cmd9]
+commands = [cmd1, cmd2, cmd3, cmd4, cmd5, cmd6, cmd7, cmd8, cmd9, cmd1, cmd1]
 
 
 def start_server(command):
@@ -135,8 +135,7 @@ view_manager_latency1.register_exporter(exporter_latency1)
 
 
 def start_process_dcgmi():
-    first_gpu = "0"
-    command = "dcgmi dmon -i " + first_gpu + " -e 100,101,112,156,157,140,150,203,204 -d 1000 > dcgm_monitor_test"
+    command = "dcgmi dmon -e 100,101,112,156,157,140,150,203,204 -d 1000 > dcgm_monitor_test"
     return subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
 
@@ -161,16 +160,22 @@ def export_metrics():
     readfile = "dcgm_monitor_test"
     while True:
         time.sleep(1)
-        result = subprocess.run(["tail", "-n", "1", readfile], stdout=subprocess.PIPE)
-        last_line = result.stdout.decode('utf-8').strip()
+        result = subprocess.run(["tail", "-n", "8", readfile], stdout=subprocess.PIPE)
+        output_lines = result.stdout.decode('utf-8').strip().splitlines()
+        last_line = output_lines[-1]
         try:
-            power = float(last_line.split()[6])
             temp = float(last_line.split()[7])
             memp = float(last_line.split()[8])
         except:
-            power = 120.0
             temp = 30
             memp = 30
+
+        power = 0
+        for line in output_lines:
+            try:
+                power += float(line.split()[6])
+            except:
+                power += 120
 
         mmap1.measure_float_put(m_power_w, power)
         mmap1.record(tmap1)
