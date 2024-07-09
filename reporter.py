@@ -123,7 +123,7 @@ view_manager_latency1 = stats.view_manager
 stats_recorder_latency1 = stats.stats_recorder
 mmap1_latency1 = stats_recorder_latency1.new_measurement_map()
 tmap1_latency1 = tag_map_module.TagMap()
-latency1_view = view_module.View(f"latency_{my_az_name}1",
+latency1_view = view_module.View(f"latency1_{my_az_name}",
                                  "The distribution of the TBT latency",
                                  [],
                                  latency1_ms,
