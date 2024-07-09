@@ -362,7 +362,7 @@ def main(load_reqs, reqt):
     global ttfts
     global tbts
     tokenizer = get_tokenizer("meta-llama/Meta-Llama-3-70b-Instruct", trust_remote_code=False)
-    dataset = sample_requests("../../ShareGPT_V3_unfiltered_cleaned_split.json", tokenizer)
+    dataset = sample_requests("../../../ShareGPT_V3_unfiltered_cleaned_split.json", tokenizer)
     data = dataset[reqt]
     print(data[1], "-", data[2])
     api_url = f"http://localhost:8000/generate"
