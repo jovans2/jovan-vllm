@@ -393,7 +393,9 @@ if __name__ == "__main__":
     thread_export_metrics = threading.Thread(target=export_metrics)
     thread_export_metrics.start()
 
+    indCmd = 0
     for cmd in commands:
+        indCmd += 1
         # Start the server
         server_process = start_server(cmd)
 
@@ -411,8 +413,13 @@ if __name__ == "__main__":
 
         for reqt in reqts:
             for freq in freqs:
-                os.system("sudo nvidia-smi -lgc " + str(freq))
-                if freq == 1980:
+                correct_freq = freq
+                if indCmd == 10:
+                    correct_freq = 1600
+                elif indCmd == 11:
+                    correct_freq = 1200
+                os.system("sudo nvidia-smi -lgc " + str(correct_freq))
+                if correct_freq == 1980:
                     os.system("sudo nvidia-smi -rgc")
                 for load in loads[reqt]:
                     ttfts = []
