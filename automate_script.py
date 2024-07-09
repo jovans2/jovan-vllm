@@ -114,7 +114,7 @@ def main():
 
     for cmd in commands:
         # Start the server
-        server_process = start_serverc(cmd)
+        server_process = start_server(cmd)
     
         print("Server started with PID:", server_process.pid)
     
