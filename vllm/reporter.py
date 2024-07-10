@@ -415,9 +415,9 @@ if __name__ == "__main__":
             for freq in freqs:
                 correct_freq = freq
                 if indCmd == 10:
-                    correct_freq = 1600
-                elif indCmd == 11:
                     correct_freq = 1200
+                elif indCmd == 11:
+                    correct_freq = 1000
                 os.system("sudo nvidia-smi -lgc " + str(correct_freq))
                 if correct_freq == 1980:
                     os.system("sudo nvidia-smi -rgc")
@@ -427,3 +427,6 @@ if __name__ == "__main__":
                     reqtt = reqt
                     main(load, reqt)
                     time.sleep(600)
+
+        server_process.kill()
+        time.sleep(60)
