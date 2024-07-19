@@ -1,0 +1,1458 @@
+Avg latency: 0.1534296593820036 seconds
+10% percentile latency: 0.1527469144000861 seconds
+25% percentile latency: 0.15290132599966455 seconds
+50% percentile latency: 0.15314938299979985 seconds
+75% percentile latency: 0.1533826515005785 seconds
+90% percentile latency: 0.15561183309928311 seconds
+99% percentile latency: 0.1562175584196848 seconds
+P99 power =  2913.248
+P50 power =  2573.6440000000002
+Avg latency: 0.1781594247659741 seconds
+10% percentile latency: 0.17782764209950983 seconds
+25% percentile latency: 0.1779744457498964 seconds
+50% percentile latency: 0.17817502900015825 seconds
+75% percentile latency: 0.1783291687493147 seconds
+90% percentile latency: 0.1784502036007325 seconds
+99% percentile latency: 0.1787570745606354 seconds
+P99 power =  2151.573
+P50 power =  1904.231
+Avg latency: 0.23863556612594766 seconds
+10% percentile latency: 0.23827819919970353 seconds
+25% percentile latency: 0.2384411887501301 seconds
+50% percentile latency: 0.2386292154997136 seconds
+75% percentile latency: 0.23878532724893375 seconds
+90% percentile latency: 0.23897196390007594 seconds
+99% percentile latency: 0.2393598516396014 seconds
+P99 power =  1529.656
+P50 power =  1397.0179999999998
+Avg latency: 0.24706768109408586 seconds
+10% percentile latency: 0.246629902299901 seconds
+25% percentile latency: 0.2468938022511793 seconds
+50% percentile latency: 0.24717717099883885 seconds
+75% percentile latency: 0.24739557275097468 seconds
+90% percentile latency: 0.24758359740098967 seconds
+99% percentile latency: 0.24786428331994104 seconds
+P99 power =  3396.1879999999996
+P50 power =  2924.897
+Avg latency: 0.28930392672403465 seconds
+10% percentile latency: 0.28889615520038203 seconds
+25% percentile latency: 0.2890745127510854 seconds
+50% percentile latency: 0.28928895949957223 seconds
+75% percentile latency: 0.2895346882501144 seconds
+90% percentile latency: 0.2897482147003757 seconds
+99% percentile latency: 0.2900942556904556 seconds
+P99 power =  2368.646
+P50 power =  2165.668
+Avg latency: 0.40052370203397003 seconds
+10% percentile latency: 0.400102235099439 seconds
+25% percentile latency: 0.4003212110005734 seconds
+50% percentile latency: 0.4005193909997615 seconds
+75% percentile latency: 0.4007468169988897 seconds
+90% percentile latency: 0.40093069430076866 seconds
+99% percentile latency: 0.4012841634999677 seconds
+P99 power =  1614.054
+P50 power =  1548.428
+Avg latency: 0.4244465157819941 seconds
+10% percentile latency: 0.4239585676989009 seconds
+25% percentile latency: 0.4242045397504626 seconds
+50% percentile latency: 0.4244793249990835 seconds
+75% percentile latency: 0.42473919024996576 seconds
+90% percentile latency: 0.42500960450088315 seconds
+99% percentile latency: 0.4254746202601927 seconds
+P99 power =  3485.890959999998
+P50 power =  3196.629
+Avg latency: 0.47970865614600916 seconds
+10% percentile latency: 0.4792089298012797 seconds
+25% percentile latency: 0.47946271425053055 seconds
+50% percentile latency: 0.4796906885003409 seconds
+75% percentile latency: 0.47997081549965515 seconds
+90% percentile latency: 0.48021236809981926 seconds
+99% percentile latency: 0.48062642107972353 seconds
+P99 power =  2791.5447999999824
+P50 power =  2506.5299999999997
+Avg latency: 0.6645904241820281 seconds
+10% percentile latency: 0.6639897812008713 seconds
+25% percentile latency: 0.664280149249862 seconds
+50% percentile latency: 0.6646007769995776 seconds
+75% percentile latency: 0.6649330220006959 seconds
+90% percentile latency: 0.6651897143996394 seconds
+99% percentile latency: 0.6655576386903522 seconds
+P99 power =  1838.8740000000003
+P50 power =  1713.4990000000003
+Avg latency: 0.21565199671799565 seconds
+10% percentile latency: 0.21521071000079245 seconds
+25% percentile latency: 0.21542062074922796 seconds
+50% percentile latency: 0.21566323450042546 seconds
+75% percentile latency: 0.21588603824920938 seconds
+90% percentile latency: 0.21610816129941668 seconds
+99% percentile latency: 0.21643584088893475 seconds
+P99 power =  2088.428
+P50 power =  1895.587
+Avg latency: 0.2505695866000024 seconds
+10% percentile latency: 0.24830828020076295 seconds
+25% percentile latency: 0.24904061824918244 seconds
+50% percentile latency: 0.2511558714995772 seconds
+75% percentile latency: 0.25141775224892626 seconds
+90% percentile latency: 0.25166312880010083 seconds
+99% percentile latency: 0.2521155573200849 seconds
+P99 power =  1671.846
+P50 power =  1544.099
+Avg latency: 0.3444268838520147 seconds
+10% percentile latency: 0.3431635410999661 seconds
+25% percentile latency: 0.34340574449925043 seconds
+50% percentile latency: 0.3436799934997907 seconds
+75% percentile latency: 0.3463798609996047 seconds
+90% percentile latency: 0.3468527837003421 seconds
+99% percentile latency: 0.3472596824698303 seconds
+P99 power =  1180.4560000000001
+P50 power =  1123.232
+Avg latency: 0.3549955600279791 seconds
+10% percentile latency: 0.3546161783999196 seconds
+25% percentile latency: 0.35486179275085306 seconds
+50% percentile latency: 0.35509285800071666 seconds
+75% percentile latency: 0.3553572819996589 seconds
+90% percentile latency: 0.3556431168010022 seconds
+99% percentile latency: 0.3564272176703707 seconds
+P99 power =  2171.353
+P50 power =  2037.53
+Avg latency: 0.40017051474600884 seconds
+10% percentile latency: 0.39992521490148647 seconds
+25% percentile latency: 0.40004172525141257 seconds
+50% percentile latency: 0.40013286849989527 seconds
+75% percentile latency: 0.400264685250022 seconds
+90% percentile latency: 0.40043735499948524 seconds
+99% percentile latency: 0.40092751355030487 seconds
+P99 power =  1858.341
+P50 power =  1760.8490000000002
+Avg latency: 0.5496619851499854 seconds
+10% percentile latency: 0.5487813491989073 seconds
+25% percentile latency: 0.548968342750868 seconds
+50% percentile latency: 0.549231636499826 seconds
+75% percentile latency: 0.5495762815003218 seconds
+90% percentile latency: 0.5522531580001668 seconds
+99% percentile latency: 0.5528216171511849 seconds
+P99 power =  1310.324
+P50 power =  1225.223
+Avg latency: 0.6640677505139866 seconds
+10% percentile latency: 0.6635434352001539 seconds
+25% percentile latency: 0.6637264385012713 seconds
+50% percentile latency: 0.664026954500514 seconds
+75% percentile latency: 0.6643393954987005 seconds
+90% percentile latency: 0.6646415064991743 seconds
+99% percentile latency: 0.6651709359811866 seconds
+P99 power =  2249.9060000000004
+P50 power =  2079.2999999999997
+Avg latency: 0.7201093364459812 seconds
+10% percentile latency: 0.7195437160999063 seconds
+25% percentile latency: 0.719749888250135 seconds
+50% percentile latency: 0.7200405769999634 seconds
+75% percentile latency: 0.7202976879993912 seconds
+90% percentile latency: 0.7205881334002697 seconds
+99% percentile latency: 0.7232447731095272 seconds
+P99 power =  2028.9
+P50 power =  1839.975
+Avg latency: 1.0074924015379985 seconds
+10% percentile latency: 1.0068651688998216 seconds
+25% percentile latency: 1.0072339665007348 seconds
+50% percentile latency: 1.0075694689994634 seconds
+75% percentile latency: 1.0079316992500935 seconds
+90% percentile latency: 1.0082532382013596 seconds
+99% percentile latency: 1.0087695399792755 seconds
+P99 power =  1375.112
+P50 power =  1269.1889999999999
+Avg latency: 0.3288459940100038 seconds
+10% percentile latency: 0.3284102466006516 seconds
+25% percentile latency: 0.32861583775002146 seconds
+50% percentile latency: 0.3288077084989709 seconds
+75% percentile latency: 0.3290467112501574 seconds
+90% percentile latency: 0.32924896939948667 seconds
+99% percentile latency: 0.32974000409980364 seconds
+P99 power =  1452.1699999999998
+P50 power =  1358.9379999999999
+Avg latency: 0.3773349919520515 seconds
+10% percentile latency: 0.3769813325990981 seconds
+25% percentile latency: 0.3771485327506525 seconds
+50% percentile latency: 0.3773377360012091 seconds
+75% percentile latency: 0.3775052492501345 seconds
+90% percentile latency: 0.37768849070016586 seconds
+99% percentile latency: 0.3780253217894096 seconds
+P99 power =  1298.1650000000002
+P50 power =  1226.865
+Avg latency: 0.526896976972017 seconds
+10% percentile latency: 0.5249503103013922 seconds
+25% percentile latency: 0.5251971025004423 seconds
+50% percentile latency: 0.5278774095004337 seconds
+75% percentile latency: 0.5282361800009312 seconds
+90% percentile latency: 0.5284601550003571 seconds
+99% percentile latency: 0.5289352000806684 seconds
+P99 power =  954.125
+P50 power =  909.567
+Avg latency: 0.5825091411900175 seconds
+10% percentile latency: 0.5815161552998689 seconds
+25% percentile latency: 0.5820176997490307 seconds
+50% percentile latency: 0.5824882750002871 seconds
+75% percentile latency: 0.5828539894996538 seconds
+90% percentile latency: 0.5832716171991705 seconds
+99% percentile latency: 0.5863860582491724 seconds
+P99 power =  1467.0362799999994
+P50 power =  1364.734
+Avg latency: 0.6482757281320082 seconds
+10% percentile latency: 0.6455160798002908 seconds
+25% percentile latency: 0.6460382562495397 seconds
+50% percentile latency: 0.6489855375002662 seconds
+75% percentile latency: 0.6495354007511196 seconds
+90% percentile latency: 0.6499624616990332 seconds
+99% percentile latency: 0.6507098898996446 seconds
+P99 power =  1375.2169999999999
+P50 power =  1288.649
+Avg latency: 0.9262586223420112 seconds
+10% percentile latency: 0.922056001800047 seconds
+25% percentile latency: 0.9253679142507281 seconds
+50% percentile latency: 0.926114324000082 seconds
+75% percentile latency: 0.9268218000006527 seconds
+90% percentile latency: 0.9302196083004673 seconds
+99% percentile latency: 0.9314865730299243 seconds
+P99 power =  990.9076000000034
+P50 power =  926.227
+Avg latency: 1.0895787098180736 seconds
+10% percentile latency: 1.0869741178008554 seconds
+25% percentile latency: 1.08962447624981 seconds
+50% percentile latency: 1.0899334570003703 seconds
+75% percentile latency: 1.0902343207499143 seconds
+90% percentile latency: 1.0905407356995056 seconds
+99% percentile latency: 1.0911425173997487 seconds
+P99 power =  1552.694
+P50 power =  1403.5330000000001
+Avg latency: 1.2097217767860056 seconds
+10% percentile latency: 1.2087933515997065 seconds
+25% percentile latency: 1.209112600750359 seconds
+50% percentile latency: 1.209594248999565 seconds
+75% percentile latency: 1.2100412047511782 seconds
+90% percentile latency: 1.2104323408999336 seconds
+99% percentile latency: 1.2136297661004392 seconds
+P99 power =  1466.254
+P50 power =  1337.223
+Avg latency: 1.721669729025969 seconds
+10% percentile latency: 1.7210751412998433 seconds
+25% percentile latency: 1.7213478652492995 seconds
+50% percentile latency: 1.7216756815005283 seconds
+75% percentile latency: 1.7219732610010396 seconds
+90% percentile latency: 1.7222382994992587 seconds
+99% percentile latency: 1.722751638139107 seconds
+P99 power =  1035.822
+P50 power =  943.407
+Avg latency: 0.06741411683403567 seconds
+10% percentile latency: 0.06672211529985361 seconds
+25% percentile latency: 0.06689243900018482 seconds
+50% percentile latency: 0.06705847500052187 seconds
+75% percentile latency: 0.06727477250024094 seconds
+90% percentile latency: 0.06962326300163113 seconds
+99% percentile latency: 0.07001692956109765 seconds
+P99 power =  2151.5200000000004
+P50 power =  1869.3780000000002
+Avg latency: 0.07679780077205214 seconds
+10% percentile latency: 0.07650183500045386 seconds
+25% percentile latency: 0.07664365199980239 seconds
+50% percentile latency: 0.07679013550114178 seconds
+75% percentile latency: 0.07695618324942188 seconds
+90% percentile latency: 0.07710141580100753 seconds
+99% percentile latency: 0.07736199844985095 seconds
+P99 power =  1508.272
+P50 power =  1429.642
+Avg latency: 0.09486952852396643 seconds
+10% percentile latency: 0.0945942920010566 seconds
+25% percentile latency: 0.09471304925045843 seconds
+50% percentile latency: 0.09482679800203186 seconds
+75% percentile latency: 0.09495073100151785 seconds
+90% percentile latency: 0.09509577369972248 seconds
+99% percentile latency: 0.09551146476962458 seconds
+P99 power =  1265.097
+P50 power =  1144.7930000000001
+Avg latency: 0.08928964336385979 seconds
+10% percentile latency: 0.0889158360001602 seconds
+25% percentile latency: 0.08916168975156324 seconds
+50% percentile latency: 0.08930537800006277 seconds
+75% percentile latency: 0.08944482574952417 seconds
+90% percentile latency: 0.08958368950006843 seconds
+99% percentile latency: 0.08985421103843691 seconds
+P99 power =  2411.582
+P50 power =  2253.4979999999996
+Avg latency: 0.10125120816594427 seconds
+10% percentile latency: 0.10085593229923688 seconds
+25% percentile latency: 0.10103857400008565 seconds
+50% percentile latency: 0.101202531999661 seconds
+75% percentile latency: 0.1013722619991313 seconds
+90% percentile latency: 0.10161150959902443 seconds
+99% percentile latency: 0.10194336790016678 seconds
+P99 power =  1952.0300000000002
+P50 power =  1696.8779999999997
+Avg latency: 0.13260343892013043 seconds
+10% percentile latency: 0.13225985569988552 seconds
+25% percentile latency: 0.13244392799970228 seconds
+50% percentile latency: 0.13259362150165543 seconds
+75% percentile latency: 0.13276762650002638 seconds
+90% percentile latency: 0.13294444759922044 seconds
+99% percentile latency: 0.13323299594088894 seconds
+P99 power =  1419.897
+P50 power =  1280.8
+Avg latency: 0.13459757043002174 seconds
+10% percentile latency: 0.13429483270010678 seconds
+25% percentile latency: 0.13443202224971174 seconds
+50% percentile latency: 0.13457655950151093 seconds
+75% percentile latency: 0.13475504074995115 seconds
+90% percentile latency: 0.13489558709879929 seconds
+99% percentile latency: 0.13522184320881933 seconds
+P99 power =  2871.076
+P50 power =  2561.49
+Avg latency: 0.15542150075397512 seconds
+10% percentile latency: 0.15517049440022673 seconds
+25% percentile latency: 0.15529931024957477 seconds
+50% percentile latency: 0.1553879990005953 seconds
+75% percentile latency: 0.15552994274912635 seconds
+90% percentile latency: 0.1557172677024937 seconds
+99% percentile latency: 0.1561599473393653 seconds
+P99 power =  2144.844
+P50 power =  1923.595
+Avg latency: 0.20967113720798078 seconds
+10% percentile latency: 0.20920016060117633 seconds
+25% percentile latency: 0.20945811049932672 seconds
+50% percentile latency: 0.2097084509987326 seconds
+75% percentile latency: 0.20997125350186252 seconds
+90% percentile latency: 0.2101806454000325 seconds
+99% percentile latency: 0.21040808348945575 seconds
+P99 power =  1522.6380000000001
+P50 power =  1410.88
+Avg latency: 0.0791909262500194 seconds
+10% percentile latency: 0.07892133010209364 seconds
+25% percentile latency: 0.0790375557517109 seconds
+50% percentile latency: 0.0791760175015952 seconds
+75% percentile latency: 0.07935338725110341 seconds
+90% percentile latency: 0.07948825870007567 seconds
+99% percentile latency: 0.07971846996188106 seconds
+P99 power =  1609.445
+P50 power =  1458.9499999999998
+Avg latency: 0.09009724902400922 seconds
+10% percentile latency: 0.08981171379964507 seconds
+25% percentile latency: 0.08997685275062395 seconds
+50% percentile latency: 0.09012451650050934 seconds
+75% percentile latency: 0.09025818724876444 seconds
+90% percentile latency: 0.09037263980062563 seconds
+99% percentile latency: 0.09058502844080067 seconds
+P99 power =  1288.379
+P50 power =  1210.565
+Avg latency: 0.11522747896789952 seconds
+10% percentile latency: 0.11440046919997257 seconds
+25% percentile latency: 0.1145010522513985 seconds
+50% percentile latency: 0.11463465949964302 seconds
+75% percentile latency: 0.11484204750013305 seconds
+90% percentile latency: 0.11758385879948037 seconds
+99% percentile latency: 0.11802964267906646 seconds
+P99 power =  1055.7630000000001
+P50 power =  951.3675000000001
+Avg latency: 0.11009579875405325 seconds
+10% percentile latency: 0.10782524929854845 seconds
+25% percentile latency: 0.11021903199980443 seconds
+50% percentile latency: 0.1103615539996099 seconds
+75% percentile latency: 0.11049754800205847 seconds
+90% percentile latency: 0.11064638199859474 seconds
+99% percentile latency: 0.11087060539943196 seconds
+P99 power =  1982.8160000000003
+P50 power =  1607.5559999999998
+Avg latency: 0.12497221870593785 seconds
+10% percentile latency: 0.12389802659963607 seconds
+25% percentile latency: 0.12401602924910549 seconds
+50% percentile latency: 0.12420500699954573 seconds
+75% percentile latency: 0.12670153249837313 seconds
+90% percentile latency: 0.12693399479830986 seconds
+99% percentile latency: 0.12724903217938846 seconds
+P99 power =  1462.171
+P50 power =  1289.35
+Avg latency: 0.17041762972200378 seconds
+10% percentile latency: 0.17015364299950306 seconds
+25% percentile latency: 0.17034334449817834 seconds
+50% percentile latency: 0.17053366399886727 seconds
+75% percentile latency: 0.1706961580002826 seconds
+90% percentile latency: 0.17085254000194255 seconds
+99% percentile latency: 0.17124056632237625 seconds
+P99 power =  1148.2512900000006
+P50 power =  1032.6909999999998
+Avg latency: 0.17508183649607237 seconds
+10% percentile latency: 0.17468196689987964 seconds
+25% percentile latency: 0.17482416224902408 seconds
+50% percentile latency: 0.17509103399970627 seconds
+75% percentile latency: 0.1752787649993479 seconds
+90% percentile latency: 0.1754328525017627 seconds
+99% percentile latency: 0.17622160874965628 seconds
+P99 power =  2174.203
+P50 power =  1745.147
+Avg latency: 0.19848840375196597 seconds
+10% percentile latency: 0.19815300709924485 seconds
+25% percentile latency: 0.19829569900048227 seconds
+50% percentile latency: 0.1984457870003098 seconds
+75% percentile latency: 0.1986375840015171 seconds
+90% percentile latency: 0.19874704679714342 seconds
+99% percentile latency: 0.20128505273936753 seconds
+P99 power =  1734.478
+P50 power =  1546.649
+Avg latency: 0.2716035504261163 seconds
+10% percentile latency: 0.2711866163990635 seconds
+25% percentile latency: 0.27143941999929666 seconds
+50% percentile latency: 0.2716267580017302 seconds
+75% percentile latency: 0.27184179100095207 seconds
+90% percentile latency: 0.27205347629860627 seconds
+99% percentile latency: 0.2726134308027395 seconds
+P99 power =  1208.333
+P50 power =  1106.707
+Avg latency: 0.09417801737612172 seconds
+10% percentile latency: 0.09376260340031876 seconds
+25% percentile latency: 0.0938974339987908 seconds
+50% percentile latency: 0.09405888199944457 seconds
+75% percentile latency: 0.09420648225204786 seconds
+90% percentile latency: 0.09435762699904444 seconds
+99% percentile latency: 0.09676044340998487 seconds
+P99 power =  1290.117
+P50 power =  1124.0639999999999
+Avg latency: 0.10976096208998934 seconds
+10% percentile latency: 0.10941986550242291 seconds
+25% percentile latency: 0.10957131500163086 seconds
+50% percentile latency: 0.1097521185001824 seconds
+75% percentile latency: 0.109906841999873 seconds
+90% percentile latency: 0.11011431050101236 seconds
+99% percentile latency: 0.11061933560209582 seconds
+P99 power =  1198.258
+P50 power =  1080.529
+Avg latency: 0.1468813990540293 seconds
+10% percentile latency: 0.1465539444983733 seconds
+25% percentile latency: 0.14669337025043205 seconds
+50% percentile latency: 0.14688375950026966 seconds
+75% percentile latency: 0.14704783924844378 seconds
+90% percentile latency: 0.14721350299951155 seconds
+99% percentile latency: 0.14755171939155842 seconds
+P99 power =  880.934
+P50 power =  829.794
+Avg latency: 0.15553590712186996 seconds
+10% percentile latency: 0.15324911509960656 seconds
+25% percentile latency: 0.15562684175165487 seconds
+50% percentile latency: 0.15580998100085708 seconds
+75% percentile latency: 0.1559794145014166 seconds
+90% percentile latency: 0.15614541780014407 seconds
+99% percentile latency: 0.15663866455885 seconds
+P99 power =  1387.995
+P50 power =  1252.205
+Avg latency: 0.17359330579389642 seconds
+10% percentile latency: 0.1732357230011985 seconds
+25% percentile latency: 0.17338617049881577 seconds
+50% percentile latency: 0.17355500650046451 seconds
+75% percentile latency: 0.17371914749855932 seconds
+90% percentile latency: 0.17385258120011712 seconds
+99% percentile latency: 0.17451813147232315 seconds
+P99 power =  1399.3729999999998
+P50 power =  1156.351
+Avg latency: 0.23584048148194414 seconds
+10% percentile latency: 0.23395194340009767 seconds
+25% percentile latency: 0.2341549369994027 seconds
+50% percentile latency: 0.23694662349953433 seconds
+75% percentile latency: 0.23730203625109425 seconds
+90% percentile latency: 0.23751098890206776 seconds
+99% percentile latency: 0.23807248259065092 seconds
+P99 power =  1004.0279999999998
+P50 power =  885.621
+Avg latency: 0.2613710470939695 seconds
+10% percentile latency: 0.2610197918009362 seconds
+25% percentile latency: 0.2612034909980139 seconds
+50% percentile latency: 0.2613420555007906 seconds
+75% percentile latency: 0.2615339679987301 seconds
+90% percentile latency: 0.2617202892983187 seconds
+99% percentile latency: 0.26226498783209534 seconds
+P99 power =  1447.909
+P50 power =  1310.705
+Avg latency: 0.29521833734993563 seconds
+10% percentile latency: 0.2948928676018113 seconds
+25% percentile latency: 0.29502556475108577 seconds
+50% percentile latency: 0.295186671499323 seconds
+75% percentile latency: 0.29536470849961916 seconds
+90% percentile latency: 0.295513029599897 seconds
+99% percentile latency: 0.2962266189910588 seconds
+P99 power =  1320.5099700000017
+P50 power =  1231.1309999999999
+Avg latency: 0.4117008092699834 seconds
+10% percentile latency: 0.4113238884005114 seconds
+25% percentile latency: 0.41152884925122635 seconds
+50% percentile latency: 0.41170436650099873 seconds
+75% percentile latency: 0.41187720500147407 seconds
+90% percentile latency: 0.4120819160987594 seconds
+99% percentile latency: 0.41264822096098214 seconds
+P99 power =  947.349
+P50 power =  910.8499999999999
+Avg latency: 0.06973884045399609 seconds
+10% percentile latency: 0.06941500100037956 seconds
+25% percentile latency: 0.06951721700079361 seconds
+50% percentile latency: 0.06975301699822012 seconds
+75% percentile latency: 0.06992783975147177 seconds
+90% percentile latency: 0.07006506710204122 seconds
+99% percentile latency: 0.07035630706057418 seconds
+P99 power =  1849.6879999999999
+P50 power =  1665.9479999999999
+Avg latency: 0.07764297579813137 seconds
+10% percentile latency: 0.07730496600051992 seconds
+25% percentile latency: 0.0774711180029044 seconds
+50% percentile latency: 0.07764908699937223 seconds
+75% percentile latency: 0.07780476499829092 seconds
+90% percentile latency: 0.07796880610003427 seconds
+99% percentile latency: 0.07823803764305921 seconds
+P99 power =  1423.045
+P50 power =  1315.4230000000002
+Avg latency: 0.09884732039394294 seconds
+10% percentile latency: 0.098472716399192 seconds
+25% percentile latency: 0.0986401959989962 seconds
+50% percentile latency: 0.0988507979982387 seconds
+75% percentile latency: 0.09902599825181824 seconds
+90% percentile latency: 0.09921485559898428 seconds
+99% percentile latency: 0.09964604616870928 seconds
+P99 power =  1121.069
+P50 power =  1053.5569999999998
+Avg latency: 0.09274070438594936 seconds
+10% percentile latency: 0.09228211120134802 seconds
+25% percentile latency: 0.09258043750105571 seconds
+50% percentile latency: 0.09279429350135615 seconds
+75% percentile latency: 0.09299041824851884 seconds
+90% percentile latency: 0.09314570029855532 seconds
+99% percentile latency: 0.0934368724468004 seconds
+P99 power =  2116.373
+P50 power =  1957.1480000000001
+Avg latency: 0.10506999997596722 seconds
+10% percentile latency: 0.10456295310104906 seconds
+25% percentile latency: 0.10482132324796112 seconds
+50% percentile latency: 0.1051059505007288 seconds
+75% percentile latency: 0.1052637720003986 seconds
+90% percentile latency: 0.10546648840063426 seconds
+99% percentile latency: 0.10596243065876479 seconds
+P99 power =  1591.3279999999997
+P50 power =  1474.35
+Avg latency: 0.13790896433000308 seconds
+10% percentile latency: 0.1374036068984424 seconds
+25% percentile latency: 0.1376884697483547 seconds
+50% percentile latency: 0.13792826749886444 seconds
+75% percentile latency: 0.13815782100209617 seconds
+90% percentile latency: 0.1383680914004799 seconds
+99% percentile latency: 0.13873178473077133 seconds
+P99 power =  1263.0549999999998
+P50 power =  1174.1889999999999
+Avg latency: 0.14305287633201805 seconds
+10% percentile latency: 0.14269731570166186 seconds
+25% percentile latency: 0.14293484999870998 seconds
+50% percentile latency: 0.14312562600025558 seconds
+75% percentile latency: 0.14337259399871982 seconds
+90% percentile latency: 0.14356780549933318 seconds
+99% percentile latency: 0.14383519847026036 seconds
+P99 power =  2445.293
+P50 power =  2188.968
+Avg latency: 0.1655434991820075 seconds
+10% percentile latency: 0.16525587659780286 seconds
+25% percentile latency: 0.16538718125048035 seconds
+50% percentile latency: 0.16554243400059931 seconds
+75% percentile latency: 0.16570074899937026 seconds
+90% percentile latency: 0.1658620915011852 seconds
+99% percentile latency: 0.16616949133207526 seconds
+P99 power =  1953.3840000000002
+P50 power =  1664.8949999999998
+Avg latency: 0.22504978634205328 seconds
+10% percentile latency: 0.22472635410085787 seconds
+25% percentile latency: 0.224858722249337 seconds
+50% percentile latency: 0.22504038749866595 seconds
+75% percentile latency: 0.22522848775042803 seconds
+90% percentile latency: 0.22536775900116482 seconds
+99% percentile latency: 0.2256936307792057 seconds
+P99 power =  1348.1349999999998
+P50 power =  1265.3390000000002
+Avg latency: 0.07243018803810264 seconds
+10% percentile latency: 0.07122529970001779 seconds
+25% percentile latency: 0.07133807999798591 seconds
+50% percentile latency: 0.07147760599946196 seconds
+75% percentile latency: 0.07403705599881505 seconds
+90% percentile latency: 0.07414287559840886 seconds
+99% percentile latency: 0.07448250486173492 seconds
+P99 power =  1383.8539999999998
+P50 power =  1258.5990000000002
+Avg latency: 0.08439007703406969 seconds
+10% percentile latency: 0.08235739739939163 seconds
+25% percentile latency: 0.08257579775090562 seconds
+50% percentile latency: 0.08510168449902267 seconds
+75% percentile latency: 0.08529522174831072 seconds
+90% percentile latency: 0.08540772110281977 seconds
+99% percentile latency: 0.08563244490251236 seconds
+P99 power =  1242.1699999999998
+P50 power =  1108.0430000000001
+Avg latency: 0.10950269770585874 seconds
+10% percentile latency: 0.10916749889802305 seconds
+25% percentile latency: 0.10931054299908283 seconds
+50% percentile latency: 0.10949294150123023 seconds
+75% percentile latency: 0.10963743175125273 seconds
+90% percentile latency: 0.10976028900186066 seconds
+99% percentile latency: 0.11049477020194899 seconds
+P99 power =  967.9759999999999
+P50 power =  879.5179999999999
+Avg latency: 0.10168902245997015 seconds
+10% percentile latency: 0.10154240160045447 seconds
+25% percentile latency: 0.10160986699884234 seconds
+50% percentile latency: 0.10168868300206668 seconds
+75% percentile latency: 0.10174843324875837 seconds
+90% percentile latency: 0.10183312269946328 seconds
+99% percentile latency: 0.1021093685012238 seconds
+P99 power =  1761.174
+P50 power =  1404.978
+Avg latency: 0.11671272046012746 seconds
+10% percentile latency: 0.1147235959982936 seconds
+25% percentile latency: 0.11487781125106267 seconds
+50% percentile latency: 0.11748370099849126 seconds
+75% percentile latency: 0.11767636949753069 seconds
+90% percentile latency: 0.11784650689914997 seconds
+99% percentile latency: 0.11813718516932567 seconds
+P99 power =  1367.5549999999998
+P50 power =  1201.531
+Avg latency: 0.15736621044797358 seconds
+10% percentile latency: 0.15706112170119013 seconds
+25% percentile latency: 0.15715693025140354 seconds
+50% percentile latency: 0.15727090099971974 seconds
+75% percentile latency: 0.15744751375041233 seconds
+90% percentile latency: 0.15780917150041204 seconds
+99% percentile latency: 0.1580964722412318 seconds
+P99 power =  1038.743
+P50 power =  943.776
+Avg latency: 0.1670864679099832 seconds
+10% percentile latency: 0.16654880440109993 seconds
+25% percentile latency: 0.166685062000397 seconds
+50% percentile latency: 0.1668049224990682 seconds
+75% percentile latency: 0.16700584200043522 seconds
+90% percentile latency: 0.16872666849994858 seconds
+99% percentile latency: 0.1698734732999219 seconds
+P99 power =  1866.2250000000001
+P50 power =  1542.0149999999999
+Avg latency: 0.19258888415785622 seconds
+10% percentile latency: 0.19230492630049412 seconds
+25% percentile latency: 0.19242394824868825 seconds
+50% percentile latency: 0.1925365924998914 seconds
+75% percentile latency: 0.19264441600080318 seconds
+90% percentile latency: 0.19275446530045884 seconds
+99% percentile latency: 0.19341654564937927 seconds
+P99 power =  1449.7749999999999
+P50 power =  1361.116
+Avg latency: 0.2618707306919532 seconds
+10% percentile latency: 0.26154146730077626 seconds
+25% percentile latency: 0.26166816700060735 seconds
+50% percentile latency: 0.2618172085003607 seconds
+75% percentile latency: 0.26199013749919686 seconds
+90% percentile latency: 0.2621960344022227 seconds
+99% percentile latency: 0.2628129618478124 seconds
+P99 power =  1077.388
+P50 power =  1012.2289999999999
+Avg latency: 0.08373537136398955 seconds
+10% percentile latency: 0.08339386830193689 seconds
+25% percentile latency: 0.08355836749888113 seconds
+50% percentile latency: 0.08373977999872295 seconds
+75% percentile latency: 0.08391318000212777 seconds
+90% percentile latency: 0.0840849296982924 seconds
+99% percentile latency: 0.08428144013756536 seconds
+P99 power =  1167.0149999999999
+P50 power =  1048.409
+Avg latency: 0.09542514177402336 seconds
+10% percentile latency: 0.09509233810276782 seconds
+25% percentile latency: 0.09525147525073407 seconds
+50% percentile latency: 0.09542752300149004 seconds
+75% percentile latency: 0.09559526800148888 seconds
+90% percentile latency: 0.09575352619940532 seconds
+99% percentile latency: 0.09607939538771461 seconds
+P99 power =  1101.095
+P50 power =  1024.339
+Avg latency: 0.12763975258199933 seconds
+10% percentile latency: 0.12733970370027237 seconds
+25% percentile latency: 0.1274531349999961 seconds
+50% percentile latency: 0.12761709650112607 seconds
+75% percentile latency: 0.1278295222482484 seconds
+90% percentile latency: 0.12797436500040932 seconds
+99% percentile latency: 0.1282883661287633 seconds
+P99 power =  840.092
+P50 power =  779.548
+Avg latency: 0.1275118747419765 seconds
+10% percentile latency: 0.12570403190038631 seconds
+25% percentile latency: 0.12586666675088054 seconds
+50% percentile latency: 0.12832585899923288 seconds
+75% percentile latency: 0.1285404344989729 seconds
+90% percentile latency: 0.12869946789796813 seconds
+99% percentile latency: 0.12908836492246337 seconds
+P99 power =  1244.416
+P50 power =  1112.8739999999998
+Avg latency: 0.14511651431001518 seconds
+10% percentile latency: 0.142619668999032 seconds
+25% percentile latency: 0.1452541235003082 seconds
+50% percentile latency: 0.14541282400023192 seconds
+75% percentile latency: 0.14563902749978297 seconds
+90% percentile latency: 0.14577680270158452 seconds
+99% percentile latency: 0.14601338566051708 seconds
+P99 power =  1142.742
+P50 power =  1059.526
+Avg latency: 0.19800187582989748 seconds
+10% percentile latency: 0.19572687139771006 seconds
+25% percentile latency: 0.19600488924879755 seconds
+50% percentile latency: 0.19882177200088336 seconds
+75% percentile latency: 0.199018208749294 seconds
+90% percentile latency: 0.1992119744012598 seconds
+99% percentile latency: 0.1996215344797747 seconds
+P99 power =  880.9689999999999
+P50 power =  826.357
+Avg latency: 0.22313522367593397 seconds
+10% percentile latency: 0.22101046729949303 seconds
+25% percentile latency: 0.22162740749990917 seconds
+50% percentile latency: 0.2237732555022376 seconds
+75% percentile latency: 0.22391558124854782 seconds
+90% percentile latency: 0.22407591339833743 seconds
+99% percentile latency: 0.2243247432291537 seconds
+P99 power =  1303.1419999999998
+P50 power =  1207.001
+Avg latency: 0.2527796055718718 seconds
+10% percentile latency: 0.2524852988008206 seconds
+25% percentile latency: 0.2526294394992874 seconds
+50% percentile latency: 0.2527788214993052 seconds
+75% percentile latency: 0.2529304259996934 seconds
+90% percentile latency: 0.25308582420075254 seconds
+99% percentile latency: 0.2535138999800256 seconds
+P99 power =  1223.965
+P50 power =  1136.78
+Avg latency: 0.3492587865439782 seconds
+10% percentile latency: 0.34849744019920764 seconds
+25% percentile latency: 0.3487654297514382 seconds
+50% percentile latency: 0.34925531550106825 seconds
+75% percentile latency: 0.34953011225115915 seconds
+90% percentile latency: 0.34977928310036077 seconds
+99% percentile latency: 0.35241228107850475 seconds
+P99 power =  915.651
+P50 power =  862.4329999999999
+Avg latency: 0.05249186768999789 seconds
+10% percentile latency: 0.05220741259945498 seconds
+25% percentile latency: 0.05226681674866995 seconds
+50% percentile latency: 0.05236655499902554 seconds
+75% percentile latency: 0.05247500749919709 seconds
+90% percentile latency: 0.05259236200217856 seconds
+99% percentile latency: 0.052804389752091084 seconds
+P99 power =  1800.909
+P50 power =  1666.9370000000001
+Avg latency: 0.05851354355201329 seconds
+10% percentile latency: 0.058192936099294455 seconds
+25% percentile latency: 0.05832901299982041 seconds
+50% percentile latency: 0.058484031000261893 seconds
+75% percentile latency: 0.05868768875097885 seconds
+90% percentile latency: 0.05886983989948931 seconds
+99% percentile latency: 0.05935124108800664 seconds
+P99 power =  1400.383
+P50 power =  1273.398
+Avg latency: 0.07013289126201562 seconds
+10% percentile latency: 0.06992216470098356 seconds
+25% percentile latency: 0.07002252450183732 seconds
+50% percentile latency: 0.0701313259996823 seconds
+75% percentile latency: 0.07023502574793383 seconds
+90% percentile latency: 0.07034433820044797 seconds
+99% percentile latency: 0.07059194269990257 seconds
+P99 power =  1168.024
+P50 power =  1057.195
+Avg latency: 0.06920127122010308 seconds
+10% percentile latency: 0.06730443880042003 seconds
+25% percentile latency: 0.06761432699931902 seconds
+50% percentile latency: 0.0698316435009474 seconds
+75% percentile latency: 0.07003870575044857 seconds
+90% percentile latency: 0.07023131080059102 seconds
+99% percentile latency: 0.07052314292224765 seconds
+P99 power =  2102.8410000000003
+P50 power =  1881.658
+Avg latency: 0.07712259382590128 seconds
+10% percentile latency: 0.07679478190220834 seconds
+25% percentile latency: 0.07695775899901491 seconds
+50% percentile latency: 0.07713394200072798 seconds
+75% percentile latency: 0.07729117600047175 seconds
+90% percentile latency: 0.07745032430066204 seconds
+99% percentile latency: 0.07766702921970137 seconds
+P99 power =  1575.1970000000001
+P50 power =  1480.489
+Avg latency: 0.09599261699011549 seconds
+10% percentile latency: 0.09548272900101437 seconds
+25% percentile latency: 0.09566907300177263 seconds
+50% percentile latency: 0.09588891850034997 seconds
+75% percentile latency: 0.09606441399864707 seconds
+90% percentile latency: 0.09627326840018213 seconds
+99% percentile latency: 0.09909096598057658 seconds
+P99 power =  1256.2900000000002
+P50 power =  1162.452
+Avg latency: 0.09455342709992692 seconds
+10% percentile latency: 0.0942371272994933 seconds
+25% percentile latency: 0.09438767324900255 seconds
+50% percentile latency: 0.09455710600195744 seconds
+75% percentile latency: 0.09471167325045826 seconds
+90% percentile latency: 0.09485732989815006 seconds
+99% percentile latency: 0.09520292256984249 seconds
+P99 power =  2542.25
+P50 power =  2254.78
+Avg latency: 0.10640162072397652 seconds
+10% percentile latency: 0.10609377829932783 seconds
+25% percentile latency: 0.10625527250067535 seconds
+50% percentile latency: 0.10640679950120102 seconds
+75% percentile latency: 0.10654530900137615 seconds
+90% percentile latency: 0.10669247339865251 seconds
+99% percentile latency: 0.10704617283798143 seconds
+P99 power =  1911.3870000000002
+P50 power =  1727.747
+Avg latency: 0.13889326892395912 seconds
+10% percentile latency: 0.13855225739935123 seconds
+25% percentile latency: 0.13873449450147746 seconds
+50% percentile latency: 0.13891667949974362 seconds
+75% percentile latency: 0.13906624149967683 seconds
+90% percentile latency: 0.13918553649928073 seconds
+99% percentile latency: 0.13950031382904854 seconds
+P99 power =  1628.605
+P50 power =  1316.5870000000002
+Avg latency: 0.05735124003201054 seconds
+10% percentile latency: 0.057113894099893515 seconds
+25% percentile latency: 0.05722346200218453 seconds
+50% percentile latency: 0.0573577059985837 seconds
+75% percentile latency: 0.057473465251860034 seconds
+90% percentile latency: 0.057594228699963425 seconds
+99% percentile latency: 0.057817227808081954 seconds
+P99 power =  1410.921
+P50 power =  1270.164
+Avg latency: 0.06367618776601011 seconds
+10% percentile latency: 0.06348430909893069 seconds
+25% percentile latency: 0.06356628924913821 seconds
+50% percentile latency: 0.06368575600026816 seconds
+75% percentile latency: 0.06378602125005273 seconds
+90% percentile latency: 0.06386376700102118 seconds
+99% percentile latency: 0.06404106875987053 seconds
+P99 power =  1221.364
+P50 power =  1120.751
+Avg latency: 0.08018348611989495 seconds
+10% percentile latency: 0.07991580559755676 seconds
+25% percentile latency: 0.080058146499141 seconds
+50% percentile latency: 0.08020316700094554 seconds
+75% percentile latency: 0.0803299307508496 seconds
+90% percentile latency: 0.08040855589752027 seconds
+99% percentile latency: 0.0805481417703777 seconds
+P99 power =  1113.9899999999998
+P50 power =  897.5149999999999
+Avg latency: 0.07560997649396449 seconds
+10% percentile latency: 0.07528367130034894 seconds
+25% percentile latency: 0.07543443975100672 seconds
+50% percentile latency: 0.07563769350053917 seconds
+75% percentile latency: 0.07580376400073874 seconds
+90% percentile latency: 0.07590173959797539 seconds
+99% percentile latency: 0.0760270959218542 seconds
+P99 power =  1724.7640000000001
+P50 power =  1446.4339999999997
+Avg latency: 0.08648224424202636 seconds
+10% percentile latency: 0.08625099360069725 seconds
+25% percentile latency: 0.0863696685009927 seconds
+50% percentile latency: 0.08647987699987425 seconds
+75% percentile latency: 0.08659132250159018 seconds
+90% percentile latency: 0.08670928230130812 seconds
+99% percentile latency: 0.08688972447303968 seconds
+P99 power =  1444.474
+P50 power =  1220.3719999999998
+Avg latency: 0.11342710975590307 seconds
+10% percentile latency: 0.11321049810030673 seconds
+25% percentile latency: 0.11332283774936514 seconds
+50% percentile latency: 0.11341631349932868 seconds
+75% percentile latency: 0.11353391675038438 seconds
+90% percentile latency: 0.1136491445991851 seconds
+99% percentile latency: 0.11402648465904348 seconds
+P99 power =  1065.776
+P50 power =  959.4289999999999
+Avg latency: 0.11247298297598173 seconds
+10% percentile latency: 0.11215396839688765 seconds
+25% percentile latency: 0.1123221289999492 seconds
+50% percentile latency: 0.11247491050198732 seconds
+75% percentile latency: 0.11262814775000152 seconds
+90% percentile latency: 0.11273334910292761 seconds
+99% percentile latency: 0.11300329474881438 seconds
+P99 power =  1933.23
+P50 power =  1656.598
+Avg latency: 0.12854358112796763 seconds
+10% percentile latency: 0.12825949689759 seconds
+25% percentile latency: 0.12836429600065458 seconds
+50% percentile latency: 0.1285475354998198 seconds
+75% percentile latency: 0.12869160824993742 seconds
+90% percentile latency: 0.1288156965005328 seconds
+99% percentile latency: 0.1290782146319907 seconds
+P99 power =  1574.0510000000002
+P50 power =  1392.34
+Avg latency: 0.17207217878796655 seconds
+10% percentile latency: 0.17170624879945534 seconds
+25% percentile latency: 0.17191297900171776 seconds
+50% percentile latency: 0.17208884399951785 seconds
+75% percentile latency: 0.17224979050024558 seconds
+90% percentile latency: 0.17239071439980763 seconds
+99% percentile latency: 0.17276828174766706 seconds
+P99 power =  1135.6230000000003
+P50 power =  1051.282
+Avg latency: 0.06534103130999575 seconds
+10% percentile latency: 0.06509494769852608 seconds
+25% percentile latency: 0.06521044224882644 seconds
+50% percentile latency: 0.0653180240005895 seconds
+75% percentile latency: 0.06544903124904522 seconds
+90% percentile latency: 0.06563218120063538 seconds
+99% percentile latency: 0.06591872828972554 seconds
+P99 power =  1261.102
+P50 power =  1016.428
+Avg latency: 0.0731879983919207 seconds
+10% percentile latency: 0.07293826860150147 seconds
+25% percentile latency: 0.07305959050063393 seconds
+50% percentile latency: 0.07319444900167582 seconds
+75% percentile latency: 0.07331741349844378 seconds
+90% percentile latency: 0.07343903070031957 seconds
+99% percentile latency: 0.07362971292888687 seconds
+P99 power =  1098.0819999999999
+P50 power =  1031.169
+Avg latency: 0.09405851166799403 seconds
+10% percentile latency: 0.09350108890139382 seconds
+25% percentile latency: 0.09377896600017266 seconds
+50% percentile latency: 0.09410794050018012 seconds
+75% percentile latency: 0.09433335775065643 seconds
+90% percentile latency: 0.09452544580017275 seconds
+99% percentile latency: 0.0948817596097797 seconds
+P99 power =  865.277
+P50 power =  791.7919999999999
+Avg latency: 0.09718044184202154 seconds
+10% percentile latency: 0.09689460329936991 seconds
+25% percentile latency: 0.09703913550038124 seconds
+50% percentile latency: 0.09717662249931891 seconds
+75% percentile latency: 0.09730079250039125 seconds
+90% percentile latency: 0.09746063210186548 seconds
+99% percentile latency: 0.09777743871178245 seconds
+P99 power =  1334.1399999999999
+P50 power =  1135.986
+Avg latency: 0.10987206112997956 seconds
+10% percentile latency: 0.10957444459891122 seconds
+25% percentile latency: 0.10971712450191262 seconds
+50% percentile latency: 0.1098793464989285 seconds
+75% percentile latency: 0.11001728124938381 seconds
+90% percentile latency: 0.11013468929777445 seconds
+99% percentile latency: 0.11050937449930644 seconds
+P99 power =  1180.643
+P50 power =  1070.5929999999998
+Avg latency: 0.14718384850812435 seconds
+10% percentile latency: 0.1467677080028807 seconds
+25% percentile latency: 0.14698417225008598 seconds
+50% percentile latency: 0.14719822850020137 seconds
+75% percentile latency: 0.1474013239994747 seconds
+90% percentile latency: 0.14755971880149446 seconds
+99% percentile latency: 0.14790226519748104 seconds
+P99 power =  914.231
+P50 power =  834.5279999999999
+Avg latency: 0.15830583346802451 seconds
+10% percentile latency: 0.15744806060065458 seconds
+25% percentile latency: 0.15755269000055705 seconds
+50% percentile latency: 0.15771130600114702 seconds
+75% percentile latency: 0.15809891224944295 seconds
+90% percentile latency: 0.16045347009967373 seconds
+99% percentile latency: 0.1607110412887414 seconds
+P99 power =  1384.08
+P50 power =  1258.118
+Avg latency: 0.17922013051805696 seconds
+10% percentile latency: 0.17896708680127632 seconds
+25% percentile latency: 0.1790885137488658 seconds
+50% percentile latency: 0.17920614600006957 seconds
+75% percentile latency: 0.17933597900082532 seconds
+90% percentile latency: 0.17946886089957842 seconds
+99% percentile latency: 0.18005696729047485 seconds
+P99 power =  1299.8029999999999
+P50 power =  1190.692
+Avg latency: 0.24264718917604478 seconds
+10% percentile latency: 0.24219540289705038 seconds
+25% percentile latency: 0.242404610750782 seconds
+50% percentile latency: 0.24269439249837887 seconds
+75% percentile latency: 0.2429691287507012 seconds
+90% percentile latency: 0.24322773070234688 seconds
+99% percentile latency: 0.2436834779590572 seconds
+P99 power =  964.7109999999999
+P50 power =  884.678
+Avg latency: 0.0551200506859459 seconds
+10% percentile latency: 0.05336403130168037 seconds
+25% percentile latency: 0.05354735750097461 seconds
+50% percentile latency: 0.05592663249990437 seconds
+75% percentile latency: 0.05618437550128874 seconds
+90% percentile latency: 0.05632762479908706 seconds
+99% percentile latency: 0.056706600611905744 seconds
+P99 power =  1619.328
+P50 power =  1531.2429999999997
+Avg latency: 0.061633798869967 seconds
+10% percentile latency: 0.059503268202388424 seconds
+25% percentile latency: 0.05995486874780909 seconds
+50% percentile latency: 0.062256474999230704 seconds
+75% percentile latency: 0.062491479999152943 seconds
+90% percentile latency: 0.06266837249931996 seconds
+99% percentile latency: 0.0630344338969735 seconds
+P99 power =  1306.0839999999998
+P50 power =  1218.881
+Avg latency: 0.07512365796187077 seconds
+10% percentile latency: 0.0747469944999466 seconds
+25% percentile latency: 0.07489408450055635 seconds
+50% percentile latency: 0.07511895649804501 seconds
+75% percentile latency: 0.07533349850200466 seconds
+90% percentile latency: 0.07554052009836595 seconds
+99% percentile latency: 0.0759384149093239 seconds
+P99 power =  1079.358
+P50 power =  1004.752
+Avg latency: 0.07110075135601074 seconds
+10% percentile latency: 0.0706457358013722 seconds
+25% percentile latency: 0.07092802950046462 seconds
+50% percentile latency: 0.0711319239999284 seconds
+75% percentile latency: 0.07133961450108472 seconds
+90% percentile latency: 0.07144443219767709 seconds
+99% percentile latency: 0.07172563317781169 seconds
+P99 power =  1880.2659999999998
+P50 power =  1761.328
+Avg latency: 0.08137087568596325 seconds
+10% percentile latency: 0.08089693220063054 seconds
+25% percentile latency: 0.08116631350185344 seconds
+50% percentile latency: 0.08140618900142726 seconds
+75% percentile latency: 0.08159233574860991 seconds
+90% percentile latency: 0.08176023239939241 seconds
+99% percentile latency: 0.0820451173310721 seconds
+P99 power =  1504.452
+P50 power =  1361.7559999999999
+Avg latency: 0.1025424325999702 seconds
+10% percentile latency: 0.10050560049967316 seconds
+25% percentile latency: 0.10082910874916706 seconds
+50% percentile latency: 0.10338248100015335 seconds
+75% percentile latency: 0.1037087327486006 seconds
+90% percentile latency: 0.1039396817999659 seconds
+99% percentile latency: 0.10424922499907552 seconds
+P99 power =  1155.804
+P50 power =  1092.127
+Avg latency: 0.10316054140205233 seconds
+10% percentile latency: 0.10277585330186412 seconds
+25% percentile latency: 0.10302531024899508 seconds
+50% percentile latency: 0.10318394250134588 seconds
+75% percentile latency: 0.10330923449964757 seconds
+90% percentile latency: 0.10346666099721916 seconds
+99% percentile latency: 0.1037597882299815 seconds
+P99 power =  2180.7309999999998
+P50 power =  2016.8849999999998
+Avg latency: 0.11926543462395058 seconds
+10% percentile latency: 0.11884297409997088 seconds
+25% percentile latency: 0.11908926249907381 seconds
+50% percentile latency: 0.11929117599902384 seconds
+75% percentile latency: 0.11945475774973602 seconds
+90% percentile latency: 0.1196381729998393 seconds
+99% percentile latency: 0.11995132770756754 seconds
+P99 power =  1677.924
+P50 power =  1536.6030000000003
+Avg latency: 0.15730052805005834 seconds
+10% percentile latency: 0.1566424102999008 seconds
+25% percentile latency: 0.15704677199846628 seconds
+50% percentile latency: 0.15731726750163944 seconds
+75% percentile latency: 0.15762829300001613 seconds
+90% percentile latency: 0.1578512595002394 seconds
+99% percentile latency: 0.15822967582837008 seconds
+P99 power =  1282.59
+P50 power =  1188.464
+Avg latency: 0.05691510215007293 seconds
+10% percentile latency: 0.056676704800702284 seconds
+25% percentile latency: 0.05681183450087701 seconds
+50% percentile latency: 0.056923436000943184 seconds
+75% percentile latency: 0.05701093200059404 seconds
+90% percentile latency: 0.05708477089901862 seconds
+99% percentile latency: 0.05744136090932443 seconds
+P99 power =  1334.305
+P50 power =  1125.812
+Avg latency: 0.06300156287592108 seconds
+10% percentile latency: 0.06279052249992674 seconds
+25% percentile latency: 0.06291293900176242 seconds
+50% percentile latency: 0.0630045504985901 seconds
+75% percentile latency: 0.0630975740004942 seconds
+90% percentile latency: 0.06318018309757463 seconds
+99% percentile latency: 0.06341878557170276 seconds
+P99 power =  1122.593
+P50 power =  1040.279
+Avg latency: 0.07807451757007221 seconds
+10% percentile latency: 0.07622089210017294 seconds
+25% percentile latency: 0.07633726874973945 seconds
+50% percentile latency: 0.07913490350256325 seconds
+75% percentile latency: 0.0793024519998653 seconds
+90% percentile latency: 0.07946008309954777 seconds
+99% percentile latency: 0.07973150987887494 seconds
+P99 power =  899.3969999999999
+P50 power =  846.5809999999999
+Avg latency: 0.074878869684042 seconds
+10% percentile latency: 0.07463417330109223 seconds
+25% percentile latency: 0.07477068300067913 seconds
+50% percentile latency: 0.07487997600037488 seconds
+75% percentile latency: 0.07499233699945762 seconds
+90% percentile latency: 0.07510062359906441 seconds
+99% percentile latency: 0.0752406842592245 seconds
+P99 power =  1484.0009999999997
+P50 power =  1269.212
+Avg latency: 0.08588244443991425 seconds
+10% percentile latency: 0.08559503760188818 seconds
+25% percentile latency: 0.08573728399824176 seconds
+50% percentile latency: 0.08589411899993138 seconds
+75% percentile latency: 0.08603545050027606 seconds
+90% percentile latency: 0.08614389420072258 seconds
+99% percentile latency: 0.08646433308062114 seconds
+P99 power =  1443.019
+P50 power =  1169.654
+Avg latency: 0.11331657309205911 seconds
+10% percentile latency: 0.11305628479858569 seconds
+25% percentile latency: 0.1131934557479326 seconds
+50% percentile latency: 0.11330421000093338 seconds
+75% percentile latency: 0.11343131474859547 seconds
+90% percentile latency: 0.11355009880171565 seconds
+99% percentile latency: 0.11392402065943315 seconds
+P99 power =  943.213
+P50 power =  891.069
+Avg latency: 0.11519834335581981 seconds
+10% percentile latency: 0.11493604309798684 seconds
+25% percentile latency: 0.11510637024821335 seconds
+50% percentile latency: 0.11526187799790932 seconds
+75% percentile latency: 0.11542302199723053 seconds
+90% percentile latency: 0.11557046240086492 seconds
+99% percentile latency: 0.11585124522749539 seconds
+P99 power =  1677.6480000000001
+P50 power =  1461.63
+Avg latency: 0.12924612866803364 seconds
+10% percentile latency: 0.12849054239850374 seconds
+25% percentile latency: 0.12864116849868878 seconds
+50% percentile latency: 0.12883562250135583 seconds
+75% percentile latency: 0.1290849277502275 seconds
+90% percentile latency: 0.13161961589794374 seconds
+99% percentile latency: 0.1319822243184899 seconds
+P99 power =  1383.166
+P50 power =  1244.028
+Avg latency: 0.17576007259398466 seconds
+10% percentile latency: 0.175359051300984 seconds
+25% percentile latency: 0.17554322550131474 seconds
+50% percentile latency: 0.17576460849886644 seconds
+75% percentile latency: 0.17597585224848444 seconds
+90% percentile latency: 0.17614381670100557 seconds
+99% percentile latency: 0.17648257149816346 seconds
+P99 power =  1040.2040000000002
+P50 power =  975.077
+Avg latency: 0.060924276701982305 seconds
+10% percentile latency: 0.060778512899923955 seconds
+25% percentile latency: 0.06086253550074616 seconds
+50% percentile latency: 0.06091795050087967 seconds
+75% percentile latency: 0.06097796125050081 seconds
+90% percentile latency: 0.06108178539907385 seconds
+99% percentile latency: 0.06129847906158829 seconds
+P99 power =  1092.481
+P50 power =  944.096
+Avg latency: 0.06793050657794084 seconds
+10% percentile latency: 0.06754963419989508 seconds
+25% percentile latency: 0.06766906550001295 seconds
+50% percentile latency: 0.06779875999927754 seconds
+75% percentile latency: 0.06790228775025753 seconds
+90% percentile latency: 0.0680328357993858 seconds
+99% percentile latency: 0.06825541854017501 seconds
+P99 power =  1030.5549999999998
+P50 power =  941.018
+Avg latency: 0.08556950484791014 seconds
+10% percentile latency: 0.08538138769836223 seconds
+25% percentile latency: 0.08546990324975923 seconds
+50% percentile latency: 0.08553788700191944 seconds
+75% percentile latency: 0.08563548875008564 seconds
+90% percentile latency: 0.08579863760060107 seconds
+99% percentile latency: 0.0860933691914397 seconds
+P99 power =  840.1729999999999
+P50 power =  761.816
+Avg latency: 0.08803154690401425 seconds
+10% percentile latency: 0.08778785539871023 seconds
+25% percentile latency: 0.08791348600243509 seconds
+50% percentile latency: 0.088050229500368 seconds
+75% percentile latency: 0.08814780650027387 seconds
+90% percentile latency: 0.08822829000091588 seconds
+99% percentile latency: 0.08840152171258524 seconds
+P99 power =  1216.931
+P50 power =  1038.362
+Avg latency: 0.09957997356599663 seconds
+10% percentile latency: 0.09940307139768265 seconds
+25% percentile latency: 0.09947827699852496 seconds
+50% percentile latency: 0.09957792550085287 seconds
+75% percentile latency: 0.09966682125104853 seconds
+90% percentile latency: 0.09975982100258989 seconds
+99% percentile latency: 0.10006071150884964 seconds
+P99 power =  1117.309
+P50 power =  974.1629999999999
+Avg latency: 0.13271626352606108 seconds
+10% percentile latency: 0.13242138740024528 seconds
+25% percentile latency: 0.13252123699930962 seconds
+50% percentile latency: 0.1326360309994925 seconds
+75% percentile latency: 0.13296031649861106 seconds
+90% percentile latency: 0.13310954429871344 seconds
+99% percentile latency: 0.13331368791143178 seconds
+P99 power =  840.3969999999999
+P50 power =  792.877
+Avg latency: 0.1428920795259837 seconds
+10% percentile latency: 0.14263558579987148 seconds
+25% percentile latency: 0.14274896850020014 seconds
+50% percentile latency: 0.1428873559980275 seconds
+75% percentile latency: 0.14302152875097818 seconds
+90% percentile latency: 0.14316838479790023 seconds
+99% percentile latency: 0.1434575405594296 seconds
+P99 power =  1347.059
+P50 power =  1052.2630000000001
+Avg latency: 0.1632087462119598 seconds
+10% percentile latency: 0.1610426502993505 seconds
+25% percentile latency: 0.16308984775059798 seconds
+50% percentile latency: 0.16387347300042165 seconds
+75% percentile latency: 0.16396561024976108 seconds
+90% percentile latency: 0.16404685649977183 seconds
+99% percentile latency: 0.16433119153898587 seconds
+P99 power =  1149.9270000000001
+P50 power =  1067.595
+Avg latency: 0.21957025681195227 seconds
+10% percentile latency: 0.2192713495984208 seconds
+25% percentile latency: 0.21938183499878505 seconds
+50% percentile latency: 0.21950857549927605 seconds
+75% percentile latency: 0.21967276875056996 seconds
+90% percentile latency: 0.21986450600052193 seconds
+99% percentile latency: 0.2225308224222317 seconds
+P99 power =  879.568
+P50 power =  836.604
+Avg latency: 0.05634399387406302 seconds
+10% percentile latency: 0.055925750500682624 seconds
+25% percentile latency: 0.056095744750564336 seconds
+50% percentile latency: 0.05628505700042297 seconds
+75% percentile latency: 0.0564347142508268 seconds
+90% percentile latency: 0.05656450189890165 seconds
+99% percentile latency: 0.056920550348222604 seconds
+P99 power =  1660.212
+P50 power =  1522.489
+Avg latency: 0.06220810875797179 seconds
+10% percentile latency: 0.06071088790195063 seconds
+25% percentile latency: 0.06216836399926251 seconds
+50% percentile latency: 0.06246113199995307 seconds
+75% percentile latency: 0.06268083474969899 seconds
+90% percentile latency: 0.06284425090016157 seconds
+99% percentile latency: 0.06319249007960025 seconds
+P99 power =  1287.782
+P50 power =  1206.6909999999998
+Avg latency: 0.07516796212198096 seconds
+10% percentile latency: 0.07479736970162776 seconds
+25% percentile latency: 0.07494485500046721 seconds
+50% percentile latency: 0.07517282299886574 seconds
+75% percentile latency: 0.07537241674799589 seconds
+90% percentile latency: 0.07558219440252287 seconds
+99% percentile latency: 0.0758435506987007 seconds
+P99 power =  1059.936
+P50 power =  1004.008
+Avg latency: 0.07114860186808801 seconds
+10% percentile latency: 0.0706612812999083 seconds
+25% percentile latency: 0.07094571075049316 seconds
+50% percentile latency: 0.07121270750030817 seconds
+75% percentile latency: 0.07136312299826386 seconds
+90% percentile latency: 0.07150700040147058 seconds
+99% percentile latency: 0.07182130732908262 seconds
+P99 power =  1981.5049999999999
+P50 power =  1774.9709999999998
+Avg latency: 0.08155403265608038 seconds
+10% percentile latency: 0.08109554489928997 seconds
+25% percentile latency: 0.08141288225124299 seconds
+50% percentile latency: 0.08159214300212625 seconds
+75% percentile latency: 0.08173810599964781 seconds
+90% percentile latency: 0.08189174060025835 seconds
+99% percentile latency: 0.08219432144098392 seconds
+P99 power =  1494.339
+P50 power =  1334.629
+Avg latency: 0.10364334534596856 seconds
+10% percentile latency: 0.10315580389797105 seconds
+25% percentile latency: 0.10351013825038535 seconds
+50% percentile latency: 0.10380742750021454 seconds
+75% percentile latency: 0.10404589475001558 seconds
+90% percentile latency: 0.10424477649830806 seconds
+99% percentile latency: 0.1045802204314532 seconds
+P99 power =  1160.455
+P50 power =  1089.5680000000002
+Avg latency: 0.10304515613194234 seconds
+10% percentile latency: 0.10265982790006092 seconds
+25% percentile latency: 0.10289237249980943 seconds
+50% percentile latency: 0.10308473750046687 seconds
+75% percentile latency: 0.10323575700022047 seconds
+90% percentile latency: 0.10336705190165958 seconds
+99% percentile latency: 0.10362035035948793 seconds
+P99 power =  2216.117
+P50 power =  1996.857
+Avg latency: 0.11913574852805323 seconds
+10% percentile latency: 0.11858906790075707 seconds
+25% percentile latency: 0.11893601850169944 seconds
+50% percentile latency: 0.11917222100055369 seconds
+75% percentile latency: 0.11939270624952769 seconds
+90% percentile latency: 0.11957560430164449 seconds
+99% percentile latency: 0.11983867543160158 seconds
+P99 power =  1711.7730000000001
+P50 power =  1551.5230000000001
+Avg latency: 0.15737135162185587 seconds
+10% percentile latency: 0.15672985069868445 seconds
+25% percentile latency: 0.15713591200164956 seconds
+50% percentile latency: 0.157422840999061 seconds
+75% percentile latency: 0.15765069575081725 seconds
+90% percentile latency: 0.15785942600050476 seconds
+99% percentile latency: 0.15829811373998381 seconds
+P99 power =  1281.993
+P50 power =  1188.5700000000002
+Avg latency: 0.056861538142002246 seconds
+10% percentile latency: 0.056652227000449785 seconds
+25% percentile latency: 0.05673263325024891 seconds
+50% percentile latency: 0.05687142200076778 seconds
+75% percentile latency: 0.05697821149897209 seconds
+90% percentile latency: 0.057074283899419244 seconds
+99% percentile latency: 0.057220172919332984 seconds
+P99 power =  1299.656
+P50 power =  1149.279
+Avg latency: 0.06312361389002763 seconds
+10% percentile latency: 0.06290463800032739 seconds
+25% percentile latency: 0.06299547724847798 seconds
+50% percentile latency: 0.06312000650177652 seconds
+75% percentile latency: 0.0632418385002893 seconds
+90% percentile latency: 0.06334649249802168 seconds
+99% percentile latency: 0.06351974076838815 seconds
+P99 power =  1129.731
+P50 power =  1039.679
+Avg latency: 0.07950343918392173 seconds
+10% percentile latency: 0.0793033138019382 seconds
+25% percentile latency: 0.07941965200006962 seconds
+50% percentile latency: 0.07952240350095963 seconds
+75% percentile latency: 0.0796197862500776 seconds
+90% percentile latency: 0.07971557659802783 seconds
+99% percentile latency: 0.07997852067997883 seconds
+P99 power =  905.193
+P50 power =  844.1370000000001
+Avg latency: 0.074999450667965 seconds
+10% percentile latency: 0.07475024799969106 seconds
+25% percentile latency: 0.07487989549917984 seconds
+50% percentile latency: 0.07500418949894083 seconds
+75% percentile latency: 0.07511798999985331 seconds
+90% percentile latency: 0.0752304177996848 seconds
+99% percentile latency: 0.07545269456059031 seconds
+P99 power =  1492.988
+P50 power =  1306.358
+Avg latency: 0.08605620582998381 seconds
+10% percentile latency: 0.08581165170107852 seconds
+25% percentile latency: 0.08593994224884227 seconds
+50% percentile latency: 0.08604106300117564 seconds
+75% percentile latency: 0.08617663450058899 seconds
+90% percentile latency: 0.0863066888992762 seconds
+99% percentile latency: 0.08657372776837292 seconds
+P99 power =  1242.483
+P50 power =  1129.086
+Avg latency: 0.11339724916390696 seconds
+10% percentile latency: 0.11312077629772829 seconds
+25% percentile latency: 0.1132402289986203 seconds
+50% percentile latency: 0.11338776400043571 seconds
+75% percentile latency: 0.11353492399939569 seconds
+90% percentile latency: 0.11369197460153373 seconds
+99% percentile latency: 0.11397765393030568 seconds
+P99 power =  1017.2069999999999
+P50 power =  890.615
+Avg latency: 0.1154113714099949 seconds
+10% percentile latency: 0.11511109089697129 seconds
+25% percentile latency: 0.11524300250039232 seconds
+50% percentile latency: 0.11542288249802368 seconds
+75% percentile latency: 0.11561255899960088 seconds
+90% percentile latency: 0.115724034098821 seconds
+99% percentile latency: 0.11596161060955637 seconds
+P99 power =  1652.585
+P50 power =  1420.6440000000002
+Avg latency: 0.12992405267395224 seconds
+10% percentile latency: 0.1285394778009504 seconds
+25% percentile latency: 0.12873990050047723 seconds
+50% percentile latency: 0.12904789250023896 seconds
+75% percentile latency: 0.13163970049936324 seconds
+90% percentile latency: 0.1318431886993494 seconds
+99% percentile latency: 0.13223886732095708 seconds
+P99 power =  1389.834
+P50 power =  1232.546
+Avg latency: 0.17565794025002834 seconds
+10% percentile latency: 0.1752846593004506 seconds
+25% percentile latency: 0.17545884500214015 seconds
+50% percentile latency: 0.17564278549980372 seconds
+75% percentile latency: 0.17581711999991967 seconds
+90% percentile latency: 0.17605316630288143 seconds
+99% percentile latency: 0.1764598906721949 seconds
+P99 power =  1039.465
+P50 power =  960.685
+Avg latency: 0.06107152728203073 seconds
+10% percentile latency: 0.06078582670052128 seconds
+25% percentile latency: 0.06091502199888055 seconds
+50% percentile latency: 0.06107937399974617 seconds
+75% percentile latency: 0.06122803899961582 seconds
+90% percentile latency: 0.06134937359893229 seconds
+99% percentile latency: 0.06155522761040629 seconds
+P99 power =  1117.357
+P50 power =  934.08
+Avg latency: 0.0680503200860694 seconds
+10% percentile latency: 0.06763917109819886 seconds
+25% percentile latency: 0.0677792655014855 seconds
+50% percentile latency: 0.0679067835008027 seconds
+75% percentile latency: 0.0680580527487109 seconds
+90% percentile latency: 0.06817662990251847 seconds
+99% percentile latency: 0.06842993666108668 seconds
+P99 power =  1056.036
+P50 power =  950.5569999999999
+Avg latency: 0.08608773033000033 seconds
+10% percentile latency: 0.08550358720167424 seconds
+25% percentile latency: 0.0856939532495744 seconds
+50% percentile latency: 0.08586968200143019 seconds
+75% percentile latency: 0.086069339750793 seconds
+90% percentile latency: 0.0863424049995956 seconds
+99% percentile latency: 0.08919332444100292 seconds
+P99 power =  968.9549999999999
+P50 power =  756.356
+Avg latency: 0.0882146794680957 seconds
+10% percentile latency: 0.08795393680302369 seconds
+25% percentile latency: 0.08807270400029665 seconds
+50% percentile latency: 0.0882082085008733 seconds
+75% percentile latency: 0.08833393849999993 seconds
+90% percentile latency: 0.08850348669984669 seconds
+99% percentile latency: 0.08876367805009068 seconds
+P99 power =  1180.245
+P50 power =  1008.5139999999999
+Avg latency: 0.09976481013600277 seconds
+10% percentile latency: 0.09950948119912936 seconds
+25% percentile latency: 0.09962536625062057 seconds
+50% percentile latency: 0.099756506499034 seconds
+75% percentile latency: 0.09990752150042681 seconds
+90% percentile latency: 0.10001203139727295 seconds
+99% percentile latency: 0.10025280410070991 seconds
+P99 power =  1057.148
+P50 power =  982.5249999999999
+Avg latency: 0.13285341207990858 seconds
+10% percentile latency: 0.13248762049879587 seconds
+25% percentile latency: 0.13263480074874678 seconds
+50% percentile latency: 0.13286056449942407 seconds
+75% percentile latency: 0.13306710375036346 seconds
+90% percentile latency: 0.13321098600099504 seconds
+99% percentile latency: 0.13361147264877218 seconds
+P99 power =  839.7399999999999
+P50 power =  784.0160000000001
+Avg latency: 0.14348985588596405 seconds
+10% percentile latency: 0.1429491720013175 seconds
+25% percentile latency: 0.14324143974863546 seconds
+50% percentile latency: 0.14346914300040225 seconds
+75% percentile latency: 0.14383876525062078 seconds
+90% percentile latency: 0.1440041618025134 seconds
+99% percentile latency: 0.14424117668015243 seconds
+P99 power =  1293.329
+P50 power =  1096.3600000000001
+Avg latency: 0.16403400502787555 seconds
+10% percentile latency: 0.16386129560014523 seconds
+25% percentile latency: 0.1639609987505537 seconds
+50% percentile latency: 0.16407532199991692 seconds
+75% percentile latency: 0.16418991899809043 seconds
+90% percentile latency: 0.16434573539809208 seconds
+99% percentile latency: 0.1646708821582797 seconds
+P99 power =  1159.415
+P50 power =  1058.9189999999999
+Avg latency: 0.22084810706602728 seconds
+10% percentile latency: 0.21971015359958984 seconds
+25% percentile latency: 0.21988473675082787 seconds
+50% percentile latency: 0.22007308150023164 seconds
+75% percentile latency: 0.22273229974962305 seconds
+90% percentile latency: 0.22311395890246785 seconds
+99% percentile latency: 0.22359284746227787 seconds
+P99 power =  873.389
+P50 power =  831.2220000000001
