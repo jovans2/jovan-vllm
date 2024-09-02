@@ -113,7 +113,7 @@ class RequestOutput:
             outputs.append(output)
 
         # Every sequence in the sequence group should have the same prompt.
-        prompt = seq_group.prompt + " MY TTFT = " + str(ttft_time) + " MY TBT = " + str(tbt_time)
+        prompt = seq_group.prompt # + " MY TTFT = " + str(ttft_time) + " MY TBT = " + str(tbt_time)
         
         prompt_token_ids = seq_group.prompt_token_ids
         prompt_logprobs = seq_group.prompt_logprobs
