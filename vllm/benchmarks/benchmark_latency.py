@@ -42,7 +42,7 @@ def main(args: argparse.Namespace):
                                                      args.input_len))
     dummy_prompt_token_ids = dummy_prompt_token_ids.tolist()
 
-    def run_to_completion(profile_dir: Optional[str] = None):
+    def run_to_completion(profile_dir, inputs):
         if profile_dir:
             with torch.profiler.profile(
                     activities=[
@@ -51,13 +51,13 @@ def main(args: argparse.Namespace):
                     ],
                     on_trace_ready=torch.profiler.tensorboard_trace_handler(
                         str(profile_dir))) as p:
-                llm.generate(prompt_token_ids=dummy_prompt_token_ids,
+                llm.generate(prompt_token_ids=inputs,
                              sampling_params=sampling_params,
                              use_tqdm=False)
             print(p.key_averages())
         else:
             start_time = time.perf_counter()
-            llm.generate(prompt_token_ids=dummy_prompt_token_ids,
+            llm.generate(prompt_token_ids=inputs,
                          sampling_params=sampling_params,
                          use_tqdm=False)
             end_time = time.perf_counter()
@@ -65,7 +65,7 @@ def main(args: argparse.Namespace):
             return latency
 
     print("Warming up...")
-    run_to_completion(profile_dir=None)
+    run_to_completion(None, dummy_prompt_token_ids)
 
     if args.profile:
         profile_dir = args.profile_result_dir
@@ -74,14 +74,24 @@ def main(args: argparse.Namespace):
                 "."
             ) / "vllm_benchmark_result" / f"latency_result_{time.time()}"
         print(f"Profiling (results will be saved to '{profile_dir}')...")
-        run_to_completion(profile_dir=profile_dir)
+        run_to_completion(profile_dir,dummy_prompt_token_ids)
         return
 
-    # Benchmark.
-    latencies = []
-    for _ in tqdm(range(args.num_iters), desc="Profiling iterations"):
-        latencies.append(run_to_completion(profile_dir=None))
-    print(f'Avg latency: {np.mean(latencies)} seconds')
+    input_lens = [1]
+    batch_sizes = [1, 2, 4, 8, 16]
+
+    for in_len in input_lens:
+        for batch_sz in batch_sizes:
+            dummy_prompt_token_ids = np.random.randint(10000, size=(batch_sz, in_len))
+            dummy_prompt_token_ids = dummy_prompt_token_ids.tolist()
+            # Benchmark.
+            latencies = []
+            for _ in tqdm(range(args.num_iters), desc="Profiling iterations"):
+                latencies.append(run_to_completion(None, dummy_prompt_token_ids))
+            print("Input len = ", in_len)
+            print("Batch size = ", batch_sz)
+            print(f'Avg latency: {np.mean(latencies)} seconds')
+            print("P50 latency = ", np.percentile(latencies, 50))
 
 
 if __name__ == '__main__':
@@ -97,7 +107,7 @@ if __name__ == '__main__':
     parser.add_argument('--tensor-parallel-size', '-tp', type=int, default=1)
     parser.add_argument('--input-len', type=int, default=32)
     parser.add_argument('--output-len', type=int, default=128)
-    parser.add_argument('--batch-size', type=int, default=8)
+    parser.add_argument('--batch-size', type=int, default=1)
     parser.add_argument('--n',
                         type=int,
                         default=1,
@@ -105,7 +115,7 @@ if __name__ == '__main__':
     parser.add_argument('--use-beam-search', action='store_true')
     parser.add_argument('--num-iters',
                         type=int,
-                        default=3,
+                        default=10,
                         help='Number of iterations to run.')
     parser.add_argument('--trust-remote-code',
                         action='store_true',
