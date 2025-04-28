@@ -19,7 +19,7 @@ def main():
     with open(input_file, 'r') as f:
         for line in f:
             if "torch.OutOfMemoryError: CUDA out of memory" in line:
-                for _ in range(6):
+                for _ in range(3):
                     print(0)
                 current_input_index = 0
                 last_seen_input_len = None
