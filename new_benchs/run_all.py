@@ -19,8 +19,8 @@ models = [
     "Qwen/Qwen3-30B-A3B",
     "Qwen/Qwen3-235B-A22B",
     "deepseek-ai/DeepSeek-R1",
-    "state-spaces/mamba-790m",
-    "state-spaces/mamba-2.8b",
+    "state-spaces/mamba-790m-hf",
+    "state-spaces/mamba-2.8b-hf",
     "nvidia/mamba2-hybrid-8b-3t-128k"
 ]
 
