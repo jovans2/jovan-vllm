@@ -12,6 +12,18 @@ models = [
     "deepseek-ai/deepseek-llm-67b-base",
 ]
 
+models = [
+    "meta-llama/Llama-3.1-8B",
+    "meta-llama/Llama-3.1-70B",
+    "meta-llama/Llama-3.1-405B-FP8",
+    "Qwen/Qwen3-30B-A3B",
+    "Qwen/Qwen3-235B-A22B",
+    "deepseek-ai/DeepSeek-R1",
+    "state-spaces/mamba-790m",
+    "state-spaces/mamba-2.8b",
+    "nvidia/mamba2-hybrid-8b-3t-128k"
+]
+
 tensor_parallel_sizes = [1, 2, 4, 8]
 
 # Make sure logs directory exists
