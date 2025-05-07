@@ -85,7 +85,7 @@ def main(args: argparse.Namespace):
         return
 
     input_lens = [512]
-    batch_sizes = [1, 2, 4, 8]
+    batch_sizes = [1, 2, 4, 8, 12, 16]
 
     for in_len in input_lens:
         for batch_sz in batch_sizes:
