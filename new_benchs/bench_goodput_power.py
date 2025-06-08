@@ -2,6 +2,7 @@
 
 import subprocess
 import sys
+import numpy as np
 import re
 import csv
 import argparse
@@ -109,21 +110,28 @@ def read_dmon_data_between(start_line_idx):
     new_lines = lines[start_line_idx:]
     data_lines = [line for line in new_lines if line.startswith("GPU ")]
 
-    columns = {'POWINST': [], 'TMPTR': [], 'SMCLK': [], 'MMCLK': []}
+    columns = {'POWINST': [], 'MTMPTR': [], 'TMPTR': [], 'SMCLK': [], 'MMCLK': []}
     for line in data_lines:
         parts = line.strip().split()
         try:
-            columns['TMPTR'].append(float(parts[2]))
-            columns['POWINST'].append(float(parts[3]))
-            columns['SMCLK'].append(float(parts[4]))
-            columns['MMCLK'].append(float(parts[5]))
+            columns['MTMPTR'].append(float(parts[2]))
+            columns['TMPTR'].append(float(parts[3]))
+            columns['POWINST'].append(float(parts[4]))
+            columns['SMCLK'].append(float(parts[5]))
+            columns['MMCLK'].append(float(parts[6]))
         except Exception:
             continue
 
-    return {
-        f'P50_{k}': round(statistics.median(v), 2) if v else None
-        for k, v in columns.items()
-    }
+    result = {}
+    for k, v in columns.items():
+        if v:
+            result[f'P50_{k}'] = round(statistics.median(v), 2)
+            result[f'P99_{k}'] = round(np.percentile(v, 99), 2)
+        else:
+            result[f'P50_{k}'] = None
+            result[f'P99_{k}'] = None
+
+    return result
 
 def main():
     parser = argparse.ArgumentParser()
@@ -153,7 +161,8 @@ def main():
         writer.writerow([
             "InputLen", "OutputLen", "RequestRate", "TensorParallelism",
             "P50_TTFT", "P99_TTFT", "P50_TPOT", "P99_TPOT",
-            "P50_POWINST", "P50_TMPTR", "P50_SMCLK", "P50_MMCLK"
+            "P50_POWINST", "P50_MTMPTR", "P50_TMPTR", "P50_SMCLK", "P50_MMCLK",
+            "P99_POWINST", "P99_MTMPTR", "P99_TMPTR", "P99_SMCLK", "P99_MMCLK"
         ])
 
         for tp in tp_sizes:
@@ -182,8 +191,10 @@ def main():
                     input_len, output_len, req_rate, tp,
                     result.get("P50_TTFT"), result.get("P99_TTFT"),
                     result.get("P50_TPOT"), result.get("P99_TPOT"),
-                    result.get("P50_POWINST"), result.get("P50_TMPTR"),
-                    result.get("P50_SMCLK"), result.get("P50_MMCLK")
+                    result.get("P50_POWINST"), result.get("P50_MTMPTR"), result.get("P50_TMPTR"),
+                    result.get("P50_SMCLK"), result.get("P50_MMCLK"),
+                    result.get("P99_POWINST"), result.get("P99_MTMPTR"), result.get("P99_TMPTR"),
+                    result.get("P99_SMCLK"), result.get("P99_MMCLK")
                 ])
                 f.flush()
 
@@ -203,8 +214,10 @@ def main():
                         input_len, output_len, req_rate, tp,
                         confirm_result.get("P50_TTFT"), confirm_result.get("P99_TTFT"),
                         confirm_result.get("P50_TPOT"), confirm_result.get("P99_TPOT"),
-                        confirm_result.get("P50_POWINST"), confirm_result.get("P50_TMPTR"),
-                        confirm_result.get("P50_SMCLK"), confirm_result.get("P50_MMCLK")
+                        confirm_result.get("P50_POWINST"), confirm_result.get("P50_MTMPTR"), confirm_result.get("P50_TMPTR"),
+                        confirm_result.get("P50_SMCLK"), confirm_result.get("P50_MMCLK"),
+                        confirm_result.get("P99_POWINST"), confirm_result.get("P99_MTMPTR"), confirm_result.get("P99_TMPTR"),
+                        confirm_result.get("P99_SMCLK"), confirm_result.get("P99_MMCLK")
                     ])
                     f.flush()
 
