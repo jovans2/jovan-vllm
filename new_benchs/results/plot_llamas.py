@@ -22,7 +22,7 @@ marker_style = {
     'v100': 's',  # Square
 }
 
-# Assign unique color to each model
+# Assign consistent color per model
 color_cycle = itertools.cycle(plt.rcParams['axes.prop_cycle'].by_key()['color'])
 model_colors = {model: next(color_cycle) for model in model_sizes}
 
@@ -31,13 +31,15 @@ ttft_data = {}
 tbt_data = {}
 power_data = {}
 
-# Load data
+# Load data with deduplication
 for model in model_sizes:
     for accel in accelerators:
         file_name = file_template.format(model, accel)
         label = f"{model_labels[model]} ({accel.upper()})"
         try:
             df = pd.read_csv(file_name)
+            # Deduplicate by keeping only the last row per RPS
+            df = df.groupby('RequestRate', as_index=False).last().sort_values('RequestRate')
             rps = df['RequestRate']
             ttft_data[label] = (rps, df['P99_TTFT'], model_colors[model], marker_style[accel])
             tbt_data[label] = (rps, df['P99_TPOT'], model_colors[model], marker_style[accel])
@@ -45,7 +47,7 @@ for model in model_sizes:
         except FileNotFoundError:
             print(f"Warning: {file_name} not found. Skipping.")
 
-# Plot helper
+# Plotting helper
 def plot_metric(data, ylabel, title, filename, ylim=None):
     plt.figure(figsize=(10, 6))
     for label, (rps, yvals, color, marker) in data.items():
@@ -61,7 +63,7 @@ def plot_metric(data, ylabel, title, filename, ylim=None):
     plt.savefig(filename)
     plt.close()
 
-# === Plot ===
+# Plot all metrics
 plot_metric(ttft_data, 'P99 TTFT (ms)', 'P99 TTFT vs Request Rate', 'llama_ttft.png', ylim=(0, 400))
 plot_metric(tbt_data, 'P99 TBT (ms)', 'P99 TBT vs Request Rate', 'llama_tbt.png')
 plot_metric(power_data, 'P99 Power (W)', 'P99 Power vs Request Rate', 'llama_power.png')
